@@ -11,6 +11,7 @@ import yasakawa from '../assets/images/companyLogo/yaskawa.png'
 import omron from '../assets/images/companyLogo/omron.png'
 import mitshubhi from '../assets/images/companyLogo/mitshubi.png'
 import schnieder from '../assets/images/companyLogo/schnieder.png'
+import { Link } from 'react-router-dom';
 
 const ProductsPage = () => {
   const [activeCategory, setActiveCategory] = useState('Valves');
@@ -98,7 +99,11 @@ const ProductsPage = () => {
           >
             <h1>Industrial Products</h1>
             <p>Explore our comprehensive range of industrial products designed for efficiency and reliability.</p>
-            <button className="btn btn-secondary">Contact Us</button>
+            
+            <Link to="/contact" className="btn btn-secondary hero-cta">
+                          Contact Us
+                        </Link>
+            
           </motion.div>
         </div>
       </section>
