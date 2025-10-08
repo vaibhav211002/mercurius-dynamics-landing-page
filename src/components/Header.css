@@ -149,25 +149,72 @@
 
 /* Mobile Navigation */
 .mobile-nav {
-  display: none;
+  display: flex;
   flex-direction: column;
   background-color: white;
   border-top: 1px solid var(--border-light);
-  padding: 1rem 0;
   overflow: hidden;
+  position: relative;
+  z-index: 999;
 }
 
-.mobile-nav.open {
+/* Mobile Navigation Header */
+.mobile-nav-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  background-color: white;
+}
+
+.mobile-nav-logo {
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.mobile-nav-logo .logo-icon {
+  margin-right: 0.5rem;
+  color: var(--primary-purple);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-gray);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.mobile-nav-close:hover {
+  color: var(--text-dark);
+  background-color: var(--background-light-gray);
+}
+
+.mobile-nav-close:active {
+  color: var(--primary-purple);
 }
 
 .mobile-nav-link {
   text-decoration: none;
   color: var(--text-gray);
   font-weight: 500;
-  padding: 0.75rem 0;
+  padding: 0.75rem 1.5rem;
   border-bottom: 1px solid var(--border-light);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
 .mobile-nav-link:hover {
@@ -179,11 +226,28 @@
 }
 
 .mobile-cta {
-  margin-top: 1rem;
+  margin: 1rem 1.5rem;
   text-align: center;
 }
 
 /* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.95rem;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
@@ -199,6 +263,7 @@
   
   .header-content {
     padding: 0.75rem 0;
+    min-height: 60px;
   }
   
   .logo-text {
@@ -208,8 +273,43 @@
   .header-cta {
     display: none;
   }
+  
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .mobile-nav-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .mobile-nav-logo {
+    font-size: 1rem;
+  }
+  
+  .mobile-cta {
+    margin: 1rem;
+  }
 }
 
+/* Mobile Landscape */
+@media (max-width: 640px) and (orientation: landscape) {
+  .header-content {
+    padding: 0.5rem 0;
+    min-height: 50px;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+  }
+  
+  .mobile-nav-link {
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Mobile Portrait */
 @media (max-width: 480px) {
   .logo-text {
     font-size: 1rem;
@@ -217,5 +317,83 @@
   
   .header-content {
     padding: 0.5rem 0;
+    min-height: 55px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 0.95rem;
+    padding: 0.8rem 0;
+  }
+  
+  .hamburger {
+    width: 22px;
+    height: 16px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .logo-text {
+    font-size: 0.9rem;
+  }
+  
+  .header-content {
+    padding: 0.4rem 0;
+    min-height: 50px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 0.9rem;
+    padding: 0.7rem 0;
+  }
+  
+  .hamburger {
+    width: 20px;
+    height: 14px;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .mobile-nav {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Android Chrome specific fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .header {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .nav-link:hover {
+    color: var(--text-gray);
+  }
+  
+  .nav-link:active {
+    color: var(--primary-purple);
+  }
+  
+  .mobile-nav-link:hover {
+    color: var(--text-gray);
+  }
+  
+  .mobile-nav-link:active {
+    color: var(--primary-purple);
+  }
+  
+  .logo:hover {
+    color: var(--text-dark);
+  }
+  
+  .logo:active {
+    color: var(--primary-purple);
   }
 }

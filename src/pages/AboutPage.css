@@ -266,6 +266,35 @@
 }
 
 /* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .about-content {
+    padding: 4rem 0;
+  }
+  
+  .content-card {
+    padding: 1.75rem;
+  }
+  
+  .timeline-content {
+    padding: 1.75rem;
+  }
+  
+  .cta-card {
+    padding: 2.5rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .about-hero h1 {
     font-size: 2.5rem;
@@ -309,11 +338,47 @@
     padding: 1.5rem;
   }
   
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+  
   .cta-card {
     padding: 2rem;
   }
 }
 
+/* Mobile Landscape */
+@media (max-width: 640px) and (orientation: landscape) {
+  .about-hero {
+    padding: 3rem 0;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+  }
+  
+  .about-content {
+    padding: 2.5rem 0;
+  }
+  
+  .timeline-item {
+    padding-left: 2.5rem !important;
+  }
+  
+  .timeline-content {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Portrait */
 @media (max-width: 480px) {
   .about-hero {
     padding: 3rem 0;
@@ -321,6 +386,10 @@
   
   .about-hero h1 {
     font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
   }
   
   .about-content {
@@ -331,6 +400,24 @@
     padding: 1rem;
   }
   
+  .content-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-card p {
+    font-size: 0.9rem;
+  }
+  
+  .value-title,
+  .facility-title {
+    font-size: 1rem;
+  }
+  
+  .value-description,
+  .facility-description {
+    font-size: 0.85rem;
+  }
+  
   .timeline-item {
     padding-left: 2rem !important;
   }
@@ -339,7 +426,121 @@
     padding: 1rem;
   }
   
+  .timeline-title {
+    font-size: 1rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+  
   .cta-card {
     padding: 1.5rem;
+  }
+  
+  .cta-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .about-content {
+    padding: 1.5rem 0;
+  }
+  
+  .content-card {
+    padding: 0.875rem;
+  }
+  
+  .content-card h2 {
+    font-size: 1.25rem;
+  }
+  
+  .content-card p {
+    font-size: 0.85rem;
+  }
+  
+  .value-title,
+  .facility-title {
+    font-size: 0.95rem;
+  }
+  
+  .value-description,
+  .facility-description {
+    font-size: 0.8rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1.75rem !important;
+  }
+  
+  .timeline-content {
+    padding: 0.875rem;
+  }
+  
+  .timeline-title {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.8rem;
+  }
+  
+  .cta-card {
+    padding: 1.25rem;
+  }
+  
+  .cta-card h2 {
+    font-size: 1.25rem;
+  }
+  
+  .cta-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .timeline {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Android Chrome specific fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .timeline-content {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .content-card:hover {
+    transform: none;
+  }
+  
+  .content-card:active {
+    transform: translateY(-2px);
+  }
+  
+  .timeline-item:hover {
+    transform: none;
+  }
+  
+  .timeline-item:active {
+    transform: translateY(-2px);
   }
 }

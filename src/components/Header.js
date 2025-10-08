@@ -1,11 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Header.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const mobileMenuRef = useRef(null);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const navigationItems = [
     { path: '/', label: 'Home' },
@@ -77,33 +100,77 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <motion.nav 
-          className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ 
-            opacity: isMobileMenuOpen ? 1 : 0,
-            height: isMobileMenuOpen ? 'auto' : 0
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          {navigationItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`mobile-nav-link ${isActive(item.path) ? 'active' : ''}`}
-              onClick={() => setIsMobileMenuOpen(false)}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.nav 
+              ref={mobileMenuRef}
+              className="mobile-nav"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ 
+                opacity: 1,
+                height: 'auto'
+              }}
+              exit={{ 
+                opacity: 0,
+                height: 0
+              }}
+              transition={{ 
+                duration: 0.3,
+                ease: "easeInOut"
+              }}
+              style={{
+                overflow: 'hidden'
+              }}
             >
-              {item.label}
-            </Link>
-          ))}
-          <Link 
-            to="/request-quote" 
-            className="btn btn-primary mobile-cta"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Get Quote
-          </Link>
-        </motion.nav>
+              {/* Mobile Menu Header */}
+              <div className="mobile-nav-header">
+                <div className="mobile-nav-logo">
+                  <div className="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                      <path 
+                        d="M16 2L20 8H28L24 14L28 20H20L16 26L12 20H4L8 14L4 8H12L16 2Z" 
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <span className="logo-text">Mercurius Dynamics</span>
+                </div>
+                <button 
+                  className="mobile-nav-close"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close mobile menu"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path 
+                      d="M18 6L6 18M6 6L18 18" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`mobile-nav-link ${isActive(item.path) ? 'active' : ''}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link 
+                to="/request-quote" 
+                className="btn btn-primary mobile-cta"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Quote
+              </Link>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
