@@ -1,0 +1,52 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5A2D82;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#A8C0FF;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#heroBg)"/>
+  
+  <!-- Industrial Background Elements -->
+  <rect x="100" y="200" width="400" height="200" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <rect x="600" y="300" width="300" height="150" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <rect x="1200" y="250" width="350" height="180" fill="rgba(255,255,255,0.1)" rx="8"/>
+  
+  <!-- CNC Machine -->
+  <rect x="200" y="400" width="200" height="100" fill="rgba(255,255,255,0.2)" rx="4"/>
+  <rect x="220" y="420" width="60" height="60" fill="rgba(138,43,226,0.3)" rx="2"/>
+  <rect x="290" y="420" width="60" height="60" fill="rgba(255,127,63,0.3)" rx="2"/>
+  <rect x="360" y="420" width="60" height="60" fill="rgba(138,43,226,0.3)" rx="2"/>
+  
+  <!-- Automation Panel -->
+  <rect x="700" y="400" width="150" height="100" fill="rgba(255,255,255,0.2)" rx="4"/>
+  <rect x="720" y="420" width="40" height="30" fill="rgba(138,43,226,0.4)" rx="2"/>
+  <rect x="770" y="420" width="50" height="30" fill="rgba(255,127,63,0.4)" rx="2"/>
+  <rect x="730" y="460" width="30" height="20" fill="rgba(138,43,226,0.4)" rx="2"/>
+  <rect x="770" y="460" width="30" height="20" fill="rgba(255,127,63,0.4)" rx="2"/>
+  
+  <!-- Valves -->
+  <circle cx="1300" cy="450" r="40" fill="rgba(255,127,63,0.3)"/>
+  <circle cx="1300" cy="450" r="25" fill="rgba(255,255,255,0.2)"/>
+  <rect x="1290" y="440" width="20" height="20" fill="rgba(255,127,63,0.4)" rx="2"/>
+  
+  <!-- Gear Systems -->
+  <circle cx="400" cy="600" r="30" fill="rgba(138,43,226,0.3)"/>
+  <circle cx="400" cy="600" r="15" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="500" cy="600" r="25" fill="rgba(255,127,63,0.3)"/>
+  <circle cx="500" cy="600" r="12" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Precision Indicators -->
+  <circle cx="1500" cy="600" r="20" fill="rgba(255,127,63,0.4)"/>
+  <path d="M1500 580 L1500 620 M1480 600 L1520 600" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  
+  <!-- Circuit Patterns -->
+  <path d="M100 800 L200 800 L250 750 L300 800 L400 800" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+  <path d="M500 800 L600 800 L650 750 L700 800 L800 800" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+  
+  <!-- Data Points -->
+  <circle cx="200" cy="800" r="4" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="300" cy="800" r="4" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="600" cy="800" r="4" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="700" cy="800" r="4" fill="rgba(255,255,255,0.6)"/>
+</svg>

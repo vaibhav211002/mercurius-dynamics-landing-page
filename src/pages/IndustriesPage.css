@@ -1,0 +1,329 @@
+/* IndustriesPage Styles */
+
+
+.industry-card.expanded .industry-content {
+  position: relative; /* restore when expanded */
+  top: 0;
+}
+
+
+
+
+
+.industries-page {
+  padding-top: 70px; /* Account for fixed header */
+}
+
+/* Hero Section */
+.industries-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #FFA500 0%, var(--primary-purple-dark) 100%);
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/images/heroes/industries-hero.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.8) 0%, rgba(90, 45, 130, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Expertise Section */
+.expertise-section {
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+}
+
+/* Industries Grid Section */
+.industries-grid-section {
+  padding: 5rem 0;
+  background-color: var(--background-light-gray);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.industry-card {
+  position: relative;
+  overflow: hidden; /* Prevent other cards from shifting */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-large);
+}
+
+.industry-card.expanded {
+  box-shadow: var(--shadow-large);
+}
+
+.industry-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.industry-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-purple);
+  border-radius: 50%;
+  color: white;
+}
+
+.industry-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.5rem;
+}
+
+.industry-info {
+  flex: 1;
+}
+
+.industry-info h3 {
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+}
+
+.industry-info p {
+  margin: 0;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.expand-icon {
+  color: var(--primary-purple);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.4s ease;
+}
+
+.industry-card.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+.industry-content {
+  overflow: hidden;
+  position: absolute; /* Take it out of normal layout flow */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff; /* or your card bg color */
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+
+.industry-content p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CNC Industries Section */
+.cnc-industries-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.cnc-industry-card {
+  background: var(--background-light-gray);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cnc-industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.cnc-industry-card h3 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+}
+
+.expand-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--text-light-gray);
+  font-size: 1rem;
+}
+
+.cnc-industry-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .industries-grid-section,
+  .cnc-industries-section {
+    padding: 3rem 0;
+  }
+  
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .industry-header {
+    padding: 1rem;
+  }
+  
+  .industry-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .industry-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .industry-content {
+    padding: 0 1rem 1rem;
+  }
+  
+  .cnc-industry-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-hero {
+    min-height: 50vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .expertise-section {
+    padding: 2rem 0;
+  }
+  
+  .industries-grid-section,
+  .cnc-industries-section {
+    padding: 2rem 0;
+  }
+  
+  .industries-grid {
+    gap: 0.75rem;
+  }
+  
+  .industry-header {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .industry-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .industry-info h3 {
+    font-size: 1rem;
+  }
+  
+  .industry-info p {
+    font-size: 0.85rem;
+  }
+  
+  .industry-content {
+    padding: 0 0.75rem 0.75rem;
+  }
+  
+  .cnc-industry-card {
+    padding: 1rem;
+  }
+  
+  .cnc-industry-card h3 {
+    font-size: 1.1rem;
+  }
+}

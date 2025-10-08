@@ -1,0 +1,386 @@
+/* RequestQuotePage Styles */
+.request-quote-page {
+  padding-top: 70px; /* Account for fixed header */
+}
+
+/* Hero Section */
+.rfq-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(51, 51, 51, 0.1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(51, 51, 51, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+}
+
+/* RFQ Form Section */
+.rfq-form-section {
+  padding: 5rem 0;
+  background-color: var(--background-light-gray);
+}
+
+.rfq-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rfq-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-large);
+}
+
+.form-section {
+  margin-bottom: 3rem;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-section h2 {
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--primary-purple);
+  padding-bottom: 0.5rem;
+}
+
+.form-section h3 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-size: 1.25rem;
+}
+
+/* Part Details */
+.part-line {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--background-light-gray);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1.5fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  padding: 10px 12px;
+  border: 2px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+.form-control::placeholder {
+  color: var(--text-light-gray);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover:not(:disabled) {
+  background-color: #fee2e2;
+}
+
+.remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-line-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.add-line-btn span {
+  font-size: 1.2rem;
+}
+
+/* Upload Sections */
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 2px dashed var(--border-light);
+  border-radius: 8px;
+  background: var(--background-light-gray);
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-purple);
+  background: rgba(138, 43, 226, 0.05);
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: var(--text-light-gray);
+}
+
+.upload-content {
+  flex: 1;
+}
+
+.upload-content p {
+  margin: 0;
+  color: var(--text-gray);
+}
+
+.upload-hint {
+  font-size: 0.85rem;
+  color: var(--text-light-gray);
+}
+
+.file-list {
+  margin-top: 1rem;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.file-item span {
+  color: var(--text-gray);
+  flex: 1;
+}
+
+.remove-file-btn {
+  background: #fee2e2;
+  border: none;
+  color: #dc2626;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.remove-file-btn:hover {
+  background: #fecaca;
+}
+
+/* Contact Information */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Agreement Section */
+.agreement-section {
+  margin-bottom: 2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-purple);
+}
+
+.link {
+  color: var(--primary-purple);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--primary-purple-dark);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .rfq-form-section {
+    padding: 3rem 0;
+  }
+  
+  .rfq-form {
+    padding: 2rem;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .part-line {
+    padding: 1rem;
+  }
+  
+  .upload-area {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .upload-content {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .rfq-form-section {
+    padding: 2rem 0;
+  }
+  
+  .rfq-form {
+    padding: 1rem;
+  }
+  
+  .form-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .part-line {
+    padding: 0.75rem;
+  }
+  
+  .form-control {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .upload-area {
+    padding: 1rem;
+  }
+  
+  .upload-icon {
+    font-size: 1.5rem;
+  }
+}
