@@ -28,6 +28,12 @@ const Header = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    // Scroll to top when navigating
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }, [location.pathname]);
 
   const navigationItems = [
@@ -72,6 +78,14 @@ const Header = () => {
                 key={item.path}
                 to={item.path}
                 className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
+                onClick={() => {
+                  // Scroll to top when navigating
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
+                }}
               >
                 {item.label}
               </Link>
@@ -80,7 +94,18 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="header-cta">
-            <Link to="/request-quote" className="btn btn-primary">
+            <Link 
+              to="/request-quote" 
+              className="btn btn-primary"
+              onClick={() => {
+                // Scroll to top when navigating
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
               Get Quote
             </Link>
           </div>
@@ -156,7 +181,15 @@ const Header = () => {
                   key={item.path}
                   to={item.path}
                   className={`mobile-nav-link ${isActive(item.path) ? 'active' : ''}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    // Scroll to top when navigating
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: 'smooth'
+                    });
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -164,7 +197,15 @@ const Header = () => {
               <Link 
                 to="/request-quote" 
                 className="btn btn-primary mobile-cta"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  // Scroll to top when navigating
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
+                }}
               >
                 Get Quote
               </Link>

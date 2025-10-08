@@ -15,10 +15,12 @@ import RequestQuotePage from './pages/RequestQuotePage';
 // Import components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <AnimatePresence mode="wait">
