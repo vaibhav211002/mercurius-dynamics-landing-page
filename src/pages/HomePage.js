@@ -65,6 +65,11 @@ const HomePage = () => {
           From precision engineering to large-scale automation, we provide comprehensive solutions tailored 
           to meet the dynamic needs of modern industry.
         </p>
+        <div className="about-contact-btn">
+          <Link to="/contact" className="btn btn-primary">
+            Contact Us
+          </Link>
+        </div>
       </motion.div>
 
       <motion.div 
