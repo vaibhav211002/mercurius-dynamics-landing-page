@@ -89,15 +89,15 @@ const HomePage = () => {
             {...fadeInUp}
           >
             <h2>Our Products and Services</h2>
-            <p>Delivering a full spectrum of engineering & Software capabilities.</p>
+            <p>Delivering a full spectrum of Engineering & Software capabilities.</p>
           </motion.div>
           
           <div className="services-grid">
             {[
-              { title: "CNC & Waterjet", description: "Precision machining and waterjet cutting for complex parts.", image: cncWaterjetImage },
               { title: "Automation", description: "Custom systems to enhance efficiency and productivity.", image: automationImage },
+              { title: "OEM Spares", description: "Reliable spares to keep your operations running smoothly.", image: oemSparesImage },
+              { title: "CNC & Waterjet", description: "Precision machining and waterjet cutting for complex parts.", image: cncWaterjetImage },
               { title: "Valves", description: "A wide range of high-quality valves for industrial applications.", image: valvesImage },
-              { title: "OEM Spares", description: "Reliable spares to keep your operations running smoothly.", image: oemSparesImage }
             ].map((service, index) => (
               <motion.div 
                 key={index}
