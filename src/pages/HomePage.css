@@ -68,6 +68,7 @@
 .hero-cta {
   font-size: 1.1rem;
   padding: 15px 30px;
+  margin-top: 1.5rem;
 }
 
 /* About Section */
@@ -84,24 +85,6 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.7;
-}
-
-.about-contact-btn {
-  margin-top: 2rem;
-  text-align: left;
-}
-
-.about-contact-btn .btn {
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.about-contact-btn .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 69, 255, 0.3);
 }
 
 .about-image {
@@ -238,9 +221,8 @@
 }
 
 /* Industries Section */
-/* Industries Section */
 .industries-section {
-  padding: 0.76rem 0;
+  padding: .76rem 0;
   background-color: var(--background-light-gray);
   background-color: white;
 }
@@ -375,6 +357,28 @@
     padding: 4rem 0;
   }
   
+  .section-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .industry-header {
+    padding: 1.25rem;
+  }
+  
+  .industry-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .industry-name {
+    font-size: 1rem;
+  }
+  
+  .industry-description {
+    padding: 0 1.25rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -402,13 +406,25 @@
     padding: 3rem 0;
   }
   
-  .about-contact-btn {
-    margin-top: 1.5rem;
-    text-align: center;
+  .section-header h1 {
+    font-size: 2rem;
   }
   
-  .about-contact-btn .btn {
-    padding: 0.6rem 1.5rem;
+  .industry-header {
+    padding: 1rem;
+  }
+  
+  .industry-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .industry-name {
+    font-size: 0.95rem;
+  }
+  
+  .industry-description {
+    padding: 0 1rem 1rem;
     font-size: 0.9rem;
   }
   
@@ -518,17 +534,30 @@
     padding: 2rem 0;
   }
   
-  .about-contact-btn {
-    margin-top: 1.25rem;
-  }
-  
-  .about-contact-btn .btn {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.85rem;
-  }
-  
   .section-header {
     margin-bottom: 2rem;
+  }
+  
+  .section-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .industry-header {
+    padding: 0.875rem;
+  }
+  
+  .industry-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .industry-name {
+    font-size: 0.9rem;
+  }
+  
+  .industry-description {
+    padding: 0 0.875rem 0.875rem;
+    font-size: 0.85rem;
   }
   
   .services-grid {

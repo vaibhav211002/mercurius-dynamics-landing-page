@@ -42,6 +42,7 @@ const Header = () => {
     { path: '/products', label: 'Products' },
     { path: '/services', label: 'Services' },
     { path: '/spares', label: 'Spares' },
+    { path: '/cnc', label: 'CNC' },
     { path: '/industries', label: 'Industries' },
     { path: '/contact', label: 'Contact' }
   ];
