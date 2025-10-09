@@ -88,8 +88,8 @@ const HomePage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Our Core Products and Services</h2>
-            <p>Delivering a full spectrum of engineering capabilities.</p>
+            <h2>Our Products and Services</h2>
+            <p>Delivering a full spectrum of engineering & Software capabilities.</p>
           </motion.div>
           
           <div className="services-grid">
