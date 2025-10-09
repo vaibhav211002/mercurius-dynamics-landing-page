@@ -121,8 +121,121 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Industries Section */}
+      <section className="industries-section">
+        <div className="container">
+          <motion.div 
+            className="section-header"
+            {...fadeInUp}
+          >
+            <h1>Industries We Serve</h1>
+            <p>Providing expert solutions across a diverse range of sectors.</p>
+          </motion.div>
+          
+          <div className="industries-grid">
+            {[
+              { 
+                name: 'Aerospace', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Defence', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L4 7L12 12L20 7L12 2Z" fill="currentColor"/>
+                    <path d="M4 7V17L12 22L20 17V7L12 12L4 7Z" fill="currentColor" opacity="0.6"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Automotive', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <circle cx="7" cy="16" r="2" fill="currentColor"/>
+                    <circle cx="17" cy="16" r="2" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Energy', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Composites', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="6" height="6" fill="currentColor" opacity="0.8"/>
+                    <rect x="15" y="3" width="6" height="6" fill="currentColor" opacity="0.6"/>
+                    <rect x="3" y="15" width="6" height="6" fill="currentColor" opacity="0.4"/>
+                    <rect x="15" y="15" width="6" height="6" fill="currentColor" opacity="0.2"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Medical', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Electronics', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                    <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Robotics', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="11" width="18" height="11" rx="2" fill="currentColor" opacity="0.8"/>
+                    <circle cx="9" cy="5" r="2" fill="currentColor"/>
+                    <circle cx="15" cy="5" r="2" fill="currentColor"/>
+                    <path d="M9 5H15" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M9 11H15" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Consumer', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+
+            ].map((industry, index) => (
+              <motion.div 
+                key={index}
+                className="industry-card"
+                {...fadeInUp}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="industry-icon">{industry.icon}</div>
+                <span className="industry-name">{industry.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="cta-section">
+      {/* <section className="cta-section">
         <div className="container">
           <motion.div 
             className="cta-content"
@@ -137,7 +250,7 @@ const HomePage = () => {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

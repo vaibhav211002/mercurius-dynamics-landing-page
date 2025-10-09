@@ -30,7 +30,7 @@ const ProductsPage = () => {
     }
   };
 
-  const categories = ['Valves', 'Automation', 'OEM Spares'];
+  const categories = ['Automation','Valves'];
 
   const brands = {
     'Valves': [
@@ -66,17 +66,17 @@ const ProductsPage = () => {
   };
 
   const productCategories = {
-    'Valves': [
-      { name: 'Gate & Globe Valves', description: 'High-quality gate and globe valves for various industrial applications.' },
-      { name: 'Ball & Butterfly Valves', description: 'Precision ball and butterfly valves for efficient flow control.' },
-      { name: 'NRVs & Special Valves', description: 'Non-return valves and specialized valve solutions.' },
-      { name: 'Engineered Valves', description: 'Custom engineered valve solutions for specific requirements.' }
-    ],
     'Automation': [
       { name: 'PLC, DCS, SCADA', description: 'State-of-the-art systems for complete industrial process control.' },
       { name: 'Panels & Drives', description: 'Custom-built control panels and VFDs to optimize motor control.' },
       { name: 'Networks & Instrumentation', description: 'Robust networking and precise measurement instrumentation.' },
       { name: 'Safety Systems', description: 'Comprehensive systems to protect your personnel and assets.' }
+    ],
+    'Valves': [
+      { name: 'Gate & Globe Valves', description: 'High-quality gate and globe valves for various industrial applications.' },
+      { name: 'Ball & Butterfly Valves', description: 'Precision ball and butterfly valves for efficient flow control.' },
+      { name: 'NRVs & Special Valves', description: 'Non-return valves and specialized valve solutions.' },
+      { name: 'Engineered Valves', description: 'Custom engineered valve solutions for specific requirements.' }
     ],
     'OEM Spares': [
       { name: 'Electrical Components', description: 'High-quality electrical spares for all major brands.' },
@@ -152,7 +152,6 @@ const ProductsPage = () => {
               >
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
-                <div className="product-arrow">▼</div>
               </motion.div>
             ))}
           </motion.div>
