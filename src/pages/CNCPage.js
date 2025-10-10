@@ -277,7 +277,7 @@ const CNCPage = () => {
              transition={{ delay: 0.6 }}
            >
              <h2 className="section-title">
-               Industries <span className="accent-text">We Serve</span>
+               Industrial <span className="accent-text">Application</span>
              </h2>
              
              <div className="industries-accordion">
