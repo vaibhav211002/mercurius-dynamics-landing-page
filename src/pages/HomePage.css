@@ -168,6 +168,9 @@
   overflow: hidden;
   box-shadow: var(--shadow-light);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -194,6 +197,13 @@
 
 .service-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-content p {
+  flex-grow: 1;
 }
 
 .service-content h3 {
@@ -207,10 +217,17 @@
   line-height: 1.6;
 }
 
-.service-content .btn {
-  margin-top: 1rem;
-  padding: 8px 16px;
-  font-size: 0.9rem;
+/* Single Learn More Button */
+.services-learn-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.services-learn-more .btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .container {

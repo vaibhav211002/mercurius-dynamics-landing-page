@@ -113,12 +113,16 @@ const HomePage = () => {
                 <div className="service-content">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  <Link to="/services" className="btn btn-outline">
-                    Learn More
-                  </Link>
                 </div>
               </motion.div>
             ))}
+          </div>
+          
+          {/* Single Learn More Button */}
+          <div className="services-learn-more">
+            <Link to="/services" className="btn btn-primary">
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
