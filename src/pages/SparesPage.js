@@ -116,7 +116,7 @@ const SparesPage = () => {
               <span className="title-accent"> Spares & Components</span>
             </h1>
             <p className="hero-description">
-              Top-quality parts from the world's leading manufacturers.
+                  Genuine OEM-certified parts from the world’s leading manufacturers, covering both current and discontinued models for every industry.
             </p>
           </motion.div>
         </div>
@@ -288,8 +288,8 @@ const SparesPage = () => {
                         className="brand-card"
                       >
                         <span className="brand-name">{brand}</span>
-                        <Link to="/contact" className="brand-contact-btn">
-                          Contact Us
+                        <Link to="/request-quote" className="brand-contact-btn">
+                          Get Quote
                         </Link>
                       </div>
                     ))}
