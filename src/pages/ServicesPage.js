@@ -9,6 +9,24 @@ const ServicesPage = () => {
     transition: { duration: 0.6 }
   };
 
+  const fadeInLeft = {
+    initial: { opacity: 0, x: -60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.6 }
+  };
+
+  const fadeInRight = {
+    initial: { opacity: 0, x: 60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.6 }
+  };
+
+  const scaleIn = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.5 }
+  };
+
   const staggerChildren = {
     animate: {
       transition: {
@@ -19,61 +37,123 @@ const ServicesPage = () => {
 
   const services = [
     {
-      title: "CNC Machining",
-      description: "High-precision components manufactured to your exact specifications."
+      title: "Proprietary Solutions & Asset Intelligence",
+      items: [
+        "T-SCADA / Fault Reporting System Development & Integration",
+        "Asset Management Software Deployment",
+        "EDMS (Electronic Document Management System)",
+        "Building Management System (BMS)",
+        "Network Management System (NMS)",
+        "Inventory Management System",
+        "Custom IoT Solutions & Remote Monitoring",
+        "Real-time Data Acquisition & Analytics"
+      ]
     },
     {
-      title: "Industrial Automation",
-      description: "Streamlining your operations with custom robotics and control systems."
+      title: "Automation Engineering Services",
+      items: [
+        "Process Automation (Batch, Continuous & Discrete)",
+        "Machine Control Systems",
+        "Information Solutions & MES Integration",
+        "SCADA, PLC & DCS Programming",
+        "HMI / Operator Interface Design",
+        "Foundation Fieldbus & Protocol Integration",
+        "Industrial Network Design & Commissioning"
+      ]
     },
     {
-      title: "Valves & Actuators",
-      description: "Reliable flow control solutions for various industrial applications."
+      title: "Panel Building & Electrical Integration",
+      items: [
+        "MCC, PCC, IMCC, VFD, APFC, HT/LT Panel Design & Fabrication",
+        "Field Panel Assembly (Feeder Pillars, Control Panels)",
+        "PLC Panel Building (Fixed / Drawout)",
+        "Electrical System Testing & Commissioning",
+        "Transformer & UPS Integration"
+      ]
     },
     {
-      title: "OEM Spares",
-      description: "Authentic replacement parts to maintain equipment integrity and performance."
+      title: "Smart Solutions & IoT",
+      items: [
+        "IIoT Implementation",
+        "Cloud-based Monitoring Solutions",
+        "Telemetry Systems Setup",
+        "Smart Street Lighting Control",
+        "Energy Management Solutions"
+      ]
     },
     {
-      title: "Pumps & Systems",
-      description: "Comprehensive pump solutions, including repair, maintenance, and sales."
+      title: "End-to-End Execution Services",
+      items: [
+        "Engineering Design & Drawing Preparation",
+        "Procurement & Vendor Coordination",
+        "Installation & Site Supervision",
+        "Commissioning & Site Acceptance Testing",
+        "Retrofitting & Migration of Legacy Systems",
+        "AMC (Annual Maintenance Contract)",
+        "Troubleshooting & Remote Support"
+      ]
     },
     {
-      title: "Piping & Tubing",
-      description: "Custom fabrication and installation of industrial piping systems."
+      title: "Specialized Integration Services",
+      items: [
+        "Safety Interlock Systems",
+        "Servo Drive Configuration",
+        "Load Sharing Systems",
+        "DG Synchronization & AMF Logic",
+        "APFC Control Logic Setup",
+        "Soft Starter Implementation",
+        "Busduct / Rising Main Systems Setup",
+        "SIS / ESD Integration & Safety Instrumented Systems"
+      ]
     },
     {
-      title: "Heat Exchangers",
-      description: "Efficient thermal management solutions for industrial processes."
+      title: "Robotics & Automation",
+      items: [
+        "Robotics & Pick-and-Place Automation",
+        "Servo Drive & Motion Control Solutions",
+        "Vision-Based Robotic Systems",
+        "Motion Planning & Optimization"
+      ]
     },
     {
-      title: "Electrical Panels",
-      description: "Design and assembly of custom control panels for automation systems."
+      title: "Building & Energy Management",
+      items: [
+        "Building Management Systems (BMS)",
+        "Energy Management Systems (EMS)",
+        "Smart Substation Integration"
+      ]
     },
     {
-      title: "Gear Boxes",
-      description: "Supply and service of industrial gearboxes for heavy machinery."
+      title: "Field Services",
+      items: [
+        "Electrical & Instrumentation (E&I) Field Services",
+        "On-site Testing, Calibration & Maintenance"
+      ]
     },
     {
-      title: "Motor & Drives",
-      description: "Sales and support for electric motors and variable frequency drives."
+      title: "Predictive Analytics & AI / ML",
+      items: [
+        "Condition-Based Monitoring",
+        "Predictive Analytics using Machine Learning",
+        "Data-Driven Asset Optimization"
+      ]
     },
     {
-      title: "Hydraulics & Pneumatics",
-      description: "Component supply and system design for fluid power applications."
+      title: "Consulting Services",
+      items: [
+        "Digital Transformation Consulting",
+        "Energy Optimization Studies",
+        "Safety & Reliability Consulting"
+      ]
     },
     {
-      title: "Reverse Engineering",
-      description: "Recreating obsolete or hard-to-find parts with modern techniques."
-    },
-    {
-      title: "AMC & Services",
-      description: "Annual Maintenance Contracts and on-demand support."
-    },
-    {
-      title: "Custom Solutions",
-      description: "Have a unique challenge? We develop tailored solutions to meet your needs.",
-      isSpecial: true
+      title: "Valve Services",
+      items: [
+        "Automation & Actuation: Pneumatic / Electric Actuator Integration, Linear Power Cylinders, Positioners",
+        "Testing & Calibration: Pressure & Leakage Testing (ANSI / DIN / BS Standards), Stroke Testing, Safety Valve Certification",
+        "Retrofitting & Upgradation: Manual-to-Automated Conversions, Legacy Valve Modernization",
+        "Maintenance & Support: On-site Valve Inspection, Condition Monitoring, Seal / Trim Replacement, Emergency Repair"
+      ]
     }
   ];
 
@@ -88,8 +168,8 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>Our Comprehensive</h1>
-            <p>From precision engineering to large-scale automation, we provide a full spectrum of services to meet the dynamic needs of modern industry.</p>
+            <h1>Our Comprehensive Services</h1>
+            <p>From precision engineering to large-scale automation, Mercurius Dynamics delivers a full spectrum of turnkey solutions to meet the evolving needs of modern industry.</p>
           </motion.div>
         </div>
       </section>
@@ -107,13 +187,16 @@ const ServicesPage = () => {
             {services.map((service, index) => (
               <motion.div 
                 key={index}
-                className={`service-card ${service.isSpecial ? 'special' : ''}`}
-                variants={fadeInUp}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
+                className="service-card"
+                variants={scaleIn}
+                transition={{ delay: index * 0.1 }}
               >
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <ul>
+                  {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </motion.div>

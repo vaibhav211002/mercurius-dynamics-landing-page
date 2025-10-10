@@ -714,6 +714,7 @@
   }
 }
 
+
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
   .service-card:hover {
@@ -731,4 +732,6 @@
   .industry-item:active {
     transform: translateY(-2px);
   }
+  
 }
+
