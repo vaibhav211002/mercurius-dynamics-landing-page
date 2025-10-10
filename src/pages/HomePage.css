@@ -9,7 +9,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: linear-gradient(90deg, rgba(147, 51, 234, 1) 0%, rgba(99, 102, 241, 1) 100%);
   overflow: hidden;
 }
 
@@ -31,7 +31,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(90, 45, 130, 0.8) 0%, rgba(168, 192, 255, 0.6) 100%);
+  background: transparent;
 }
 
 .hero-content {
@@ -55,7 +55,7 @@
 }
 
 .hero-title-line.purple {
-  color: var(--secondary-orange);
+  color: var(--primary-purple-light);
 }
 
 .hero-description {
@@ -261,6 +261,7 @@
 
 /* Each Card */
 .industry-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,6 +283,16 @@
   border-color: rgba(139, 69, 255, 0.2);
 }
 
+.industry-card:hover .industry-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.industry-card:hover .industry-icon,
+.industry-card:hover .industry-name {
+  opacity: 0.3;
+}
+
 
 /* Icon */
 .industry-icon {
@@ -294,6 +305,32 @@
   height: 32px;
   border-radius: 50%;
   font-size: 0.9rem;
+}
+
+/* Industry Button */
+.industry-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+  z-index: 10;
+}
+
+.industry-button:hover {
+  background: var(--gradient-primary-hover);
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.4);
 }
 
 /* Text */

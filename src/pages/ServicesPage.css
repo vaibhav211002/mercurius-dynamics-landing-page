@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .services-hero {
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   color: white;
   padding: 4rem 0;
   text-align: center;
@@ -88,6 +88,29 @@
   font-size: 1.1rem;
 }
 
+/* Heading Text Effects */
+.heading-normal {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.heading-accent {
+  color: var(--primary-purple);
+  font-weight: 700;
+  position: relative;
+}
+
+.heading-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-purple);
+  border-radius: 2px;
+}
+
 .capability-card {
   background: var(--background-light-gray);
   padding: 2rem;
@@ -104,7 +127,7 @@
 
 .capability-card h3 {
   margin-bottom: 1rem;
-  color: var(--secondary-orange);
+  color: var(--primary-purple);
   font-size: 1.25rem;
 }
 

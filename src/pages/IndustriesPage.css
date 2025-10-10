@@ -20,7 +20,7 @@
   min-height: 60vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #FFA500 0%, var(--primary-purple-dark) 100%);
+  background: var(--gradient-primary);
   overflow: hidden;
 }
 

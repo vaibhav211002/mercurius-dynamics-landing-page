@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .spares-hero {
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   padding: 4rem 0;
   color: white;
   text-align: center;
@@ -28,7 +28,7 @@
 }
 
 .title-accent {
-  color: var(--secondary-orange);
+  color: var(--primary-purple-light);
 }
 
 .hero-description {
@@ -41,6 +41,9 @@
 .spares-content {
   padding: 4rem 0;
   background-color: white;
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .intro-section {
@@ -73,6 +76,9 @@
   color: var(--text-dark);
   text-align: center;
   margin-bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .features-grid {

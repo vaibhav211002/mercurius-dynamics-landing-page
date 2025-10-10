@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .cnc-hero {
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   padding: 4rem 0;
   color: white;
   text-align: center;
@@ -28,7 +28,7 @@
 }
 
 .title-accent {
-  color: var(--secondary-orange);
+  color: white;
 }
 
 .hero-description {
@@ -41,6 +41,9 @@
 .cnc-content {
   padding: 4rem 0;
   background-color: white;
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 /* Section Titles */
@@ -50,6 +53,9 @@
   color: var(--text-dark);
   text-align: center;
   margin-bottom: 3rem;
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .accent-text {
@@ -98,7 +104,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-purple), var(--secondary-orange));
+  background: var(--gradient-primary);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -366,14 +372,14 @@
 }
 
 .btn-primary {
-  background: var(--secondary-orange);
+  background: var(--gradient-primary);
   color: white;
 }
 
 .btn-primary:hover {
-  background: #e67e22;
+  background: var(--gradient-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.3);
 }
 
 .btn-outline {

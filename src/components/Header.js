@@ -62,15 +62,12 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <Link to="/" className="logo">
-            <div className="logo-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path 
-                  d="M16 2L20 8H28L24 14L28 20H20L16 26L12 20H4L8 14L4 8H12L16 2Z" 
-                  fill="currentColor"
-                />
-              </svg>
+            <div className="logo-abbreviation">MD</div>
+            <div className="logo-separator"></div>
+            <div className="logo-full-name">
+              <div className="logo-line-1">MERCURIUS</div>
+              <div className="logo-line-2">DYNAMICS</div>
             </div>
-            <span className="logo-text">Mercurius Dynamics</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -152,15 +149,12 @@ const Header = () => {
               {/* Mobile Menu Header */}
               <div className="mobile-nav-header">
                 <div className="mobile-nav-logo">
-                  <div className="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                      <path 
-                        d="M16 2L20 8H28L24 14L28 20H20L16 26L12 20H4L8 14L4 8H12L16 2Z" 
-                        fill="currentColor"
-                      />
-                    </svg>
+                  <div className="logo-abbreviation">MD</div>
+                  <div className="logo-separator"></div>
+                  <div className="logo-full-name">
+                    <div className="logo-line-1">MERCURIUS</div>
+                    <div className="logo-line-2">DYNAMICS</div>
                   </div>
-                  <span className="logo-text">Mercurius Dynamics</span>
                 </div>
                 <button 
                   className="mobile-nav-close"

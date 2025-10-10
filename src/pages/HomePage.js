@@ -233,6 +233,9 @@ const HomePage = () => {
               >
                 <div className="industry-icon">{industry.icon}</div>
                 <span className="industry-name">{industry.name}</span>
+                <Link to="/industries" className="industry-button">
+                  View Details
+                </Link>
               </motion.div>
             ))}
           </div>

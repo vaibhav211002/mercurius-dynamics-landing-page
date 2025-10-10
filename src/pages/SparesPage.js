@@ -7,9 +7,9 @@ const SparesPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
+    initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.4 }
   };
 
   const brands = {
@@ -158,12 +158,9 @@ const SparesPage = () => {
             
             <div className="brands-listing">
               {filteredBrands.map(([letter, brandList], index) => (
-                <motion.div
+                <div
                   key={letter}
                   className="brand-letter-section"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                 >
                   <div className="letter-header">
                     <div className="letter-badge">{letter}</div>
@@ -172,17 +169,15 @@ const SparesPage = () => {
                   
                   <div className="brands-grid">
                     {brandList.map((brand, brandIndex) => (
-                      <motion.div
+                      <div
                         key={brand}
                         className="brand-card"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
                       >
                         <span className="brand-name">{brand}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>

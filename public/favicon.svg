@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .purple-bar { fill: #9333EA; }
+      .md-text { fill: #1F2937; font-family: Arial, sans-serif; font-weight: bold; font-size: 12px; }
+    </style>
+  </defs>
+  
+  <!-- Purple vertical bar -->
+  <rect x="2" y="4" width="6" height="24" rx="3" class="purple-bar"/>
+  
+  <!-- MD text -->
+  <text x="12" y="20" class="md-text">MD</text>
+</svg>

@@ -6,9 +6,9 @@ const CNCPage = () => {
   const [expandedIndustry, setExpandedIndustry] = useState(null);
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
+    initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.4 }
   };
 
   const toggleIndustry = (industryName) => {
@@ -96,20 +96,16 @@ const CNCPage = () => {
             
             <div className="capabilities-grid">
               {capabilities.map((capability, index) => (
-                <motion.div
+                <div
                   key={index}
                   className="capability-card"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="capability-icon">
                     {capability.icon}
                   </div>
                   <h3 className="capability-title">{capability.title}</h3>
                   <p className="capability-description">{capability.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
@@ -126,12 +122,9 @@ const CNCPage = () => {
              
              <div className="materials-grid">
                {Object.entries(materials).map(([category, materialList], index) => (
-                 <motion.div
+                 <div
                    key={category}
                    className="material-category"
-                   initial={{ opacity: 0, y: 30 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: index * 0.1 }}
                  >
                    <h3 className="category-title">{category}</h3>
                    <ul className="material-list">
@@ -141,7 +134,7 @@ const CNCPage = () => {
                        </li>
                      ))}
                    </ul>
-                 </motion.div>
+                 </div>
                ))}
              </div>
            </motion.div>

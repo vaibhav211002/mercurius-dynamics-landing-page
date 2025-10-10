@@ -127,7 +127,10 @@ const ServicesPage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Our Capabilities</h2>
+            <h2>
+              <span className="heading-normal">Our </span>
+              <span className="heading-accent">Capabilities</span>
+            </h2>
             <p>A comprehensive suite of tools designed for scalability, security, and superior operational control.</p>
           </motion.div>
 
@@ -182,7 +185,10 @@ const ServicesPage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Materials We Cut</h2>
+            <h2>
+              <span className="heading-normal">Materials We </span>
+              <span className="heading-accent">Cut</span>
+            </h2>
           </motion.div>
 
           <motion.div 

@@ -13,7 +13,7 @@
 
 /* Hero Section */
 .products-hero {
-  background: linear-gradient(135deg, #666666 0%, #999999 100%);
+  background: var(--gradient-primary);
   color: white;
   padding: 4rem 0;
   text-align: center;
