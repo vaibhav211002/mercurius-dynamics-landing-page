@@ -39,7 +39,7 @@
 
 /* Main Content */
 .cnc-content {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background-color: white;
   opacity: 1;
   visibility: visible;
@@ -52,7 +52,7 @@
   font-weight: 700;
   color: var(--text-dark);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   opacity: 1;
   visibility: visible;
   display: block;
@@ -76,25 +76,53 @@
 
 /* Capabilities Section */
 .capabilities-section {
-  margin-bottom: 4rem;
+  margin: 2rem 0;
 }
 
-.capabilities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.capabilities-section h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.capabilities-section p {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  padding: 0 1rem;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
 }
 
 .capability-card {
-  background: var(--background-light-gray);
+  background: white;
   border: 1px solid rgba(139, 69, 255, 0.1);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .capability-card::before {
@@ -132,14 +160,14 @@
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.1);
 }
 
-.capability-title {
+.capability-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--primary-purple);
   margin-bottom: 1rem;
 }
 
-.capability-description {
+.capability-card p {
   font-size: 1rem;
   color: var(--text-gray);
   line-height: 1.6;
@@ -148,50 +176,33 @@
 
 /* Materials Section */
 .materials-section {
-  margin-bottom: 4rem;
+  margin: 2rem 0;
 }
 
-.materials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.materials-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.materials-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  border: 1px solid rgba(139, 69, 255, 0.1);
 }
 
 .material-category {
-  background: white;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.material-category:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(139, 69, 255, 0.1);
-  border-color: rgba(139, 69, 255, 0.2);
-}
-
-.category-title {
+.material-category h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--primary-purple);
   margin-bottom: 1.5rem;
-  text-align: center;
-  position: relative;
-}
-
-.category-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: var(--primary-purple);
-  border-radius: 1px;
 }
 
 .material-list {
@@ -200,31 +211,16 @@
   margin: 0;
 }
 
-.material-item {
-  padding: 0.75rem 0;
+.material-list li {
+  padding: 0.5rem 0;
   color: var(--text-gray);
   font-size: 1rem;
-  border-bottom: 1px solid var(--border-light);
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.material-item:last-child {
-  border-bottom: none;
-}
-
-.material-item::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--primary-purple);
-  font-weight: bold;
-  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 /* Industries Section */
 .industries-section {
-  margin-bottom: 3rem;
+  margin: 2rem 0;
 }
 
 /* Accordion Layout */
@@ -409,27 +405,32 @@
     font-size: 2.2rem;
   }
   
-  .capabilities-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .cnc-content {
+    padding: 1.5rem 0;
+  }
+  
+  .capabilities-section,
+  .materials-section,
+  .industries-section {
+    margin: 1.5rem 0;
   }
   
   .capability-card {
-    padding: 1.75rem;
+    padding: 1.25rem;
   }
   
-  .capability-icon {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .materials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .material-category {
-    padding: 1.75rem;
+  .materials-card {
+    padding: 1.25rem;
   }
   
   .industry-header {
@@ -458,7 +459,13 @@
   }
   
   .cnc-content {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .capabilities-section,
+  .materials-section,
+  .industries-section {
+    margin: 1.25rem 0;
   }
   
   .hero-title {
@@ -479,7 +486,7 @@
   }
   
   .capability-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .capability-icon {
@@ -501,7 +508,7 @@
   }
   
   .material-category {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .category-title {
