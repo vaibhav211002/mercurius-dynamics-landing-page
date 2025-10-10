@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './ContactPage.css';
 
@@ -6,12 +6,93 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+91',
     phone: '',
-    purpose: 'Sales Inquiry',
+    purpose: 'Service',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+  const phoneInputRef = useRef(null);
+
+  // Country codes list with flags (alphabetically sorted)
+  const countryCodes = [
+    { code: '+93', country: 'Afghanistan', flag: '🇦🇫' },
+    { code: '+54', country: 'Argentina', flag: '🇦🇷' },
+    { code: '+61', country: 'Australia', flag: '🇦🇺' },
+    { code: '+43', country: 'Austria', flag: '🇦🇹' },
+    { code: '+973', country: 'Bahrain', flag: '🇧🇭' },
+    { code: '+880', country: 'Bangladesh', flag: '🇧🇩' },
+    { code: '+32', country: 'Belgium', flag: '🇧🇪' },
+    { code: '+975', country: 'Bhutan', flag: '🇧🇹' },
+    { code: '+359', country: 'Bulgaria', flag: '🇧🇬' },
+    { code: '+55', country: 'Brazil', flag: '🇧🇷' },
+    { code: '+1', country: 'Canada', flag: '🇨🇦' },
+    { code: '+56', country: 'Chile', flag: '🇨🇱' },
+    { code: '+86', country: 'China', flag: '🇨🇳' },
+    { code: '+57', country: 'Colombia', flag: '🇨🇴' },
+    { code: '+385', country: 'Croatia', flag: '🇭🇷' },
+    { code: '+420', country: 'Czech Republic', flag: '🇨🇿' },
+    { code: '+45', country: 'Denmark', flag: '🇩🇰' },
+    { code: '+20', country: 'Egypt', flag: '🇪🇬' },
+    { code: '+372', country: 'Estonia', flag: '🇪🇪' },
+    { code: '+33', country: 'France', flag: '🇫🇷' },
+    { code: '+358', country: 'Finland', flag: '🇫🇮' },
+    { code: '+49', country: 'Germany', flag: '🇩🇪' },
+    { code: '+30', country: 'Greece', flag: '🇬🇷' },
+    { code: '+36', country: 'Hungary', flag: '🇭🇺' },
+    { code: '+91', country: 'India', flag: '🇮🇳' },
+    { code: '+98', country: 'Iran', flag: '🇮🇷' },
+    { code: '+964', country: 'Iraq', flag: '🇮🇶' },
+    { code: '+353', country: 'Ireland', flag: '🇮🇪' },
+    { code: '+972', country: 'Israel', flag: '🇮🇱' },
+    { code: '+39', country: 'Italy', flag: '🇮🇹' },
+    { code: '+81', country: 'Japan', flag: '🇯🇵' },
+    { code: '+962', country: 'Jordan', flag: '🇯🇴' },
+    { code: '+7', country: 'Kazakhstan', flag: '🇰🇿' },
+    { code: '+965', country: 'Kuwait', flag: '🇰🇼' },
+    { code: '+996', country: 'Kyrgyzstan', flag: '🇰🇬' },
+    { code: '+371', country: 'Latvia', flag: '🇱🇻' },
+    { code: '+961', country: 'Lebanon', flag: '🇱🇧' },
+    { code: '+370', country: 'Lithuania', flag: '🇱🇹' },
+    { code: '+352', country: 'Luxembourg', flag: '🇱🇺' },
+    { code: '+60', country: 'Malaysia', flag: '🇲🇾' },
+    { code: '+52', country: 'Mexico', flag: '🇲🇽' },
+    { code: '+977', country: 'Nepal', flag: '🇳🇵' },
+    { code: '+31', country: 'Netherlands', flag: '🇳🇱' },
+    { code: '+64', country: 'New Zealand', flag: '🇳🇿' },
+    { code: '+234', country: 'Nigeria', flag: '🇳🇬' },
+    { code: '+47', country: 'Norway', flag: '🇳🇴' },
+    { code: '+968', country: 'Oman', flag: '🇴🇲' },
+    { code: '+92', country: 'Pakistan', flag: '🇵🇰' },
+    { code: '+51', country: 'Peru', flag: '🇵🇪' },
+    { code: '+48', country: 'Poland', flag: '🇵🇱' },
+    { code: '+351', country: 'Portugal', flag: '🇵🇹' },
+    { code: '+974', country: 'Qatar', flag: '🇶🇦' },
+    { code: '+40', country: 'Romania', flag: '🇷🇴' },
+    { code: '+7', country: 'Russia', flag: '🇷🇺' },
+    { code: '+966', country: 'Saudi Arabia', flag: '🇸🇦' },
+    { code: '+65', country: 'Singapore', flag: '🇸🇬' },
+    { code: '+421', country: 'Slovakia', flag: '🇸🇰' },
+    { code: '+386', country: 'Slovenia', flag: '🇸🇮' },
+    { code: '+27', country: 'South Africa', flag: '🇿🇦' },
+    { code: '+82', country: 'South Korea', flag: '🇰🇷' },
+    { code: '+34', country: 'Spain', flag: '🇪🇸' },
+    { code: '+94', country: 'Sri Lanka', flag: '🇱🇰' },
+    { code: '+46', country: 'Sweden', flag: '🇸🇪' },
+    { code: '+41', country: 'Switzerland', flag: '🇨🇭' },
+    { code: '+963', country: 'Syria', flag: '🇸🇾' },
+    { code: '+992', country: 'Tajikistan', flag: '🇹🇯' },
+    { code: '+66', country: 'Thailand', flag: '🇹🇭' },
+    { code: '+90', country: 'Turkey', flag: '🇹🇷' },
+    { code: '+993', country: 'Turkmenistan', flag: '🇹🇲' },
+    { code: '+971', country: 'UAE', flag: '🇦🇪' },
+    { code: '+380', country: 'Ukraine', flag: '🇺🇦' },
+    { code: '+44', country: 'United Kingdom', flag: '🇬🇧' },
+    { code: '+1', country: 'United States', flag: '🇺🇸' },
+    { code: '+998', country: 'Uzbekistan', flag: '🇺🇿' }
+  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -27,6 +108,32 @@ const ContactPage = () => {
     }));
   };
 
+  const handleCountrySelect = (country) => {
+    setFormData(prev => ({
+      ...prev,
+      countryCode: country.code
+    }));
+    setIsCountryDropdownOpen(false);
+  };
+
+  const getCurrentCountry = () => {
+    return countryCodes.find(country => country.code === formData.countryCode) || countryCodes[0];
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (phoneInputRef.current && !phoneInputRef.current.contains(event.target)) {
+        setIsCountryDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -38,8 +145,9 @@ const ContactPage = () => {
       setFormData({
         name: '',
         email: '',
+        countryCode: '+91',
         phone: '',
-        purpose: 'Sales Inquiry',
+        purpose: 'Service',
         message: ''
       });
     }, 2000);
@@ -115,7 +223,7 @@ const ContactPage = () => {
                 
                 <form onSubmit={handleSubmit} className="contact-form">
                   <div className="form-group">
-                    <label htmlFor="name" className="form-label">Name</label>
+                    <label htmlFor="name" className="form-label">Name <span className="required">*</span></label>
                     <input
                       type="text"
                       id="name"
@@ -129,7 +237,7 @@ const ContactPage = () => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email</label>
+                    <label htmlFor="email" className="form-label">Email <span className="required">*</span></label>
                     <input
                       type="email"
                       id="email"
@@ -143,36 +251,65 @@ const ContactPage = () => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="phone" className="form-label">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="form-control"
-                      placeholder="Your Phone Number"
-                    />
+                    <label htmlFor="phone" className="form-label">Phone Number <span className="required">*</span></label>
+                    <div className="phone-input-container" ref={phoneInputRef}>
+                      <div className="phone-input-wrapper">
+                        <div 
+                          className="country-selector"
+                          onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
+                        >
+                          <span className="flag">{getCurrentCountry().flag}</span>
+                          <span className="country-code">{getCurrentCountry().code}</span>
+                          <span className="dropdown-arrow">▼</span>
+                        </div>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="phone-input"
+                          placeholder="201-555-5555"
+                          required
+                        />
+                      </div>
+                      {isCountryDropdownOpen && (
+                        <div className="country-dropdown">
+                          {countryCodes.map((country, index) => (
+                            <div
+                              key={index}
+                              className={`country-option ${formData.countryCode === country.code ? 'selected' : ''}`}
+                              onClick={() => handleCountrySelect(country)}
+                            >
+                              <span className="flag">{country.flag}</span>
+                              <span className="country-name">{country.country}</span>
+                              <span className="country-code">{country.code}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="purpose" className="form-label">Purpose</label>
+                    <label htmlFor="purpose" className="form-label">Purpose <span className="required">*</span></label>
                     <select
                       id="purpose"
                       name="purpose"
                       value={formData.purpose}
                       onChange={handleInputChange}
                       className="form-control"
+                      required
                     >
-                      <option value="Sales Inquiry">Sales Inquiry</option>
-                      <option value="Support">Support</option>
-                      <option value="Partnership">Partnership</option>
-                      <option value="General Question">General Question</option>
+                      <option value="Service">Service</option>
+                      <option value="Software enquiry">Software enquiry</option>
+                      <option value="Custom Software enquiry">Custom Software enquiry</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="message" className="form-label">Message</label>
+                    <label htmlFor="message" className="form-label">Message <span className="required">*</span></label>
                     <textarea
                       id="message"
                       name="message"

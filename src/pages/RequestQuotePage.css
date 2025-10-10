@@ -142,38 +142,72 @@
 }
 
 .remove-btn {
-  background: #fee2e2;
-  border: 1px solid #fecaca;
-  color: #dc2626;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #e2e8f0;
+  color: #64748b;
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.remove-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
 }
 
 .remove-btn:hover:not(:disabled) {
-  background-color: #fecaca;
-  border-color: #f87171;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.remove-btn:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+.remove-btn:hover:not(:disabled) svg {
+  position: relative;
+  z-index: 1;
+  stroke: #ffffff;
+}
+
+.remove-btn:active:not(:disabled) {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
 }
 
 .remove-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.3;
   cursor: not-allowed;
-  background-color: #f3f4f6;
-  border-color: #e5e7eb;
-  color: #9ca3af;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #94a3b8;
 }
 
 .remove-btn:disabled:hover {
   transform: none;
   box-shadow: none;
+}
+
+.remove-btn:disabled::before {
+  display: none;
 }
 
 .add-new-line-btn {
@@ -420,33 +454,6 @@
   margin-bottom: 0;
 }
 
-/* Agreement Section */
-.agreement-section {
-  margin-bottom: 2rem;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
-  color: var(--text-gray);
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--primary-purple);
-}
-
-.link {
-  color: var(--primary-purple);
-  text-decoration: underline;
-}
-
-.link:hover {
-  color: var(--primary-purple-dark);
-}
 
 /* Submit Button */
 .submit-btn {

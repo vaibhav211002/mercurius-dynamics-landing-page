@@ -43,8 +43,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-title">Contact Us</h4>
             <div className="contact-info">
-              <p>123 Industrial Way</p>
-              <p>Anytown, USA</p>
+              <p>A-67 Ground Floor, Sector 67, Noida </p>
+              <p>Uttar Pradesh 201309, India</p>
               <p>Email: info@mercuriusdynamics.com</p>
               <p>Phone: +91 7838167696</p>
             </div>
