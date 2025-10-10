@@ -215,7 +215,7 @@ const AboutPage = () => {
           </motion.div>
 
           {/* Call to Action */}
-          <motion.div 
+          {/* <motion.div 
             className="cta-section"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
@@ -230,7 +230,7 @@ const AboutPage = () => {
                 Contact Us
               </Link>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </div>

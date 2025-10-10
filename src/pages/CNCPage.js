@@ -189,12 +189,9 @@ const CNCPage = () => {
                    )
                  }
                ].map((industry, index) => (
-                 <motion.div 
+                 <div 
                    key={index}
                    className="industry-accordion-item"
-                   initial={{ opacity: 0, y: 30 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: index * 0.1 }}
                  >
                    <div 
                      className="industry-header"
@@ -221,16 +218,20 @@ const CNCPage = () => {
                      {expandedIndustry === industry.name && (
                        <motion.div
                          className="industry-content"
-                         initial={{ opacity: 0, y: -10 }}
-                         animate={{ opacity: 1, y: 0 }}
-                         exit={{ opacity: 0, y: -10 }}
-                         transition={{ duration: 0.3, ease: 'easeInOut' }}
+                         initial={{ opacity: 0, height: 0 }}
+                         animate={{ opacity: 1, height: 'auto' }}
+                         exit={{ opacity: 0, height: 0 }}
+                         transition={{ 
+                           duration: 0.3, 
+                           ease: 'easeInOut'
+                         }}
+                         style={{ overflow: 'hidden' }}
                        >
                          <p className="industry-description">{industry.description}</p>
                        </motion.div>
                      )}
                    </AnimatePresence>
-                 </motion.div>
+                 </div>
                ))}
              </div>
            </motion.div>
