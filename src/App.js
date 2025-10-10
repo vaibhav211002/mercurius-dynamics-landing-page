@@ -13,6 +13,8 @@ import IndustriesPage from './pages/IndustriesPage';
 import RequestQuotePage from './pages/RequestQuotePage';
 import SparesPage from './pages/SparesPage';
 import CNCPage from './pages/CNCPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 // Import components
 import Header from './components/Header';
@@ -141,6 +143,32 @@ function App() {
                   transition={{ duration: 0.5 }}
                 >
                   <CNCPage />
+                </motion.div>
+              } 
+            />
+            <Route 
+              path="/privacy-policy" 
+              element={
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <PrivacyPolicyPage />
+                </motion.div>
+              } 
+            />
+            <Route 
+              path="/terms-of-service" 
+              element={
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <TermsOfServicePage />
                 </motion.div>
               } 
             />

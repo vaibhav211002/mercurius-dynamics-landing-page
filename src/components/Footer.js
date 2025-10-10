@@ -58,8 +58,8 @@ const Footer = () => {
               © {currentYear} Mercurius Dynamics. All rights reserved.
             </p>
             <div className="footer-bottom-links">
-              <Link to="/privacy">Privacy Policy</Link>
-              <Link to="/terms">Terms of Service</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/terms-of-service">Terms of Service</Link>
               <Link to="/contact">Contact</Link>
             </div>
           </div>

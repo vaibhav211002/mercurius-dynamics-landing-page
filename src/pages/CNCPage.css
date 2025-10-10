@@ -174,6 +174,76 @@
   margin: 0;
 }
 
+/* Key Benefits Section */
+.key-benefits-section {
+  margin: 2rem 0;
+}
+
+.key-benefits-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: white;
+  border: 1px solid rgba(139, 69, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 69, 255, 0.15);
+  border-color: rgba(139, 69, 255, 0.3);
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.benefit-description {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Materials Section */
 .materials-section {
   margin: 2rem 0;
@@ -190,32 +260,70 @@
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
+  padding: 2.5rem;
   border: 1px solid rgba(139, 69, 255, 0.1);
 }
 
 .material-category {
-  text-align: center;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(139, 69, 255, 0.02);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-purple);
 }
 
 .material-category h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-purple);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .material-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
 }
 
 .material-list li {
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.material-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+.materials-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(139, 69, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-purple);
+}
+
+.materials-note p {
+  margin: 0;
+  color: var(--text-dark);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.materials-note strong {
+  color: var(--primary-purple);
 }
 
 /* Industries Section */
@@ -308,15 +416,43 @@
   z-index: 1;
 }
 
-.industry-description {
+.industry-content-wrapper {
   padding: 1.5rem;
+}
+
+.industry-section {
+  margin-bottom: 1.5rem;
+}
+
+.industry-section:last-child {
+  margin-bottom: 0;
+}
+
+.industry-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.industry-subtitle::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  background: var(--primary-purple);
+  margin-right: 0.75rem;
+  border-radius: 2px;
+}
+
+.industry-text {
   margin: 0;
   color: var(--text-gray);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   font-weight: 400;
-  display: block;
-  position: relative;
+  padding-left: 1.5rem;
 }
 
 /* CTA Section */
@@ -410,19 +546,37 @@
     max-width: 100%;
   }
   
-  .col-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  
   .cnc-content {
     padding: 1.5rem 0;
   }
   
   .capabilities-section,
+  .key-benefits-section,
   .materials-section,
   .industries-section {
     margin: 1.5rem 0;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .benefit-card {
+    padding: 1.25rem;
+  }
+  
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .benefit-title {
+    font-size: 1rem;
+  }
+  
+  .benefit-description {
+    font-size: 0.9rem;
   }
   
   .capability-card {
@@ -430,7 +584,20 @@
   }
   
   .materials-card {
+    padding: 2rem;
+  }
+  
+  .material-category {
+    margin-bottom: 1.5rem;
     padding: 1.25rem;
+  }
+  
+  .material-category h3 {
+    font-size: 1.2rem;
+  }
+  
+  .material-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
   
   .industry-header {
@@ -502,23 +669,49 @@
     font-size: 0.95rem;
   }
   
-  .materials-grid {
+  .benefits-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+  
+  .benefit-card {
+    padding: 1rem;
+  }
+  
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .benefit-title {
+    font-size: 0.95rem;
+  }
+  
+  .benefit-description {
+    font-size: 0.85rem;
+  }
+  
+  .materials-card {
+    padding: 1.5rem;
   }
   
   .material-category {
-    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
   }
   
-  .category-title {
-    font-size: 1.25rem;
+  .material-category h3 {
+    font-size: 1.1rem;
   }
   
-  .material-item {
-    font-size: 0.95rem;
-    padding: 0.6rem 0;
-    padding-left: 1.25rem;
+  .material-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  
+  .material-list li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
   }
   
   .industry-header {
@@ -630,6 +823,27 @@
     font-size: 0.9rem;
   }
   
+  .benefits-grid {
+    gap: 0.75rem;
+  }
+  
+  .benefit-card {
+    padding: 0.875rem;
+  }
+  
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .benefit-title {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-description {
+    font-size: 0.8rem;
+  }
+  
   .materials-grid {
     gap: 1rem;
   }
@@ -662,9 +876,21 @@
     font-size: 0.9rem;
   }
   
-  .industry-description {
-    padding: 0 0.875rem 0.875rem;
+  .industry-content-wrapper {
+    padding: 1rem;
+  }
+  
+  .industry-section {
+    margin-bottom: 1rem;
+  }
+  
+  .industry-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .industry-text {
     font-size: 0.85rem;
+    padding-left: 1rem;
   }
   
   .cta-card {

@@ -93,6 +93,81 @@ const CNCPage = () => {
             </div>
           </motion.div>
 
+          {/* Key Benefits Section */}
+          <motion.div 
+            className="key-benefits-section"
+            {...fadeInUp}
+            transition={{ delay: 0.3 }}
+          >
+            <h2>
+              <span className="heading-normal">Key </span>
+              <span className="heading-accent">Benefits</span>
+            </h2>
+            
+            <div className="benefits-grid">
+              {[
+                {
+                  title: "High Precision Cutting",
+                  description: "Tolerances of ±0.003\""
+                },
+                {
+                  title: "Burr-Free Edges",
+                  description: "No secondary finishing required"
+                },
+                {
+                  title: "Low Contact Force",
+                  description: "Ideal for delicate or complex parts"
+                },
+                {
+                  title: "Exceptional Positional Accuracy",
+                  description: "±0.003\" precision"
+                },
+                {
+                  title: "Zero Heat-Affected Zone (HAZ)",
+                  description: "No thermal distortion"
+                },
+                {
+                  title: "Versatile Material Capability",
+                  description: "Suitable for nearly all materials"
+                },
+                {
+                  title: "Minimal Kerf Width",
+                  description: "Maximizes material efficiency"
+                },
+                {
+                  title: "No Distortion or Warping",
+                  description: "Maintains geometric accuracy"
+                },
+                {
+                  title: "Minimal Fixturing Required",
+                  description: "Faster setup, lower cost"
+                },
+                {
+                  title: "Superior Composite Results",
+                  description: "No delamination, no fraying"
+                }
+              ].map((benefit, index) => (
+                <motion.div 
+                  key={index}
+                  className="benefit-card"
+                  {...fadeInUp}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <div className="benefit-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                  <div className="benefit-content">
+                    <h3 className="benefit-title">{benefit.title}</h3>
+                    <p className="benefit-description">{benefit.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Materials Section */}
           <motion.div 
             className="materials-section"
@@ -109,36 +184,88 @@ const CNCPage = () => {
               {...fadeInUp}
             >
               <div className="row">
-                <div className="col col-4">
-                  <h3 className="material-category">Metals</h3>
+                <div className="col col-6">
+                  <h3 className="material-category">Metals & Alloys</h3>
                   <ul className="material-list">
-                    <li>Aluminum</li>
-                    <li>Steel (Stainless, Carbon, Tool)</li>
+                    <li>Stainless Steel</li>
+                    <li>Mild Steel</li>
+                    <li>AR500 Sheets</li>
                     <li>Titanium</li>
-                    <li>Brass & Copper</li>
                     <li>Inconel</li>
+                    <li>Aluminium Alloys</li>
+                    <li>Brass</li>
+                    <li>Copper</li>
+                    <li>Bronze</li>
                   </ul>
                 </div>
-                <div className="col col-4">
-                  <h3 className="material-category">Plastics & Composites</h3>
+                <div className="col col-6">
+                  <h3 className="material-category">Composites & Advanced Materials</h3>
                   <ul className="material-list">
                     <li>Carbon Fiber</li>
+                    <li>Kevlar</li>
+                    <li>Aramid</li>
+                    <li>Dyneema</li>
                     <li>Fiberglass</li>
-                    <li>G10 / FR-4</li>
-                    <li>Acrylic & Polycarbonate</li>
-                    <li>ABS, Nylon, Delrin</li>
+                    <li>FRP Panels</li>
+                    <li>Hybrid Carbon-Kevlar</li>
+                    <li>High-performance composite laminates</li>
                   </ul>
                 </div>
-                <div className="col col-4">
-                  <h3 className="material-category">Other Materials</h3>
+                <div className="col col-6">
+                  <h3 className="material-category">Plastics & Polymers</h3>
                   <ul className="material-list">
-                    <li>Stone (Granite, Marble)</li>
-                    <li>Glass</li>
-                    <li>Ceramics</li>
+                    <li>Acrylic</li>
+                    <li>Polycarbonate</li>
+                    <li>PTFE (Teflon)</li>
+                    <li>Nylon</li>
+                    <li>Delrin (POM)</li>
+                    <li>UHMWPE</li>
+                    <li>ABS</li>
+                    <li>PVC</li>
+                    <li>Rubber</li>
                     <li>Foam</li>
-                    <li>Rubber & Gaskets</li>
+                    <li>Gasket Materials</li>
+                    <li>Insulation</li>
                   </ul>
                 </div>
+                <div className="col col-6">
+                  <h3 className="material-category">Natural & Engineered Stone</h3>
+                  <ul className="material-list">
+                    <li>Granite</li>
+                    <li>Marble</li>
+                    <li>Quartz</li>
+                    <li>Slate</li>
+                    <li>Corian</li>
+                  </ul>
+                </div>
+                <div className="col col-6">
+                  <h3 className="material-category">Glass & Ceramics</h3>
+                  <ul className="material-list">
+                    <li>Glass</li>
+                    <li>Laminated Glass</li>
+                    <li>Porcelain</li>
+                    <li>Ceramic Composites</li>
+                    <li>Silicon</li>
+                  </ul>
+                </div>
+                <div className="col col-6">
+                  <h3 className="material-category">Others (Custom & Specialty Materials)</h3>
+                  <ul className="material-list">
+                    <li>Wood</li>
+                    <li>MDF</li>
+                    <li>Leather</li>
+                    <li>Laminates</li>
+                    <li>ACP (Aluminium Composite Panels)</li>
+                    <li>Phenolic Boards</li>
+                    <li>Bakelite</li>
+                    <li>Technical Fabrics</li>
+                    <li>Specialty Materials</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="materials-note">
+                <p><strong>Note:</strong> We can cut almost any material tailored precisely to your project's design, tolerance, and performance requirements.</p>
               </div>
             </motion.div>
           </motion.div>
@@ -157,31 +284,107 @@ const CNCPage = () => {
                {[
                  { 
                    name: 'Defence', 
-                   description: 'Critical components for defense systems requiring highest precision and quality standards. We maintain strict security protocols and ITAR compliance.',
+                   applications: 'Armour plates, ballistic panels, Kevlar®/Dyneema® components, tactical housings, and transparent armour systems.',
+                   services: 'High-pressure waterjet cutting for armour-grade metals and composites, CNC machining of structural parts, and rapid prototyping for defence assemblies.',
                    icon: (
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                        <path d="M12 2L4 7L12 12L20 7L12 2Z" fill="currentColor"/>
                        <path d="M4 7V17L12 22L20 17V7L12 12L4 7Z" fill="currentColor" opacity="0.6"/>
                      </svg>
                    )
                  },
                  { 
-                   name: 'Aerospace', 
-                   description: 'Lightweight, high-strength parts for aircraft and spacecraft applications. AS9100 certified manufacturing processes ensure reliability.',
+                   name: 'Automotive & Rail', 
+                   applications: 'Brake discs, calipers, chassis and mounting brackets, aluminium prototypes, and automotive glass.',
+                   services: 'CNC machining and waterjet profiling for precision mechanical parts, rapid prototyping, and high-accuracy production for EV, metro, and rail systems.',
                    icon: (
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
+                       <circle cx="7" cy="16" r="2" fill="currentColor"/>
+                       <circle cx="17" cy="16" r="2" fill="currentColor"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Aerospace & Aeronautics', 
+                   applications: 'Titanium housings, propulsion components, carbon/Kevlar® dampers, alloy brackets, and actuation systems.',
+                   services: 'Cold-cut waterjet and CNC machining of thin-wall titanium, Inconel, and composites — delivering zero heat-affected zones and aerospace-grade precision.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
                      </svg>
                    )
                  },
                  { 
-                   name: 'Automotive', 
-                   description: 'Prototypes, tooling, and production parts for automotive industry. From concept to production, we support every phase.',
+                   name: 'Composites & Advanced Materials', 
+                   applications: 'Carbon fiber, Kevlar, Dyneema, FRP/CFRP/GFRP laminates, honeycomb panels, and hybrid composites.',
+                   services: 'Precision CNC and waterjet cutting with no delamination or fraying; specialized profiling and tooling for lightweight structural components.',
                    icon: (
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                       <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-                       <circle cx="7" cy="16" r="2" fill="currentColor"/>
-                       <circle cx="17" cy="16" r="2" fill="currentColor"/>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7H21M3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7M8 11H16M8 15H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Renewable Energy', 
+                   applications: 'Hydrogen fuel cell plates, solar glass panels, wind turbine blades, and composite housings.',
+                   services: 'High-precision CNC machining and waterjet cutting for clean-energy systems including bipolar plates, flow channels, and encapsulation glass.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Electronics & Instrumentation', 
+                   applications: 'Sensor housings, heat sinks, PCB backplates, and enclosures.',
+                   services: 'Fine-tolerance CNC machining and waterjet cutting for metals and polymers used in electronic and control systems.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                       <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
+                       <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Medical & Healthcare', 
+                   applications: 'Titanium implants, surgical instruments, fluid valves, and diagnostic housings.',
+                   services: 'CNC precision machining of biocompatible materials with burr-free finishes suitable for sterile environments.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Architecture & Design', 
+                   applications: 'Architectural facades, decorative panels, inlays, signage, and art installations.',
+                   services: 'Waterjet and CNC cutting of metals, stone, and glass for custom architectural and interior design projects.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M3 21H21V19H3V21ZM5 17H19V15H5V17ZM7 13H17V11H7V13ZM9 9H15V7H9V9ZM11 5H13V3H11V5Z" fill="currentColor"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'Marine', 
+                   applications: 'Corrosion-resistant housings, flanges, fittings, and sealing panels.',
+                   services: 'Waterjet cutting for stainless steel, bronze, and Inconel; CNC machining for marine and offshore assemblies.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                     </svg>
+                   )
+                 },
+                 { 
+                   name: 'R&D & Prototype Manufacturing', 
+                   applications: 'Concept models, experimental parts, jigs, and fixtures for product validation.',
+                   services: 'Rapid CNC prototyping and multi-material waterjet cutting with design optimization support.',
+                   icon: (
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                       <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                      </svg>
                    )
                  }
@@ -224,7 +427,16 @@ const CNCPage = () => {
                          }}
                          style={{ overflow: 'hidden' }}
                        >
-                         <p className="industry-description">{industry.description}</p>
+                         <div className="industry-content-wrapper">
+                           <div className="industry-section">
+                             <h4 className="industry-subtitle">Applications:</h4>
+                             <p className="industry-text">{industry.applications}</p>
+                           </div>
+                           <div className="industry-section">
+                             <h4 className="industry-subtitle">Services:</h4>
+                             <p className="industry-text">{industry.services}</p>
+                           </div>
+                         </div>
                        </motion.div>
                      )}
                    </AnimatePresence>
