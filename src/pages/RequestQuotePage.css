@@ -521,6 +521,123 @@
   }
 }
 
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .rfq-form-section {
+    padding: 1.5rem 0;
+  }
+  
+  .rfq-form {
+    padding: 1.25rem;
+  }
+  
+  .form-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .part-line {
+    padding: 0.8rem;
+  }
+  
+  .form-control {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  .rfq-form-section {
+    padding: 1.25rem 0;
+  }
+  
+  .rfq-form {
+    padding: 1rem;
+  }
+  
+  .form-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1rem;
+  }
+  
+  .part-line {
+    padding: 0.75rem;
+  }
+  
+  .form-control {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+  
+  .rfq-form-section {
+    padding: 1rem 0;
+  }
+  
+  .rfq-form {
+    padding: 0.75rem;
+  }
+  
+  .form-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .form-section h3 {
+    font-size: 0.9rem;
+  }
+  
+  .part-line {
+    padding: 0.6rem;
+  }
+  
+  .form-control {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 2rem;

@@ -379,7 +379,29 @@
   }
 }
 
-/* Small Mobile Devices */
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .logo-text {
+    font-size: 1rem;
+  }
+  
+  .header-content {
+    padding: 0.5rem 0;
+    min-height: 55px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  
+  .hamburger {
+    width: 22px;
+    height: 16px;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
 @media (max-width: 375px) {
   .logo-text {
     font-size: 0.9rem;
@@ -398,6 +420,28 @@
   .hamburger {
     width: 20px;
     height: 14px;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .logo-text {
+    font-size: 0.8rem;
+  }
+  
+  .header-content {
+    padding: 0.3rem 0;
+    min-height: 45px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+  }
+  
+  .hamburger {
+    width: 18px;
+    height: 12px;
   }
 }
 

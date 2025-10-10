@@ -707,14 +707,86 @@
   }
 }
 
-/* Small Mobile Devices */
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .intro-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .intro-section p {
+    font-size: 1rem;
+  }
+  
+  .why-choose-section h3,
+  .brands-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+  
+  .feature-icon {
+    width: 36px;
+    height: 32px;
+  }
+  
+  .feature-card h4 {
+    font-size: 0.9rem;
+  }
+  
+  .search-input-wrapper input {
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .category-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+  
+  .letter-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+  }
+  
+  .brands-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .brand-card {
+    padding: 0.8rem;
+  }
+  
+  .brand-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
 @media (max-width: 375px) {
   .hero-title {
     font-size: 1.6rem;
+    line-height: 1.2;
   }
   
   .hero-description {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   .intro-section h2 {
@@ -737,7 +809,7 @@
   
   .feature-icon {
     width: 32px;
-    height: 32px;
+    height: 28px;
   }
   
   .feature-card h4 {
@@ -752,6 +824,7 @@
   .category-tab {
     padding: 0.4rem 0.75rem;
     font-size: 0.8rem;
+    min-height: 44px;
   }
   
   .letter-badge {
@@ -771,6 +844,76 @@
   
   .brand-name {
     font-size: 0.75rem;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .intro-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .intro-section p {
+    font-size: 0.8rem;
+  }
+  
+  .why-choose-section h3,
+  .brands-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  
+  .feature-icon {
+    width: 28px;
+    height: 24px;
+  }
+  
+  .feature-card h4 {
+    font-size: 0.8rem;
+  }
+  
+  .search-input-wrapper input {
+    padding: 0.5rem 0.6rem 0.5rem 2rem;
+    font-size: 0.8rem;
+  }
+  
+  .category-tab {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    min-height: 44px;
+  }
+  
+  .letter-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+  
+  .brands-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .brand-card {
+    padding: 0.5rem;
+  }
+  
+  .brand-name {
+    font-size: 0.7rem;
   }
 }
 

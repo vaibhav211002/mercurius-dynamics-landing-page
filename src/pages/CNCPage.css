@@ -911,14 +911,67 @@
   }
 }
 
-/* Small Mobile Devices */
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .capability-card {
+    padding: 1.25rem;
+  }
+  
+  .capability-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .capability-title {
+    font-size: 1rem;
+  }
+  
+  .benefit-card {
+    padding: 1rem;
+  }
+  
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .benefit-title {
+    font-size: 0.9rem;
+  }
+  
+  .material-card {
+    padding: 1rem;
+  }
+  
+  .material-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
 @media (max-width: 375px) {
   .hero-title {
     font-size: 1.6rem;
+    line-height: 1.2;
   }
   
   .hero-description {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   .section-title {
@@ -936,6 +989,78 @@
   
   .capability-title {
     font-size: 0.95rem;
+  }
+  
+  .benefit-card {
+    padding: 0.875rem;
+  }
+  
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .benefit-title {
+    font-size: 0.85rem;
+  }
+  
+  .material-card {
+    padding: 0.875rem;
+  }
+  
+  .material-title {
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .capability-card {
+    padding: 0.875rem;
+  }
+  
+  .capability-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .capability-title {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-card {
+    padding: 0.75rem;
+  }
+  
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .benefit-title {
+    font-size: 0.8rem;
+  }
+  
+  .material-card {
+    padding: 0.75rem;
+  }
+  
+  .material-title {
+    font-size: 0.8rem;
   }
   
   .capability-description {

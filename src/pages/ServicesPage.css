@@ -329,6 +329,135 @@
   }
 }
 
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .services-hero {
+    padding: 2.5rem 0;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .services-grid-section,
+  .capabilities-section,
+  .materials-section,
+  .benefits-section {
+    padding: 1.5rem 0;
+  }
+  
+  .service-card {
+    padding: 1.25rem;
+  }
+  
+  .capability-card {
+    padding: 1.25rem;
+  }
+  
+  .materials-card {
+    padding: 1.25rem;
+  }
+  
+  .service-card h3,
+  .capability-card h3,
+  .materials-card h3 {
+    font-size: 1rem;
+  }
+  
+  .service-card p,
+  .capability-card p,
+  .materials-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
+@media (max-width: 375px) {
+  .services-hero {
+    padding: 2rem 0;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  .services-grid-section,
+  .capabilities-section,
+  .materials-section,
+  .benefits-section {
+    padding: 1.25rem 0;
+  }
+  
+  .service-card {
+    padding: 1rem;
+  }
+  
+  .capability-card {
+    padding: 1rem;
+  }
+  
+  .materials-card {
+    padding: 1rem;
+  }
+  
+  .service-card h3,
+  .capability-card h3,
+  .materials-card h3 {
+    font-size: 0.95rem;
+  }
+  
+  .service-card p,
+  .capability-card p,
+  .materials-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .services-hero {
+    padding: 1.5rem 0;
+  }
+  
+  .services-hero h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+  
+  .services-grid-section,
+  .capabilities-section,
+  .materials-section,
+  .benefits-section {
+    padding: 1rem 0;
+  }
+  
+  .service-card {
+    padding: 0.875rem;
+  }
+  
+  .capability-card {
+    padding: 0.875rem;
+  }
+  
+  .materials-card {
+    padding: 0.875rem;
+  }
+  
+  .service-card h3,
+  .capability-card h3,
+  .materials-card h3 {
+    font-size: 0.9rem;
+  }
+  
+  .service-card p,
+  .capability-card p,
+  .materials-card p {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 480px) {
   .services-hero {
     padding: 3rem 0;

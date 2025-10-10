@@ -580,14 +580,82 @@
   }
 }
 
-/* Small Mobile Devices */
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .about-hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .about-content {
+    padding: 2rem 0;
+  }
+  
+  .content-card {
+    padding: 1.25rem;
+  }
+  
+  .content-card h2 {
+    font-size: 1.4rem;
+  }
+  
+  .content-card p {
+    font-size: 0.9rem;
+  }
+  
+  .value-title,
+  .mission-vision-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .mission-vision-card p {
+    font-size: 0.9rem;
+  }
+  
+  .mission-icon,
+  .vision-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .value-card {
+    padding: 1rem;
+  }
+  
+  .value-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .value-title {
+    font-size: 1rem;
+  }
+  
+  .value-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
 @media (max-width: 375px) {
   .about-hero h1 {
     font-size: 1.8rem;
+    line-height: 1.2;
   }
   
   .about-hero p {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .about-content {
@@ -607,41 +675,106 @@
   }
   
   .value-title,
-  .facility-title {
-    font-size: 0.95rem;
+  .mission-vision-card h2 {
+    font-size: 1.2rem;
   }
   
-  .value-description,
-  .facility-description {
-    font-size: 0.8rem;
+  .mission-vision-card p {
+    font-size: 0.85rem;
   }
   
-  .timeline-item {
-    padding-left: 1.75rem !important;
+  .mission-icon,
+  .vision-icon {
+    width: 44px;
+    height: 44px;
   }
   
-  .timeline-content {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .value-card {
     padding: 0.875rem;
   }
   
-  .timeline-title {
-    font-size: 0.95rem;
+  .value-icon {
+    width: 32px;
+    height: 32px;
   }
   
-  .timeline-description {
+  .value-title {
+    font-size: 0.9rem;
+  }
+  
+  .value-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .about-hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  .about-hero p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .about-content {
+    padding: 1.25rem 0;
+  }
+  
+  .content-card {
+    padding: 0.75rem;
+  }
+  
+  .content-card h2 {
+    font-size: 1.1rem;
+  }
+  
+  .content-card p {
     font-size: 0.8rem;
   }
   
-  .cta-card {
-    padding: 1.25rem;
+  .value-title,
+  .mission-vision-card h2 {
+    font-size: 1.1rem;
   }
   
-  .cta-card h2 {
-    font-size: 1.25rem;
+  .mission-vision-card p {
+    font-size: 0.8rem;
   }
   
-  .cta-card p {
-    font-size: 0.95rem;
+  .mission-icon,
+  .vision-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .value-card {
+    padding: 0.75rem;
+  }
+  
+  .value-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .value-title {
+    font-size: 0.85rem;
+  }
+  
+  .value-description {
+    font-size: 0.75rem;
   }
 }
 

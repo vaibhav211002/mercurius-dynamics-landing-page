@@ -294,6 +294,69 @@ textarea.form-control {
   }
 }
 
+/* iPhone 14 Pro Max / Large Android (414px) */
+@media (max-width: 414px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    min-height: 44px; /* Touch target */
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+/* iPhone 14 Pro / Standard Android (375px) */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* iPhone SE / Small Android (320px) */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+  
+  .card {
+    padding: 0.75rem;
+  }
+}
+
 /* Animation Classes */
 .fade-in {
   animation: fadeIn 0.6s ease-in;
