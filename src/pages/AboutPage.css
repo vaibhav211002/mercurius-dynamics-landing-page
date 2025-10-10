@@ -90,10 +90,10 @@
 
 /* Value Items */
 .value-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .value-item:last-child {
@@ -101,8 +101,8 @@
 }
 
 .value-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #6A35E9 0%, #8B5CF6 100%);
   border-radius: 50%;
   display: flex;
@@ -119,15 +119,16 @@
 
 .value-title {
   color: var(--text-dark);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
 .value-description {
   color: var(--text-gray);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
+  font-size: 1.05rem;
 }
 
 /* Core Values Section */

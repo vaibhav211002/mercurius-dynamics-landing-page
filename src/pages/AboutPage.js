@@ -20,28 +20,46 @@ const AboutPage = () => {
 
   const timelineData = [
     {
-      year: '2005',
-      title: 'Founded Mercurius Dynamics',
-      description: 'Started as a small precision engineering company with a vision to revolutionize industrial solutions.',
+      year: '1999',
+      title: 'Nocle Systems and Controls (formerly Elcon Systems)',
+      description: 'Established as an authorized distributor for Rockwell Automation, marking the beginning of our journey in the industrial automation sector.',
       icon: '🏭'
     },
     {
-      year: '2010',
-      title: 'Expanded CNC Machining Capabilities',
-      description: 'Invested in state-of-the-art CNC machinery to meet growing demand for precision components.',
+      year: '2006',
+      title: 'Wissen Automation India',
+      description: 'Founded to deliver advanced automation and control solutions, expanding engineering capabilities across diverse industries.',
       icon: '⚙️'
     },
     {
-      year: '2015',
-      title: 'Launched Industrial Automation Division',
-      description: 'Expanded into automation solutions to help clients optimize their manufacturing processes.',
-      icon: '🤖'
+      year: '2007–2017',
+      title: 'Siemens Partnership',
+      description: 'Wissen Automation served as an official distributor for Siemens, strengthening global partnerships and driving innovation in automation and process control.',
+      icon: '🤝'
     },
     {
-      year: '2020',
-      title: 'Achieved ISO Certification',
-      description: 'Obtained ISO 9001:2015 certification, demonstrating our commitment to quality management.',
-      icon: '✅'
+      year: '2012',
+      title: 'Wissen Automation International Expansion',
+      description: 'Expanded operations to Uganda and the African region, offering automation, panel manufacturing, and engineering solutions on an international scale.',
+      icon: '🌍'
+    },
+    {
+      year: '2015',
+      title: 'Tricolor Automation',
+      description: 'Launched to specialize in custom control systems, process automation, PLC programming, and industrial integration providing end-to-end automation expertise.',
+      icon: '🎨'
+    },
+    {
+      year: '2016',
+      title: 'Bellisimo Solutions',
+      description: 'Founded to focus on CNC machining and waterjet cutting for Aerospace and Defence applications, supporting high-precision R&D and production engineering.',
+      icon: '✈️'
+    },
+    {
+      year: '2025',
+      title: 'Mercurius Dynamics',
+      description: 'Established to unite all wings under one global brand, expanding internationally and driving the next era of industrial innovation and excellence.',
+      icon: '🚀'
     }
   ];
 
@@ -77,14 +95,14 @@ const AboutPage = () => {
                   <span className="heading-accent">Overview</span>
                 </h2>
                 <p>
-                  Mercurius Dynamics has been a trusted partner in precision engineering and industrial automation since 2005. Our journey began with a vision to deliver world-class manufacturing solutions that combine innovation with reliability.
+                  Leveraging decades of engineering heritage and guided by the same leadership that has successfully built and managed industrial ventures for over 20 years, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella  built upon a legacy of reliability, and innovation.
+We are part of a diversified industrial group that includes Wissen Automation India, Tricolor Automation, and Bellisimo Solutions, together forming a robust ecosystem of engineering, automation, manufacturing, and software expertise.
                 </p>
                 <p>
-                  Today, we operate state-of-the-art facilities equipped with advanced CNC machining centers, waterjet cutting systems, and comprehensive automation workshops. Our team of experienced engineers and technicians work tirelessly to exceed client expectations.
-                </p>
-                <p>
-                  We serve diverse industries including aerospace, defense, automotive, energy, and medical devices, providing end-to-end solutions from design to delivery.
-                </p>
+At Mercurius Dynamics, we deliver end-to-end solutions from turnkey engineering, CNC machining, waterjet cutting, and fabrication to process automation, control systems, and enterprise software platforms. Our goal is to empower industries with smarter, more connected, and future-ready operations.
+With a multidisciplinary team of engineers, developers, and system integrators, we serve core sectors including Aerospace, Defence, Oil & Gas, Rail & Metro, Power, Automotive, Cement, Steel, Chemicals, and FMCG providing comprehensive design, development, and implementation services tailored to the evolving demands of modern industry.
+Rooted in the same leadership values that have driven our group’s success for decades.
+</p>
               </div>
             </motion.div>
 
@@ -99,7 +117,7 @@ const AboutPage = () => {
                 
                 <div className="value-item">
                   <div className="value-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
                       <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
                       <circle cx="12" cy="12" r="2" fill="currentColor"/>
@@ -108,14 +126,13 @@ const AboutPage = () => {
                   <div className="value-content">
                     <h3 className="value-title">Mission</h3>
                     <p className="value-description">
-                      To deliver precision-engineered solutions that empower industries to achieve operational excellence
-                    </p>
+To engineer innovative, reliable, and intelligent industrial solutions that combine excellence, and intelligence, empowering industries to achieve greater efficiency, accuracy, and sustainability.                    </p>
                   </div>
                 </div>
 
                 <div className="value-item">
                   <div className="value-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="2"/>
                       <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
                     </svg>
@@ -123,7 +140,21 @@ const AboutPage = () => {
                   <div className="value-content">
                     <h3 className="value-title">Vision</h3>
                     <p className="value-description">
-                      To be the global leader in industrial engineering solutions, recognized for innovation and quality
+                      To be a global leader in integrated engineering and automation, recognized for transforming industries through technology, precision, and innovation, while building smarter, more connected, and future-ready operations.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="value-item">
+                  <div className="value-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div className="value-content">
+                    <h3 className="value-title">Values</h3>
+                    <p className="value-description">
+                      At Mercurius Dynamics, our values define how we build, innovate, and deliver:
                     </p>
                   </div>
                 </div>
@@ -149,7 +180,7 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3>Integrity</h3>
-                <p>Unwavering commitment to ethical business practices</p>
+                <p>Upholding transparency, ethics, and accountability in every partnership.</p>
               </div>
               
               <div className="core-value-card">
@@ -161,7 +192,7 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3>Innovation</h3>
-                <p>Continuous improvement and technological advancement</p>
+                <p>Continuously advancing technologies to redefine industrial efficiency.</p>
               </div>
               
               <div className="core-value-card">
@@ -172,7 +203,7 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3>Quality</h3>
-                <p>Excellence in every project, no compromises</p>
+                <p>Maintaining uncompromising standards across design, manufacturing, and delivery.</p>
               </div>
               
               <div className="core-value-card">
@@ -185,7 +216,7 @@ const AboutPage = () => {
                   </svg>
                 </div>
                 <h3>Collaboration</h3>
-                <p>Partnership approach with clients and suppliers</p>
+                <p>Working closely with clients and partners to craft tailored solutions.</p>
               </div>
             </div>
           </motion.div>
@@ -224,27 +255,30 @@ const AboutPage = () => {
                 <h2>Our Facilities</h2>
                 
                 <div className="facility-item">
-                  <h3 className="facility-title">CNC Machining</h3>
+                  <h3 className="facility-title">Panel Manufacturing</h3>
                   <p className="facility-description">
-                    State-of-the-art facility equipped with advanced machinery to produce precision components 
-                    with tight tolerances and superior surface finishes.
+                    Dedicated facility for industrial control panel fabrication, designed to meet global automation and safety standards. Our panels are engineered for reliability, scalability, and seamless integration with modern control systems.
                   </p>
                 </div>
 
                 <div className="facility-item">
-                  <h3 className="facility-title">Automation Workshops</h3>
+                  <h3 className="facility-title">Software Development Lab </h3>
                   <p className="facility-description">
-                    Designed to create customized automation solutions that optimize industrial processes 
-                    and enhance productivity for our clients.
+A specialized software R&D lab focused on developing industrial control software, SCADA systems, and enterprise platforms
                   </p>
                 </div>
 
                 <div className="facility-item">
-                  <h3 className="facility-title">CNC Units & OEM Spares</h3>
+                  <h3 className="facility-title">Waterjet & CNC Machining</h3>
                   <p className="facility-description">
-                    A comprehensive inventory management system ensuring quick and reliable access to 
-                    essential parts and components.
+High-precision CNC and waterjet machining centers equipped to handle a wide range of metals, composites, and polymers  ensuring tight tolerances, superior finishes, and efficient prototype-to-production workflows.
                   </p>
+                </div>
+
+                <div className="facility-item">
+                  <h3 className="facility-title">Engineering</h3>
+                  <p className="facility-description">
+An in-house engineering and design unit equipped with advanced CAD, simulation, and PLC programming tools, enabling precise mechanical, electrical, and control system electrical layouts turnkey industrial projects.                  </p>
                 </div>
               </div>
             </motion.div>
