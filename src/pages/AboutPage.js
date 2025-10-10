@@ -72,16 +72,18 @@ const AboutPage = () => {
               {...fadeInUp}
             >
               <div className="content-section">
-                <h2>Company Overview</h2>
+                <h2>
+                  <span className="heading-normal">Company </span>
+                  <span className="heading-accent">Overview</span>
+                </h2>
                 <p>
-                  Mercurius Dynamics is a leading provider of CNC machining, industrial automation, valves, and OEM spares. 
-                  We are committed to delivering high-quality, reliable solutions that exceed customer expectations. 
-                  Our state-of-the-art facilities and experienced engineers ensure precision and reliability in every project.
+                  Mercurius Dynamics has been a trusted partner in precision engineering and industrial automation since 2005. Our journey began with a vision to deliver world-class manufacturing solutions that combine innovation with reliability.
                 </p>
                 <p>
-                  From precision engineering to large-scale automation, we provide comprehensive solutions tailored 
-                  to meet the dynamic needs of modern industry. Our focus on innovation, quality, and customer 
-                  satisfaction has made us a trusted partner for businesses across various sectors.
+                  Today, we operate state-of-the-art facilities equipped with advanced CNC machining centers, waterjet cutting systems, and comprehensive automation workshops. Our team of experienced engineers and technicians work tirelessly to exceed client expectations.
+                </p>
+                <p>
+                  We serve diverse industries including aerospace, defense, automotive, energy, and medical devices, providing end-to-end solutions from design to delivery.
                 </p>
               </div>
             </motion.div>
@@ -96,31 +98,97 @@ const AboutPage = () => {
                 <h2>Mission, Vision & Values</h2>
                 
                 <div className="value-item">
-                  <h3 className="value-title">Mission</h3>
-                  <p className="value-description">
-                    To provide cutting-edge industrial solutions that empower our clients to achieve their goals 
-                    and enhance their operational efficiency.
-                  </p>
+                  <div className="value-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div className="value-content">
+                    <h3 className="value-title">Mission</h3>
+                    <p className="value-description">
+                      To deliver precision-engineered solutions that empower industries to achieve operational excellence
+                    </p>
+                  </div>
                 </div>
 
                 <div className="value-item">
-                  <h3 className="value-title">Vision</h3>
-                  <p className="value-description">
-                    To be the preferred partner for industrial solutions, recognized for our quality, innovation, 
-                    and customer focus in the global marketplace.
-                  </p>
-                </div>
-
-                <div className="value-item">
-                  <h3 className="value-title">Values</h3>
-                  <p className="value-description">
-                    Integrity, Innovation, Quality, Customer Focus, and Collaboration guide everything we do, 
-                    ensuring excellence in every project we undertake.
-                  </p>
+                  <div className="value-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                  <div className="value-content">
+                    <h3 className="value-title">Vision</h3>
+                    <p className="value-description">
+                      To be the global leader in industrial engineering solutions, recognized for innovation and quality
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
+
+          {/* Our Core Values */}
+          <motion.div 
+            className="core-values-section"
+            {...fadeInUp}
+            transition={{ delay: 0.2 }}
+          >
+            <h2>
+              <span className="heading-normal">Our Core </span>
+              <span className="heading-accent">Values</span>
+            </h2>
+            <div className="core-values-grid">
+              <div className="core-value-card">
+                <div className="core-value-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h3>Integrity</h3>
+                <p>Unwavering commitment to ethical business practices</p>
+              </div>
+              
+              <div className="core-value-card">
+                <div className="core-value-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h3>Innovation</h3>
+                <p>Continuous improvement and technological advancement</p>
+              </div>
+              
+              <div className="core-value-card">
+                <div className="core-value-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3>Quality</h3>
+                <p>Excellence in every project, no compromises</p>
+              </div>
+              
+              <div className="core-value-card">
+                <div className="core-value-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3>Collaboration</h3>
+                <p>Partnership approach with clients and suppliers</p>
+              </div>
+            </div>
+          </motion.div>
 
           <div className="row">
             {/* Certifications & Compliance */}

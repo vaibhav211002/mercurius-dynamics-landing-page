@@ -33,12 +33,12 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="hero-title">
-              <span className="hero-title-line">Precision</span>
-              <span className="hero-title-line purple">CNC & Waterjet</span>
-              <span className="hero-title-line">Cutting Services</span>
+              <span className="hero-title-line">Engineering the Future</span>
+              <span className="hero-title-line purple"> Industrial Automation</span>
+              <span className="hero-title-line"> CNC Precision & Scalable IT Solutions</span>
             </h1>
             <p className="hero-description">
-              Delivering high-quality, precision-cut parts for diverse industries with advanced CNC machining and waterjet cutting technologies.
+              Delivering turnkey engineering and digital transformation solutions from intelligent automation to precision manufacturing and smart infrastructure.
             </p>
             <Link to="/contact" className="btn btn-secondary hero-cta">
               Contact Us
@@ -57,17 +57,14 @@ const HomePage = () => {
       >
         <h2>About Mercurius Dynamics</h2>
         <p>
-          We are a leading provider of CNC machining, industrial automation, valves, and OEM spares, 
-          committed to delivering high-quality solutions that exceed customer expectations. Our state-of-the-art 
-          facilities and experienced engineers ensure precision and reliability in every project.
+          Leveraging decades of engineering heritage and guided by leadership with over 20 years of proven industrial success, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella built on a legacy of precision, reliability, and innovation.
         </p>
         <p>
-          From precision engineering to large-scale automation, we provide comprehensive solutions tailored 
-          to meet the dynamic needs of modern industry.
+          We are an integrated engineering organization delivering end-to-end solutions from turnkey engineering, CNC machining, waterjet cutting, and fabrication to process automation, control systems, and enterprise software platforms. We bring together mechanical precision and digital intelligence to drive industrial excellence.
         </p>
         <div className="about-contact-btn">
-          <Link to="/contact" className="btn btn-primary">
-            Contact Us
+          <Link to="/about" className="btn btn-primary">
+            Learn More
           </Link>
         </div>
       </motion.div>
@@ -94,15 +91,15 @@ const HomePage = () => {
             {...fadeInUp}
           >
             <h2>Our Products and Services</h2>
-            <p>Delivering a full spectrum of Engineering & Software capabilities.</p>
+            <p>Delivering a full spectrum of Engineering, Manufacturing, and Digital Automation capabilities.</p>
           </motion.div>
           
           <div className="services-grid">
             {[
-              { title: "Automation", description: "Custom systems to enhance efficiency and productivity.", image: automationImage },
+              { title: "Automation", description: "Custom-engineered automation systems that enhance productivity and operational efficiency across diverse industries.", image: automationImage },
               { title: "OEM Spares", description: "Reliable spares to keep your operations running smoothly.", image: oemSparesImage },
-              { title: "CNC & Waterjet", description: "Precision machining and waterjet cutting for complex parts.", image: cncWaterjetImage },
-              { title: "Valves", description: "A wide range of high-quality valves for industrial applications.", image: valvesImage },
+              { title: "CNC & Waterjet", description: "Advanced CNC machining and waterjet cutting services for intricate, high-tolerance components.", image: cncWaterjetImage },
+              { title: "Valves", description: "A comprehensive range of industrial valves engineered for durability, safety, and performance.", image: valvesImage },
             ].map((service, index) => (
               <motion.div 
                 key={index}
@@ -140,7 +137,101 @@ const HomePage = () => {
           <div className="industries-grid">
             {[
               { 
-                name: 'Aerospace', 
+                name: 'Oil & Gas', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Cement & Construction', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 21H21V19H3V21ZM5 17H19V15H5V17ZM7 13H17V11H7V13ZM9 9H15V7H9V9ZM11 5H13V3H11V5Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Paper & Textile', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Metro & Railways', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 16C5 17.1 5.9 18 7 18H17C18.1 18 19 17.1 19 16V8C19 6.9 18.1 6 17 6H7C5.9 6 5 6.9 5 8V16ZM7 8H17V16H7V8Z" fill="currentColor"/>
+                    <circle cx="8" cy="12" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                    <circle cx="16" cy="12" r="1" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Telecommunications', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Metal & Steel', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Power & Renewable Energy', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Automotive & Heavy Machinery', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <circle cx="7" cy="16" r="2" fill="currentColor"/>
+                    <circle cx="17" cy="16" r="2" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Food & Beverage', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9ZM19 9H14V4H5V21H19V9Z" fill="currentColor"/>
+                    <path d="M8 12H16V14H8V12ZM8 16H16V18H8V16Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Pharmaceutical', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Mining', 
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                  </svg>
+                )
+              },
+              { 
+                name: 'Marine', 
                 icon: (
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
@@ -157,36 +248,7 @@ const HomePage = () => {
                 )
               },
               { 
-                name: 'Automotive', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <circle cx="7" cy="16" r="2" fill="currentColor"/>
-                    <circle cx="17" cy="16" r="2" fill="currentColor"/>
-                  </svg>
-                )
-              },
-              { 
-                name: 'Energy', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-                  </svg>
-                )
-              },
-              { 
-                name: 'Composites', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="6" height="6" fill="currentColor" opacity="0.8"/>
-                    <rect x="15" y="3" width="6" height="6" fill="currentColor" opacity="0.6"/>
-                    <rect x="3" y="15" width="6" height="6" fill="currentColor" opacity="0.4"/>
-                    <rect x="15" y="15" width="6" height="6" fill="currentColor" opacity="0.2"/>
-                  </svg>
-                )
-              },
-              { 
-                name: 'Medical', 
+                name: 'Aerospace', 
                 icon: (
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
@@ -194,31 +256,12 @@ const HomePage = () => {
                 )
               },
               { 
-                name: 'Electronics', 
+                name: 'Water & Wastewater Treatment', 
                 icon: (
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
-                    <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                )
-              },
-              { 
-                name: 'Robotics', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="11" width="18" height="11" rx="2" fill="currentColor" opacity="0.8"/>
-                    <circle cx="9" cy="5" r="2" fill="currentColor"/>
-                    <circle cx="15" cy="5" r="2" fill="currentColor"/>
-                    <path d="M9 5H15" stroke="currentColor" strokeWidth="2"/>
-                    <path d="M9 11H15" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                )
-              },
-              { 
-                name: 'Consumer', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" fill="currentColor"/>
+                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9ZM19 9H14V4H5V21H19V9Z" fill="currentColor"/>
+                    <path d="M12 8C15.31 8 18 10.69 18 14C18 17.31 15.31 20 12 20C8.69 20 6 17.31 6 14C6 10.69 8.69 8 12 8ZM12 10C9.79 10 8 11.79 8 14C8 16.21 9.79 18 12 18C14.21 18 16 16.21 16 14C16 11.79 14.21 10 12 10Z" fill="currentColor"/>
+                    <path d="M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z" fill="currentColor"/>
                   </svg>
                 )
               },

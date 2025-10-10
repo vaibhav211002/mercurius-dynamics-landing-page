@@ -46,7 +46,7 @@ const Footer = () => {
               <p>123 Industrial Way</p>
               <p>Anytown, USA</p>
               <p>Email: info@mercuriusdynamics.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Phone: +91 7838167696</p>
             </div>
           </div>
         </div>

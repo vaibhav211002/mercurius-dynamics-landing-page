@@ -63,7 +63,7 @@ const ContactPage = () => {
         </svg>
       ),
       title: 'Phone',
-      values: ['+1 (555) 123-4567', '+1 (555) 123-4568']
+      values: ['+91 7838167696']
     },
     {
       icon: (

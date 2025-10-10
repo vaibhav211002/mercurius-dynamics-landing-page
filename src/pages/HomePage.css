@@ -246,9 +246,8 @@
 /* Grid Layout */
 /* Grid Layout */
 .industries-grid {
-
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 industries (4x4 grid) */
   grid-auto-rows: minmax(100px, auto);  /* height adjusts dynamically */
   gap: 0.6rem; /* spacing between cards */
   justify-content: center;
@@ -481,9 +480,10 @@
   }
   
   .industries-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
     gap: 0.4rem;
     margin-top: 1.25rem;
-    max-width: 500px;
+    max-width: 800px;
   }
   
   .industry-card {
@@ -531,9 +531,10 @@
   }
   
   .industries-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
     gap: 0.35rem;
     margin-top: 1rem;
-    max-width: 400px;
+    max-width: 600px;
   }
   
   .industry-card {
@@ -612,9 +613,10 @@
   }
   
   .industries-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small mobile */
     gap: 0.3rem;
     margin-top: 0.75rem;
-    max-width: 350px;
+    max-width: 500px;
   }
   
   .industry-card {
@@ -674,6 +676,7 @@
   }
   
   .industries-grid {
+    grid-template-columns: 1fr; /* single column on very small screens */
     gap: 0.3rem;
     margin-top: 0.75rem;
   }
