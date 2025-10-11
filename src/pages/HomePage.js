@@ -60,7 +60,7 @@ const HomePage = () => {
           Leveraging decades of engineering heritage and guided by leadership with over 20 years of proven industrial success, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella built on a legacy of precision, reliability, and innovation.
         </p>
         <p>
-          We are an integrated engineering organization delivering end-to-end solutions from turnkey engineering, CNC machining, waterjet cutting, and fabrication to process automation, control systems, and enterprise software platforms. We bring together mechanical precision and digital intelligence to drive industrial excellence.
+          We are an integrated engineering organization delivering end-to-end solutions from turnkey engineering, CNC machining, waterjet cutting, and fabrication to process automation, control systems, and enterprise software platforms.
         </p>
         <div className="about-contact-btn">
           <Link to="/about" className="btn btn-primary">
@@ -90,7 +90,7 @@ const HomePage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Our Products and Services</h2>
+            <h1>Our Products and Services</h1>
             <p>Delivering a full spectrum of Engineering, Manufacturing, and Digital Automation capabilities.</p>
           </motion.div>
           

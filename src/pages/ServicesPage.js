@@ -210,7 +210,7 @@ const ServicesPage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Key Benefits</h2>
+            <h1>Key Benefits</h1>
           </motion.div>
 
           <motion.div 

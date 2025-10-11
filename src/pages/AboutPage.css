@@ -32,9 +32,10 @@
   margin-bottom: 2rem;
 }
 
-.content-section h2 {
+.content-section h1 {
   margin-bottom: 1.5rem;
   color: var(--text-dark);
+  text-align: center;
 }
 
 .heading-normal {
@@ -137,9 +138,10 @@
   text-align: center;
 }
 
-.core-values-section h2 {
+.core-values-section h1 {
   margin-bottom: 3rem;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .core-values-grid {

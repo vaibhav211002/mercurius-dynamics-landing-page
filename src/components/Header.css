@@ -116,6 +116,15 @@
   align-items: center;
 }
 
+.header-cta .btn-primary {
+  padding: 6px 12px; /* Adjusted padding for exact logo height */
+  font-size: 0.8rem; /* Slightly larger font for readability */
+  height: 32px; /* Exact match to logo separator height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;

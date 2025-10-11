@@ -92,7 +92,7 @@ const AboutPage = () => {
               <div className="content-section">
                 <h2>
                   <span className="heading-normal">Company </span>
-                  <span className="heading-accent">Overview</span>
+                  <span className="heading-normal">Overview</span>
                 </h2>
                 <p>
                   Leveraging decades of engineering heritage and guided by the same leadership that has successfully built and managed industrial ventures for over 20 years, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella  built upon a legacy of reliability, and innovation.
@@ -168,10 +168,10 @@ To engineer innovative, reliable, and intelligent industrial solutions that comb
             {...fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <h2>
+            <h1>
               <span className="heading-normal">Our Core </span>
-              <span className="heading-accent">Values</span>
-            </h2>
+              <span className="heading-normal">Values</span>
+            </h1>
             <div className="core-values-grid">
               <div className="core-value-card">
                 <div className="core-value-icon">

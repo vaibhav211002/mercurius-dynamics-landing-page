@@ -44,10 +44,10 @@ const CNCPage = () => {
             {...fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <h2>
+            <h1>
               <span className="heading-normal">Our </span>
-              <span className="heading-accent">Capabilities</span>
-            </h2>
+              <span className="heading-normal">Capabilities</span>
+            </h1>
             <p>A comprehensive suite of tools designed for scalability, security, and superior operational control.</p>
 
             <div className="row">
@@ -99,10 +99,10 @@ const CNCPage = () => {
             {...fadeInUp}
             transition={{ delay: 0.3 }}
           >
-            <h2>
+            <h1>
               <span className="heading-normal">Key </span>
-              <span className="heading-accent">Benefits</span>
-            </h2>
+              <span className="heading-normal">Benefits</span>
+            </h1>
             
             <div className="benefits-grid">
               {[
@@ -174,10 +174,10 @@ const CNCPage = () => {
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            <h2>
+            <h1>
               <span className="heading-normal">Materials We </span>
-              <span className="heading-accent">Cut</span>
-            </h2>
+              <span className="heading-normal">Cut</span>
+            </h1>
 
             <motion.div 
               className="materials-card"
@@ -276,9 +276,9 @@ const CNCPage = () => {
              {...fadeInUp}
              transition={{ delay: 0.6 }}
            >
-             <h2 className="section-title">
-               Industrial <span className="accent-text">Application</span>
-             </h2>
+             <h1 className="section-title">
+               Industrial <span className="heading-normal">Application</span>
+             </h1>
              
              <div className="industries-accordion">
                {[

@@ -442,7 +442,7 @@ const IndustriesPage = () => {
             className="section-header"
             {...fadeInUp}
           >
-            <h2>Industries We Serve (CNC-specific)</h2>
+            <h1>Industries We Serve (CNC-specific)</h1>
           </motion.div>
 
           <div className="row">
