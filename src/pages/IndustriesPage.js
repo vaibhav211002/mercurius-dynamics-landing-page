@@ -3,6 +3,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './IndustriesPage.css';
 
+// Import industry SVG icons
+import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
+import constructionIcon from '../assets/images/svgs/construction-cone.svg';
+import paperIcon from '../assets/images/svgs/paper.svg';
+import metroIcon from '../assets/images/svgs/metro.svg';
+import communicationsIcon from '../assets/images/svgs/communications.svg';
+import metaIcon from '../assets/images/svgs/meta.svg';
+import renewableEnergyIcon from '../assets/images/svgs/renewable-energy.svg';
+import automotiveIcon from '../assets/images/svgs/automotive.svg';
+import fnbIcon from '../assets/images/svgs/fnb.svg';
+import pharmaIcon from '../assets/images/svgs/pharma.svg';
+import miningIcon from '../assets/images/svgs/mining-02.svg';
+import marineIcon from '../assets/images/svgs/marine.svg';
+import defenceIcon from '../assets/images/svgs/defence.svg';
+import aerospaceIcon from '../assets/images/svgs/aerospace.svg';
+import waterTreatmentIcon from '../assets/images/svgs/water treatment.svg';
+
 // Import industry images
 import aerospaceImage from '../assets/images/industries/aerospace.svg';
 import automotiveImage from '../assets/images/industries/automotive.svg';
@@ -34,13 +51,7 @@ const IndustriesPage = () => {
   const industries = [
     {
       name: 'Oil & Gas',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-          <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
-          <circle cx="12" cy="12" r="2" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={oilGasIcon} alt="Oil & Gas" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Automation and electrical systems',
       description: 'Automation and electrical systems in the oil & gas sector require high reliability, safety integrity, and resilience in harsh conditions. Solutions span upstream, midstream, and downstream facilities, enabling safe, efficient, and compliant operations.',
       keyOfferings: [
@@ -59,11 +70,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Cement & Construction',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M3 21H21V19H3V21ZM5 17H19V15H5V17ZM7 13H17V11H7V13ZM9 9H15V7H9V9ZM11 5H13V3H11V5Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={constructionIcon} alt="Cement & Construction" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Continuous, dust-tolerant control',
       description: 'Continuous, dust-tolerant control from raw mill to packing with energy optimization and reliable drives.',
       keyOfferings: [
@@ -79,11 +86,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Paper & Textile',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7H21M3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7M8 11H16M8 15H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      icon: <img src={paperIcon} alt="Paper & Textile" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Stable tension/speed control',
       description: 'Stable tension/speed, recipe control, and utility automation to improve quality and reduce rework.',
       keyOfferings: [
@@ -98,13 +101,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Metro & Railways',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <circle cx="7" cy="16" r="2" fill="currentColor"/>
-          <circle cx="17" cy="16" r="2" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={metroIcon} alt="Metro & Railways" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Centralized supervision',
       description: 'Centralized supervision for stations, depots, and OCCs with fast fault isolation and utility control.',
       keyOfferings: [
@@ -119,11 +116,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Telecommunications',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      icon: <img src={communicationsIcon} alt="Telecommunications" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Carrier-grade uptime',
       description: 'Carrier-grade uptime with tight power/cooling control and network visibility across towers, exchanges, and data centers.',
       keyOfferings: [
@@ -138,14 +131,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Metal & Steel',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <rect x="3" y="3" width="6" height="6" fill="currentColor" opacity="0.8"/>
-          <rect x="15" y="3" width="6" height="6" fill="currentColor" opacity="0.6"/>
-          <rect x="3" y="15" width="6" height="6" fill="currentColor" opacity="0.4"/>
-          <rect x="15" y="15" width="6" height="6" fill="currentColor" opacity="0.2"/>
-        </svg>
-      ),
+      icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Rugged control systems',
       description: 'Rugged control for furnaces, rolling, casting, and heavy material handling with synchronized drives.',
       keyOfferings: [
@@ -161,11 +147,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Power & Renewable Energy',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={renewableEnergyIcon} alt="Power & Renewable Energy" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Coordinated controls',
       description: 'Coordinated controls, protection, and energy visibility for conventional plants and renewables.',
       keyOfferings: [
@@ -180,13 +162,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Automotive & Heavy Machinery',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <circle cx="7" cy="16" r="2" fill="currentColor"/>
-          <circle cx="17" cy="16" r="2" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={automotiveIcon} alt="Automotive & Heavy Machinery" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Motion and test systems',
       description: 'Motion, test, and plant visibility for discrete manufacturing, with integrated quality and traceability.',
       keyOfferings: [
@@ -200,11 +176,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Food & Beverage',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7H21M3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7M8 11H16M8 15H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      icon: <img src={fnbIcon} alt="Food & Beverage" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Hygienic, traceable control',
       description: 'Hygienic, traceable control for batch/continuous processing with utilities optimization.',
       keyOfferings: [
@@ -219,11 +191,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Pharmaceutical',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={pharmaIcon} alt="Pharmaceutical" style={{width: '28px', height: '28px'}} />,
       subtitle: 'GxP-compliant automation',
       description: 'GxP-compliant automation with environmental control, batch integrity, and data traceability.',
       keyOfferings: [
@@ -238,11 +206,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Mining',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={miningIcon} alt="Mining" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Harsh-duty control',
       description: 'Harsh-duty control for crushing, conveying, beneficiation, and dewatering.',
       keyOfferings: [
@@ -256,11 +220,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Marine',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={marineIcon} alt="Marine" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Engine-room automation',
       description: 'Engine-room, utility, and safety automation for vessels and yards with marine-grade hardware.',
       keyOfferings: [
@@ -274,12 +234,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Defence',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L4 7L12 12L20 7L12 2Z" fill="currentColor"/>
-          <path d="M4 7V17L12 22L20 17V7L12 12L4 7Z" fill="currentColor" opacity="0.6"/>
-        </svg>
-      ),
+      icon: <img src={defenceIcon} alt="Defence" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Mission-critical control',
       description: 'Mission-critical control, ruggedized hardware, and traceable manufacturing for labs, ranges, and production.',
       keyOfferings: [
@@ -293,11 +248,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Aerospace',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-        </svg>
-      ),
+      icon: <img src={aerospaceIcon} alt="Aerospace" style={{width: '28px', height: '28px'}} />,
       subtitle: 'High-precision manufacturing',
       description: 'High-precision manufacturing and qualification systems with full traceability.',
       keyOfferings: [
@@ -311,12 +262,7 @@ const IndustriesPage = () => {
     },
     {
       name: 'Water & Wastewater Treatment',
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-          <path d="M8 12h8M12 8v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      ),
+      icon: <img src={waterTreatmentIcon} alt="Water & Wastewater Treatment" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Fail-safe control',
       description: 'Fail-safe control for treatment, pumping, and distribution with remote visibility.',
       keyOfferings: [
@@ -332,7 +278,6 @@ const IndustriesPage = () => {
   ];
 
   const handleCardClick = (industry) => {
-    console.log('Setting selectedIndustry to:', industry.name);
     setSelectedIndustry(industry);
   };
 
@@ -483,7 +428,6 @@ const IndustriesPage = () => {
       </section>
 
       {/* Industry Detail Modal */}
-      {console.log('selectedIndustry state:', selectedIndustry)}
       <AnimatePresence>
         {selectedIndustry && (
           <motion.div 

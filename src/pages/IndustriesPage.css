@@ -70,7 +70,7 @@
 
 /* Expertise Section */
 .expertise-section {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background-color: white;
 }
 
@@ -79,17 +79,18 @@
 }
 
 .section-header h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-header p {
   color: var(--text-gray);
   font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 /* Industries Grid Section */
 .industries-grid-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: var(--background-light-gray);
 }
 
@@ -115,30 +116,48 @@
   text-align: center;
   min-height: 160px;
   justify-content: center;
+  cursor: pointer;
 }
 
 .industry-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(139, 69, 255, 0.15);
-  border-color: rgba(139, 69, 255, 0.3);
+  /* border-color: rgba(139, 69, 255, 0.3); */
 }
 
 .industry-icon {
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  width: 48px;
+  height: 48px;
+  background: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .industry-icon svg {
   width: 28px;
   height: 28px;
+}
+
+.industry-card:hover .industry-icon {
+  background: white;
+  background-color: white;
+  height: 54px;
+  width: 54px;
+  color: black;
+  transform: scale(1.1);
+  transition:linear 5ms;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.industry-card:hover .industry-icon svg {
+  /* filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%); */
 }
 
 .industry-info {
@@ -169,8 +188,8 @@
 }
 
 .industry-card.highlighted {
-  border: 2px solid var(--primary-purple);
-  box-shadow: 0 8px 24px rgba(139, 69, 255, 0.25);
+  /* border: 2px solid var(--primary-purple); */
+  /* box-shadow: 0 8px 24px rgba(139, 69, 255, 0.25); */
   transform: translateY(-4px);
   animation: highlightPulse 2s ease-in-out infinite;
 }
@@ -389,7 +408,7 @@
   
   .industries-grid-section,
   .cnc-industries-section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .industries-grid {
@@ -440,12 +459,12 @@
   }
   
   .expertise-section {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
   
   .industries-grid-section,
   .cnc-industries-section {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
   
   .industries-grid {
@@ -548,12 +567,12 @@
   }
   
   .expertise-section {
-    padding: 1.25rem 0;
+    padding: 0.75rem 0;
   }
   
   .industries-grid-section,
   .cnc-industries-section {
-    padding: 1.25rem 0;
+    padding: 0.75rem 0;
   }
   
   .industries-grid {
@@ -656,12 +675,12 @@
   }
   
   .expertise-section {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   
   .industries-grid-section,
   .cnc-industries-section {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   
   .industries-grid {
