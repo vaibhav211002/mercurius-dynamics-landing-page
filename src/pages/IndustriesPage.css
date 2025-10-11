@@ -126,10 +126,9 @@
 }
 
 .industry-icon {
-  width: 48px;
-  height: 48px;
-  background: white;
-  background-color: rgb(255, 255, 255);
+  width: 54px;
+  height: 54px;
+  background: white !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -137,27 +136,27 @@
   color: black;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-purple);
   transition: all 0.3s ease;
 }
 
 .industry-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 .industry-card:hover .industry-icon {
-  background: white;
-  background-color: white;
-  height: 54px;
-  width: 54px;
+  /* background: white !important; */
+  background-color: purple;
   color: black;
   transform: scale(1.1);
-  transition:linear 5ms;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
+  border: 2px solid var(--primary-purple-light);
 }
 
 .industry-card:hover .industry-icon svg {
-  /* filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%); */
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 .industry-info {
@@ -422,14 +421,14 @@
   }
   
   .industry-icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 0.75rem;
   }
   
   .industry-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
   
   .industry-info h3 {
@@ -478,14 +477,14 @@
   }
   
   .industry-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     margin-bottom: 0.75rem;
   }
   
   .industry-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
   
   .industry-info h3 {
@@ -694,14 +693,14 @@
   }
   
   .industry-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 0.4rem;
   }
   
   .industry-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   
   .industry-info h3 {
