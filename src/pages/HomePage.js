@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 // Import service images
-import cncWaterjetImage from '../assets/images/services/cnc-waterjet.png';
-import automationImage from '../assets/images/services/automation.png';
-import valvesImage from '../assets/images/services/valves.png';
-import oemSparesImage from '../assets/images/services/oem-spares.png';
+import cncWaterjetImage from '../assets/images/services/cnc-waterjet.jpg';
+import automationImage from '../assets/images/services/automations.jpg';
+import valvesImage from '../assets/images/services/valves.jpg';
+import oemSparesImage from '../assets/images/services/automation.jpg';
 import image from '../assets/images/industries/image.png'
 
 
@@ -96,10 +96,10 @@ const HomePage = () => {
           
           <div className="services-grid">
             {[
-              { title: "Automation", description: "Custom-engineered automation systems that enhance productivity and operational efficiency across diverse industries.", image: automationImage },
-              { title: "OEM Spares", description: "Reliable spares to keep your operations running smoothly.", image: oemSparesImage },
-              { title: "CNC & Waterjet", description: "Advanced CNC machining and waterjet cutting services for intricate, high-tolerance components.", image: cncWaterjetImage },
-              { title: "Valves", description: "A comprehensive range of industrial valves engineered for durability, safety, and performance.", image: valvesImage },
+              { title: "Automation", description: "Custom-engineered automation systems that enhance productivity and operational efficiency across diverse industries.", image: automationImage, link: "/services" },
+              { title: "OEM Spares", description: "Reliable spares to keep your operations running smoothly.", image: oemSparesImage, link: "/spares" },
+              { title: "CNC & Waterjet", description: "Advanced CNC machining and waterjet cutting services for intricate, high-tolerance components.", image: cncWaterjetImage, link: "/cnc" },
+              { title: "Valves", description: "A comprehensive range of industrial valves engineered for durability, safety, and performance.", image: valvesImage, link: "/products" },
             ].map((service, index) => (
               <motion.div 
                 key={index}
@@ -113,16 +113,12 @@ const HomePage = () => {
                 <div className="service-content">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
+                  <Link to={service.link} className="btn btn-primary service-learn-more">
+                    Learn More
+                  </Link>
                 </div>
               </motion.div>
             ))}
-          </div>
-          
-          {/* Single Learn More Button */}
-          <div className="services-learn-more">
-            <Link to="/services" className="btn btn-primary">
-              Learn More
-            </Link>
           </div>
         </div>
       </section>
