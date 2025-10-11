@@ -117,9 +117,9 @@
 }
 
 .header-cta .btn-primary {
-  padding: 6px 12px; /* Adjusted padding for exact logo height */
-  font-size: 0.8rem; /* Slightly larger font for readability */
-  height: 32px; /* Exact match to logo separator height */
+  padding: 10px 20px; /* Increased padding for larger button */
+  font-size: 0.9rem; /* Larger font size for better readability */
+  height: 40px; /* Increased height for better presence */
   display: flex;
   align-items: center;
   justify-content: center;

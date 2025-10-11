@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './ServicesPage.css';
+import { Link } from 'react-router-dom';
 
 const ServicesPage = () => {
   const fadeInUp = {
@@ -203,40 +204,18 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="benefits-section">
+      {/* Call to Action Section */}
+      <section className="cta-section">
         <div className="container">
           <motion.div 
-            className="section-header"
+            className="cta-content"
             {...fadeInUp}
           >
-            <h1>Key Benefits</h1>
-          </motion.div>
-
-          <motion.div 
-            className="benefits-grid"
-            variants={staggerChildren}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {[
-              "Exceptional Precision & Tight Tolerances",
-              "No Heat-Affected Zone (HAZ) Preserving Material Integrity",
-              "High-Throughput for Rapid Turnaround",
-              "Perfectly Smooth, Burr-Free Edges",
-              "Ability to Create Complex & Intricate Geometries",
-              "Unmatched Material Versatility"
-            ].map((benefit, index) => (
-              <motion.div 
-                key={index}
-                className="benefit-item"
-                variants={fadeInUp}
-              >
-                <span className="benefit-check">✓</span>
-                <span className="benefit-text">{benefit}</span>
-              </motion.div>
-            ))}
+            <h1>Ready to Start a Project?</h1>
+            <p>Let's discuss how we can help bring your vision to life</p>
+            <Link to="/contact" className="btn btn-primary cta-button">
+              Contact Us Today
+            </Link>
           </motion.div>
         </div>
       </section>

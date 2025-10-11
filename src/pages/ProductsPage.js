@@ -336,12 +336,13 @@ const ProductsPage = () => {
                   "Specialized safety and protection solutions",
                   "Custom cable assemblies and connectivity solutions",
                   "Tailored maintenance and support services"
-                ]
+                ],
+                isCustom: true
               }
               ].map((product, index) => (
                 <motion.div 
                   key={index}
-                  className="automation-product-card"
+                  className={`automation-product-card ${product.isCustom ? 'custom-solutions-card' : ''}`}
                   variants={scaleIn}
                   transition={{ delay: index * 0.1 }}
                 >
@@ -530,12 +531,13 @@ const ProductsPage = () => {
                     "Specialized valve testing and certification",
                     "Custom valve maintenance programs",
                     "Tailored technical support and training"
-                  ]
+                  ],
+                  isCustom: true
                 }
               ].map((product, index) => (
                 <motion.div 
                   key={index}
-                  className="valves-product-card"
+                  className={`valves-product-card ${product.isCustom ? 'custom-solutions-card' : ''}`}
                   variants={scaleIn}
                   transition={{ delay: index * 0.1 }}
                 >
