@@ -295,23 +295,35 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.industry-card:hover .industry-icon,
+.industry-card:hover .industry-icon {
+  background: var(--primary-purple) !important;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
+}
+
+.industry-card:hover .industry-icon img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
 .industry-card:hover .industry-name {
   opacity: 0.3;
 }
 
 
 /* Icon */
-.industry-icon {
-  background: var(--primary-purple);
-  color: white;
+.industries-section .industry-icon {
+  background: white !important;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-purple);
 }
 
 /* Industry Button */
@@ -459,8 +471,8 @@
   }
   
   .industry-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
   
   .industry-name {
@@ -501,8 +513,8 @@
   }
   
   .industry-icon {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
   }
   
   .industry-name {
@@ -552,8 +564,8 @@
   }
   
   .industry-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
   
   .industry-name {
@@ -810,6 +822,14 @@
   .industries-grid {
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* Industry Icon Images */
+.industries-section .industry-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 /* Android Chrome specific fixes */

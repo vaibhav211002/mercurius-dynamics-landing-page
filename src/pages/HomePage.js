@@ -10,6 +10,23 @@ import valvesImage from '../assets/images/services/valves.jpg';
 import oemSparesImage from '../assets/images/services/automation.jpg';
 import image from '../assets/images/industries/image.png'
 
+// Import industry SVG icons
+import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
+import constructionIcon from '../assets/images/svgs/construction-cone.svg';
+import paperIcon from '../assets/images/svgs/paper.svg';
+import metroIcon from '../assets/images/svgs/metro.svg';
+import communicationsIcon from '../assets/images/svgs/communications.svg';
+import metaIcon from '../assets/images/svgs/meta.svg';
+import renewableEnergyIcon from '../assets/images/svgs/renewable-energy.svg';
+import automotiveIcon from '../assets/images/svgs/automotive.svg';
+import fnbIcon from '../assets/images/svgs/fnb.svg';
+import pharmaIcon from '../assets/images/svgs/pharma.svg';
+import miningIcon from '../assets/images/svgs/mining-02.svg';
+import marineIcon from '../assets/images/svgs/marine.svg';
+import defenceIcon from '../assets/images/svgs/defence.svg';
+import aerospaceIcon from '../assets/images/svgs/aerospace.svg';
+import waterTreatmentIcon from '../assets/images/svgs/water treatment.svg';
+
 
 const HomePage = () => {
   const fadeInUp = {
@@ -138,134 +155,64 @@ const HomePage = () => {
             {[
               { 
                 name: 'Oil & Gas', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={oilGasIcon} alt="Oil & Gas" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Cement & Construction', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 21H21V19H3V21ZM5 17H19V15H5V17ZM7 13H17V11H7V13ZM9 9H15V7H9V9ZM11 5H13V3H11V5Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={constructionIcon} alt="Construction" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Paper & Textile', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={paperIcon} alt="Paper & Textile" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Metro & Railways', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 16C5 17.1 5.9 18 7 18H17C18.1 18 19 17.1 19 16V8C19 6.9 18.1 6 17 6H7C5.9 6 5 6.9 5 8V16ZM7 8H17V16H7V8Z" fill="currentColor"/>
-                    <circle cx="8" cy="12" r="1" fill="currentColor"/>
-                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
-                    <circle cx="16" cy="12" r="1" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={metroIcon} alt="Metro & Railways" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Telecommunications', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={communicationsIcon} alt="Telecommunications" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Metal & Steel', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Power & Renewable Energy', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={renewableEnergyIcon} alt="Power & Renewable Energy" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Automotive & Heavy Machinery', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <circle cx="7" cy="16" r="2" fill="currentColor"/>
-                    <circle cx="17" cy="16" r="2" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={automotiveIcon} alt="Automotive & Heavy Machinery" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Food & Beverage', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9ZM19 9H14V4H5V21H19V9Z" fill="currentColor"/>
-                    <path d="M8 12H16V14H8V12ZM8 16H16V18H8V16Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={fnbIcon} alt="Food & Beverage" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Pharmaceutical', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={pharmaIcon} alt="Pharmaceutical" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Mining', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={miningIcon} alt="Mining" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Marine', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={marineIcon} alt="Marine" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Defence', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L4 7L12 12L20 7L12 2Z" fill="currentColor"/>
-                    <path d="M4 7V17L12 22L20 17V7L12 12L4 7Z" fill="currentColor" opacity="0.6"/>
-                  </svg>
-                )
+                icon: <img src={defenceIcon} alt="Defence" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Aerospace', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={aerospaceIcon} alt="Aerospace" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Water & Wastewater Treatment', 
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9ZM19 9H14V4H5V21H19V9Z" fill="currentColor"/>
-                    <path d="M12 8C15.31 8 18 10.69 18 14C18 17.31 15.31 20 12 20C8.69 20 6 17.31 6 14C6 10.69 8.69 8 12 8ZM12 10C9.79 10 8 11.79 8 14C8 16.21 9.79 18 12 18C14.21 18 16 16.21 16 14C16 11.79 14.21 10 12 10Z" fill="currentColor"/>
-                    <path d="M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z" fill="currentColor"/>
-                  </svg>
-                )
+                icon: <img src={waterTreatmentIcon} alt="Water & Wastewater Treatment" style={{width: '20px', height: '20px'}} />
               },
-
             ].map((industry, index) => (
               <motion.div 
                 key={index}
