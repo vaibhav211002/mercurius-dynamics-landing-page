@@ -149,7 +149,10 @@
 .industry-card:hover .industry-icon {
   /* background: white !important; */
   background-color: purple;
+  width: 45px;
+  height: 45px;
   color: black;
+  transition: ease-in;
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
   border: 2px solid var(--primary-purple-light);
