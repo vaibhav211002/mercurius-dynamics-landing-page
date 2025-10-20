@@ -77,6 +77,16 @@
   background-color: var(--background-light-gray);
 }
 
+.about-section .row {
+  align-items: stretch;
+}
+
+.about-section .col-6:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .about-section h2 {
   margin-bottom: 1.5rem;
 }
@@ -85,6 +95,16 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.7;
+}
+
+.about-contact-btn {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.about-section .col-6:last-child {
+  display: flex;
+  align-items: stretch;
 }
 
 .about-image {
@@ -280,14 +300,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid rgba(139, 69, 255, 0.1);
+  border: 2px solid transparent;
+  background-clip: padding-box;
   min-height: 100px;
 }
 
 .industry-card:hover {
   box-shadow: 0 4px 16px rgba(139, 69, 255, 0.15);
   transform: translateY(-2px);
-  border-color: rgba(139, 69, 255, 0.2);
 }
 
 .industry-card:hover .industry-button {
@@ -296,7 +316,7 @@
 }
 
 .industry-card:hover .industry-icon {
-  background: var(--primary-purple) !important;
+  background: var(--gradient-primary) !important;
   color: white;
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
@@ -324,6 +344,7 @@
   font-size: 0.9rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--primary-purple);
+  transition: all 0.3s ease;
 }
 
 /* Industry Button */
@@ -460,6 +481,15 @@
   .industries-section,
   .cta-section {
     padding: 3rem 0;
+  }
+  
+  .about-section .col-6:first-child {
+    margin-bottom: 2rem;
+  }
+  
+  .about-contact-btn {
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
   
   .section-header h1 {

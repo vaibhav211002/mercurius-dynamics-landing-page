@@ -31,6 +31,7 @@ import heroimg from '../assets/images/heroes/image.png'
 const IndustriesPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState(null);
   const [highlightedIndustry, setHighlightedIndustry] = useState(null);
+  const [hasProcessedUrlParam, setHasProcessedUrlParam] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -284,6 +285,7 @@ const IndustriesPage = () => {
   const closeModal = () => {
     setSelectedIndustry(null);
     setHighlightedIndustry(null);
+    setHasProcessedUrlParam(false);
     // Remove URL parameter when modal is closed
     navigate('/industries', { replace: true });
   };
@@ -293,21 +295,23 @@ const IndustriesPage = () => {
     const urlParams = new URLSearchParams(location.search);
     const industryParam = urlParams.get('industry');
     
-    if (industryParam) {
+    if (industryParam && !hasProcessedUrlParam) {
       // Find the industry in our industries array
       const industry = industries.find(ind => ind.name === industryParam);
       if (industry) {
         setHighlightedIndustry(industry.name);
+        setHasProcessedUrlParam(true);
         // Auto-open modal for the highlighted industry
         setTimeout(() => {
           setSelectedIndustry(industry);
         }, 500); // Small delay to allow page to load
       }
-    } else {
-      // Only clear highlighting if no industry parameter (don't clear selectedIndustry)
+    } else if (!industryParam) {
+      // Reset the flag when there's no industry parameter
+      setHasProcessedUrlParam(false);
       setHighlightedIndustry(null);
     }
-  }, [location.search, industries]);
+  }, [location.search, industries, hasProcessedUrlParam]);
 
   return (
     <div className="industries-page">
