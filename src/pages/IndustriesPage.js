@@ -385,13 +385,13 @@ const IndustriesPage = () => {
       </section>
 
       {/* CNC Specific Industries */}
-      <section className="cnc-industries-section">
+      {/* <section className="cnc-industries-section">
         <div className="container">
           <motion.div 
             className="section-header"
             {...fadeInUp}
           >
-            <h1>Industries We Serve (CNC-specific)</h1>
+            <h1>Industries Wes Serve (CNC-specific)</h1>
           </motion.div>
 
           <div className="row">
@@ -429,7 +429,7 @@ const IndustriesPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Industry Detail Modal */}
       <AnimatePresence>
