@@ -903,18 +903,27 @@
   
   .about-content {
     padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
   }
   
   .about-text {
     font-size: 0.6rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   
   .about-contact-btn {
-    padding: 6px 12px;
-    font-size: 0.55rem;
-    margin-top: 0.5rem;
+    padding: 4px 8px;
+    font-size: 0.5rem;
+    margin-top: 0.4rem;
+    min-height: 22px;
   }
   
   /* Services Section */
