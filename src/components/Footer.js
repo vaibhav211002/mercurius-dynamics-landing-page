@@ -29,19 +29,19 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="footer-section">
+          <div className="footer-section footer-section-centered">
             <h4 className="footer-title">Quick Links</h4>
-            <ul className="footer-links">
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/industries">Industries</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
+            <div className="footer-links-grid">
+              <Link to="/services">Services</Link>
+              <Link to="/products">Products</Link>
+              <Link to="/industries">Industries</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
           </div>
 
           {/* Contact Info */}
-          <div className="footer-section">
+          <div className="footer-section footer-section-centered">
             <h4 className="footer-title">Contact Us</h4>
             <div className="contact-info">
               <p>A-67 Ground Floor, Sector 67, Noida </p>
