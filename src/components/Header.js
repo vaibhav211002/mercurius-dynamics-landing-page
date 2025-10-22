@@ -112,10 +112,19 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button 
             className="mobile-menu-btn"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
             aria-label="Toggle mobile menu"
           >
-            <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+            <span className="hamburger">
               <span></span>
               <span></span>
               <span></span>
@@ -148,29 +157,6 @@ const Header = () => {
             >
               {/* Mobile Menu Header */}
               <div className="mobile-nav-header">
-                <div className="mobile-nav-logo">
-                  <div className="logo-abbreviation">MD</div>
-                  <div className="logo-separator"></div>
-                  <div className="logo-full-name">
-                    <div className="logo-line-1">MERCURIUS</div>
-                    <div className="logo-line-2">DYNAMICS</div>
-                  </div>
-                </div>
-                <button 
-                  className="mobile-nav-close"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  aria-label="Close mobile menu"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path 
-                      d="M18 6L6 18M6 6L18 18" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
               </div>
               {navigationItems.map((item) => (
                 <Link
