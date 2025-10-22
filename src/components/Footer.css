@@ -22,18 +22,55 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-logo .logo-icon {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.md-logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.md-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.md-bar {
+  width: 4px;
+  height: 32px;
+  background-color: var(--primary-purple);
+  margin-left: 4px;
+  border-radius: 2px;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo .logo-text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: white;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.logo-tagline {
+  font-size: 0.85rem;
+  color: var(--primary-purple);
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .footer-description {
@@ -155,6 +192,31 @@
     gap: 1.5rem;
   }
   
+  .footer-logo {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-logo .logo-icon {
+    margin-right: 0.75rem;
+  }
+  
+  .md-text {
+    font-size: 1.5rem;
+  }
+  
+  .md-bar {
+    height: 28px;
+  }
+  
+  .footer-logo .logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.8rem;
+  }
+  
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
@@ -178,6 +240,22 @@
   
   .footer-section {
     text-align: center;
+  }
+  
+  .md-text {
+    font-size: 1.3rem;
+  }
+  
+  .md-bar {
+    height: 24px;
+  }
+  
+  .footer-logo .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.75rem;
   }
   
   .footer-section h3 {

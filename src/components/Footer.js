@@ -13,17 +13,18 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <div className="logo-icon">
-                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                  <path 
-                    d="M16 2L20 8H28L24 14L28 20H20L16 26L12 20H4L8 14L4 8H12L16 2Z" 
-                    fill="currentColor"
-                  />
-                </svg>
+                <div className="md-logo">
+                  <span className="md-text">MD</span>
+                  <div className="md-bar"></div>
+                </div>
               </div>
-              <span className="logo-text">Mercurius Dynamics</span>
+              <div className="logo-text-container">
+                <span className="logo-text">Mercurius Dynamics</span>
+                <span className="logo-tagline">Precision Engineering & Automation</span>
+              </div>
             </div>
             <p className="footer-description">
-              Precision Engineering & Automation Excellence
+              Driving innovation in industrial solutions with decades of engineering excellence and cutting-edge technology.
             </p>
           </div>
 

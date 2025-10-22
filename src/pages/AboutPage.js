@@ -83,38 +83,37 @@ const AboutPage = () => {
       {/* Main Content */}
       <section className="about-content">
         <div className="container">
-          <div className="row">
-            {/* Company Overview */}
-            <motion.div 
-              className="col col-6"
-              {...fadeInUp}
-            >
-              <div className="content-section">
-                <h2>
-                  <span className="heading-normal">Company </span>
-                  <span className="heading-normal">Overview</span>
-                </h2>
-                <p>
-                  Leveraging decades of engineering heritage and guided by the same leadership that has successfully built and managed industrial ventures for over 20 years, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella  built upon a legacy of reliability, and innovation.
+          {/* Company Overview - Full Width */}
+          <motion.div 
+            className="company-overview-section"
+            {...fadeInUp}
+          >
+            <div className="content-section">
+              <h2>
+                <span className="heading-normal">Company </span>
+                <span className="heading-normal">Overview</span>
+              </h2>
+              <p>
+                Leveraging decades of engineering heritage and guided by the same leadership that has successfully built and managed industrial ventures for over 20 years, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella  built upon a legacy of reliability, and innovation.
 We are part of a diversified industrial group that includes Wissen Automation India, Tricolor Automation, and Bellisimo Solutions, together forming a robust ecosystem of engineering, automation, manufacturing, and software expertise.
-                </p>
-                <p>
+              </p>
+              <p>
 At Mercurius Dynamics, we deliver end-to-end solutions from turnkey engineering, CNC machining, waterjet cutting, and fabrication to process automation, control systems, and enterprise software platforms. Our goal is to empower industries with smarter, more connected, and future-ready operations.
 With a multidisciplinary team of engineers, developers, and system integrators, we serve core sectors including Aerospace, Defence, Oil & Gas, Rail & Metro, Power, Automotive, Cement, Steel, Chemicals, and FMCG providing comprehensive design, development, and implementation services tailored to the evolving demands of modern industry.
-Rooted in the same leadership values that have driven our group’s success for decades.
+Rooted in the same leadership values that have driven our group's success for decades.
 </p>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* Mission, Vision & Values */}
+          {/* Mission and Vision - Side by Side */}
+          <div className="row">
             <motion.div 
               className="col col-6"
               {...fadeInUp}
               transition={{ delay: 0.1 }}
             >
               <div className="content-card">
-                <h2>Mission, Vision & Values</h2>
-                
+                <h2>Mission</h2>
                 <div className="value-item">
                   <div className="value-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
@@ -124,12 +123,21 @@ Rooted in the same leadership values that have driven our group’s success for 
                     </svg>
                   </div>
                   <div className="value-content">
-                    <h3 className="value-title">Mission</h3>
                     <p className="value-description">
-To engineer innovative, reliable, and intelligent industrial solutions that combine excellence, and intelligence, empowering industries to achieve greater efficiency, accuracy, and sustainability.                    </p>
+                      To engineer innovative, reliable, and intelligent industrial solutions that combine excellence, and intelligence, empowering industries to achieve greater efficiency, accuracy, and sustainability.
+                    </p>
                   </div>
                 </div>
+              </div>
+            </motion.div>
 
+            <motion.div 
+              className="col col-6"
+              {...fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="content-card">
+                <h2>Vision</h2>
                 <div className="value-item">
                   <div className="value-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
@@ -138,23 +146,8 @@ To engineer innovative, reliable, and intelligent industrial solutions that comb
                     </svg>
                   </div>
                   <div className="value-content">
-                    <h3 className="value-title">Vision</h3>
                     <p className="value-description">
                       To be a global leader in integrated engineering and automation, recognized for transforming industries through technology, precision, and innovation, while building smarter, more connected, and future-ready operations.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="value-item">
-                  <div className="value-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div className="value-content">
-                    <h3 className="value-title">Values</h3>
-                    <p className="value-description">
-                      At Mercurius Dynamics, our values define how we build, innovate, and deliver:
                     </p>
                   </div>
                 </div>
@@ -221,39 +214,19 @@ To engineer innovative, reliable, and intelligent industrial solutions that comb
             </div>
           </motion.div>
 
-          <div className="row">
-            {/* Certifications & Compliance */}
-            <motion.div 
-              className="col col-6"
-              {...fadeInUp}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="content-card">
-                <h2>Certifications & Compliance</h2>
-                <p>
-                  We adhere to the highest industry standards and maintain certifications for quality management systems. 
-                  Our commitment to compliance ensures that all our products and services meet stringent regulatory 
-                  requirements and industry best practices.
-                </p>
-                <ul className="certifications-list">
-                  <li>ISO 9001:2015 Quality Management System</li>
-                  <li>AS9100 Aerospace Quality Management</li>
-                  <li>ISO 14001 Environmental Management</li>
-                  <li>OHSAS 18001 Occupational Health & Safety</li>
-                  <li>NADCAP Special Process Certification</li>
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* Our Facilities */}
-            <motion.div 
-              className="col col-6"
-              {...fadeInUp}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="content-card">
-                <h2>Our Facilities</h2>
-                
+          {/* Our Facilities */}
+          <motion.div 
+            className="facilities-section"
+            {...fadeInUp}
+            transition={{ delay: 0.3 }}
+          >
+            <div className="content-section">
+              <h2>
+                <span className="heading-normal">Our </span>
+                <span className="heading-normal">Facilities</span>
+              </h2>
+              
+              <div className="facilities-grid">
                 <div className="facility-item">
                   <h3 className="facility-title">Panel Manufacturing</h3>
                   <p className="facility-description">
@@ -264,27 +237,28 @@ To engineer innovative, reliable, and intelligent industrial solutions that comb
                 <div className="facility-item">
                   <h3 className="facility-title">Software Development Lab </h3>
                   <p className="facility-description">
-A specialized software R&D lab focused on developing industrial control software, SCADA systems, and enterprise platforms
+                    A specialized software R&D lab focused on developing industrial control software, SCADA systems, and enterprise platforms
                   </p>
                 </div>
 
                 <div className="facility-item">
                   <h3 className="facility-title">Waterjet & CNC Machining</h3>
                   <p className="facility-description">
-High-precision CNC and waterjet machining centers equipped to handle a wide range of metals, composites, and polymers  ensuring tight tolerances, superior finishes, and efficient prototype-to-production workflows.
+                    High-precision CNC and waterjet machining centers equipped to handle a wide range of metals, composites, and polymers ensuring tight tolerances, superior finishes, and efficient prototype-to-production workflows.
                   </p>
                 </div>
 
                 <div className="facility-item">
                   <h3 className="facility-title">Engineering</h3>
                   <p className="facility-description">
-An in-house engineering and design unit equipped with advanced CAD, simulation, and PLC programming tools, enabling precise mechanical, electrical, and control system electrical layouts turnkey industrial projects.                  </p>
+                    An in-house engineering and design unit equipped with advanced CAD, simulation, and PLC programming tools, enabling precise mechanical, electrical, and control system electrical layouts turnkey industrial projects.
+                  </p>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
-          {/* Our Journey Timeline */}
+          {/* Our Journey Timeline - Horizontal */}
           <motion.div 
             className="timeline-section"
             {...fadeInUp}
@@ -294,18 +268,26 @@ An in-house engineering and design unit equipped with advanced CAD, simulation, 
               <h2>Our Journey</h2>
             </div>
             
-            <div className="timeline">
+            <div className="horizontal-timeline">
+              <div className="timeline-line"></div>
               {timelineData.map((item, index) => (
                 <motion.div 
                   key={index}
-                  className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+                  className="horizontal-timeline-item"
                   variants={fadeInUp}
                   initial="initial"
                   whileInView="animate"
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: 0.5 + (index * 0.2) }}
                 >
-                  <div className="timeline-content">
+                  <div 
+                    className="timeline-dot"
+                    style={{ animationDelay: `${1.2 + (index * 0.2)}s` }}
+                  ></div>
+                  <div 
+                    className="timeline-content"
+                    style={{ animationDelay: `${1.4 + (index * 0.2)}s` }}
+                  >
                     <div className="timeline-icon">{item.icon}</div>
                     <div className="timeline-year">{item.year}</div>
                     <h3 className="timeline-title">{item.title}</h3>
