@@ -20,7 +20,6 @@ const Footer = () => {
               </div>
               <div className="logo-text-container">
                 <span className="logo-text">Mercurius Dynamics</span>
-                <span className="logo-tagline">Precision Engineering & Automation</span>
               </div>
             </div>
             <p className="footer-description">

@@ -376,17 +376,6 @@ const CNCPage = () => {
                    )
                  },
                  { 
-                   name: 'Marine', 
-                   subtitle: 'Engine-room automation',
-                   applications: 'Corrosion-resistant housings, flanges, fittings, and sealing panels.',
-                   services: 'Waterjet cutting for stainless steel, bronze, and Inconel; CNC machining for marine and offshore assemblies.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                     </svg>
-                   )
-                 },
-                 { 
                    name: 'R&D & Prototype Manufacturing', 
                    subtitle: 'Rapid prototyping',
                    applications: 'Concept models, experimental parts, jigs, and fixtures for product validation.',

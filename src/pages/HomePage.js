@@ -15,14 +15,11 @@ import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
 import constructionIcon from '../assets/images/svgs/construction-cone.svg';
 import paperIcon from '../assets/images/svgs/paper.svg';
 import metroIcon from '../assets/images/svgs/metro.svg';
-import communicationsIcon from '../assets/images/svgs/communications.svg';
 import metaIcon from '../assets/images/svgs/meta.svg';
 import renewableEnergyIcon from '../assets/images/svgs/renewable-energy.svg';
 import automotiveIcon from '../assets/images/svgs/automotive.svg';
 import fnbIcon from '../assets/images/svgs/fnb.svg';
 import pharmaIcon from '../assets/images/svgs/pharma.svg';
-import miningIcon from '../assets/images/svgs/mining-02.svg';
-import marineIcon from '../assets/images/svgs/marine.svg';
 import defenceIcon from '../assets/images/svgs/defence.svg';
 import aerospaceIcon from '../assets/images/svgs/aerospace.svg';
 import waterTreatmentIcon from '../assets/images/svgs/water treatment.svg';
@@ -170,10 +167,6 @@ const HomePage = () => {
                 icon: <img src={metroIcon} alt="Metro & Railways" style={{width: '20px', height: '20px'}} />
               },
               { 
-                name: 'Telecommunications', 
-                icon: <img src={communicationsIcon} alt="Telecommunications" style={{width: '20px', height: '20px'}} />
-              },
-              { 
                 name: 'Metal & Steel', 
                 icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '20px', height: '20px'}} />
               },
@@ -192,14 +185,6 @@ const HomePage = () => {
               { 
                 name: 'Pharmaceutical', 
                 icon: <img src={pharmaIcon} alt="Pharmaceutical" style={{width: '20px', height: '20px'}} />
-              },
-              { 
-                name: 'Mining', 
-                icon: <img src={miningIcon} alt="Mining" style={{width: '20px', height: '20px'}} />
-              },
-              { 
-                name: 'Marine', 
-                icon: <img src={marineIcon} alt="Marine" style={{width: '20px', height: '20px'}} />
               },
               { 
                 name: 'Defence', 

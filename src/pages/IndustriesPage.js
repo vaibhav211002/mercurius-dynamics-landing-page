@@ -8,14 +8,11 @@ import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
 import constructionIcon from '../assets/images/svgs/construction-cone.svg';
 import paperIcon from '../assets/images/svgs/paper.svg';
 import metroIcon from '../assets/images/svgs/metro.svg';
-import communicationsIcon from '../assets/images/svgs/communications.svg';
 import metaIcon from '../assets/images/svgs/meta.svg';
 import renewableEnergyIcon from '../assets/images/svgs/renewable-energy.svg';
 import automotiveIcon from '../assets/images/svgs/automotive.svg';
 import fnbIcon from '../assets/images/svgs/fnb.svg';
 import pharmaIcon from '../assets/images/svgs/pharma.svg';
-import miningIcon from '../assets/images/svgs/mining-02.svg';
-import marineIcon from '../assets/images/svgs/marine.svg';
 import defenceIcon from '../assets/images/svgs/defence.svg';
 import aerospaceIcon from '../assets/images/svgs/aerospace.svg';
 import waterTreatmentIcon from '../assets/images/svgs/water treatment.svg';
@@ -116,21 +113,6 @@ const IndustriesPage = () => {
       ]
     },
     {
-      name: 'Telecommunications',
-      icon: <img src={communicationsIcon} alt="Telecommunications" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Carrier-grade uptime',
-      description: 'Carrier-grade uptime with tight power/cooling control and network visibility across towers, exchanges, and data centers.',
-      keyOfferings: [
-        'SCADA and Network Management System (NMS) for multi-site alarms, KPIs, bandwidth & uptime',
-        'MCC/PCC/IMCC/VFD panels for facility power, CRAC/CRAH, and chilled water pumps',
-        'DG synchronization, AMF, UPS, rectifier/DC-plant monitoring; battery health analytics',
-        'Environmental monitoring (temperature, humidity, smoke, water leak, intrusion)',
-        'SNMP/Modbus/OPC gateways; dashboards, reports, alert policies & escalation',
-        'Power quality, harmonics, and load balancing; bus-duct & PDU integration',
-        'Cabling, installation, I/O tests, commissioning, cyber-hardening, AMC'
-      ]
-    },
-    {
       name: 'Metal & Steel',
       icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '28px', height: '28px'}} />,
       subtitle: 'Rugged control systems',
@@ -203,34 +185,6 @@ const IndustriesPage = () => {
         'Batch/recipe control, e-records, audit trails (21 CFR Part 11 aligned)',
         'Environmental & compressed air quality monitoring; deviation/CAPA reports',
         'Calibration, IQ/OQ support, commissioning, secure backups, AMC'
-      ]
-    },
-    {
-      name: 'Mining',
-      icon: <img src={miningIcon} alt="Mining" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Harsh-duty control',
-      description: 'Harsh-duty control for crushing, conveying, beneficiation, and dewatering.',
-      keyOfferings: [
-        'PLC/SCADA for primary/secondary crushers, screens, mills, thickeners, tailings',
-        'MCC/PCC/IMCC/VFD panels; soft starters; 415 V–11 kV distribution',
-        'Level/flow/vibration/weight instrumentation; belt weighers & sampler control',
-        'Conveyor interlocks, emergency stops, drift/tear detection, chute blocking',
-        'Dust suppression control, water sprays; environmental monitoring & reports',
-        'Electrical installation, calibration, FAT/SAT, commissioning, AMC'
-      ]
-    },
-    {
-      name: 'Marine',
-      icon: <img src={marineIcon} alt="Marine" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Engine-room automation',
-      description: 'Engine-room, utility, and safety automation for vessels and yards with marine-grade hardware.',
-      keyOfferings: [
-        'PLC/SCADA for pumps, bilge, ballast, HVAC, freshwater & sewage systems',
-        'MCC/IMCC/VFD panels; genset synchronization, AMF, shore-to-ship changeover',
-        'Tank level/pressure/temperature instrumentation; alarm & monitoring panels',
-        'Navigation lighting and critical alarms; mimic panels',
-        'Corrosion-resistant enclosures, cable selection, marine wiring standards',
-        'Commissioning, retrofit, documentation, AMC'
       ]
     },
     {
