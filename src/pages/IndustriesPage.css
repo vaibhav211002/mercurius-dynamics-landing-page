@@ -762,3 +762,26 @@
     font-size: 0.8rem;
   }
 }
+
+/* Card Arrow Styles */
+.card-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 24px;
+  height: 24px;
+  background: rgba(139, 69, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.industry-card:hover .card-arrow {
+  opacity: 1;
+  background: rgba(139, 69, 255, 0.15);
+  transform: scale(1.1);
+}

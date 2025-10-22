@@ -371,6 +371,11 @@ const IndustriesPage = () => {
                 transition={{ duration: 0.2 }}
                 onClick={() => handleCardClick(industry)}
               >
+                <div className="card-arrow">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="industry-icon">
                   {industry.icon}
                 </div>

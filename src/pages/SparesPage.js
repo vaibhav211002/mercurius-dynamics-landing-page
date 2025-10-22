@@ -176,7 +176,7 @@ const SparesPage = () => {
             transition={{ delay: 0.4 }}
           >
             <div className="search-header">
-              <h3>Find Your Brand</h3>
+              <h3>Brands We Support (A–Z)</h3>
               <div className="search-stats">
                 <span className="total-brands">Total: {totalBrands} brands</span>
                 {(searchTerm || selectedLetter) && (
@@ -268,7 +268,7 @@ const SparesPage = () => {
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
-            <h3>Brands We Support (A–Z)</h3>
+            {/* <h3>Brands We Support (A–Z)</h3> */}
             
             <div className="brands-listing">
               {filteredBrands.map(([letter, brandList], index) => (

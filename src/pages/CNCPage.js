@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './CNCPage.css';
 
 const CNCPage = () => {
-  const [expandedIndustry, setExpandedIndustry] = useState(null);
+  const [selectedIndustry, setSelectedIndustry] = useState(null);
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -11,8 +11,8 @@ const CNCPage = () => {
     transition: { duration: 0.4 }
   };
 
-  const toggleIndustry = (industryName) => {
-    setExpandedIndustry(expandedIndustry === industryName ? null : industryName);
+  const handleCardClick = (industry) => {
+    setSelectedIndustry(selectedIndustry === industry ? null : industry);
   };
 
   return (
@@ -280,10 +280,11 @@ const CNCPage = () => {
                Industrial <span className="heading-normal">Application</span>
              </h1>
              
-             <div className="industries-accordion">
+             <div className="industries-grid">
                {[
                  { 
                    name: 'Defence', 
+                   subtitle: 'Mission-critical control',
                    applications: 'Armour plates, ballistic panels, Kevlar®/Dyneema® components, tactical housings, and transparent armour systems.',
                    services: 'High-pressure waterjet cutting for armour-grade metals and composites, CNC machining of structural parts, and rapid prototyping for defence assemblies.',
                    icon: (
@@ -295,6 +296,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Automotive & Rail', 
+                   subtitle: 'Motion and test systems',
                    applications: 'Brake discs, calipers, chassis and mounting brackets, aluminium prototypes, and automotive glass.',
                    services: 'CNC machining and waterjet profiling for precision mechanical parts, rapid prototyping, and high-accuracy production for EV, metro, and rail systems.',
                    icon: (
@@ -307,6 +309,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Aerospace & Aeronautics', 
+                   subtitle: 'High-precision manufacturing',
                    applications: 'Titanium housings, propulsion components, carbon/Kevlar® dampers, alloy brackets, and actuation systems.',
                    services: 'Cold-cut waterjet and CNC machining of thin-wall titanium, Inconel, and composites — delivering zero heat-affected zones and aerospace-grade precision.',
                    icon: (
@@ -317,6 +320,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Composites & Advanced Materials', 
+                   subtitle: 'Specialized profiling and tooling',
                    applications: 'Carbon fiber, Kevlar, Dyneema, FRP/CFRP/GFRP laminates, honeycomb panels, and hybrid composites.',
                    services: 'Precision CNC and waterjet cutting with no delamination or fraying; specialized profiling and tooling for lightweight structural components.',
                    icon: (
@@ -327,6 +331,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Renewable Energy', 
+                   subtitle: 'Coordinated controls',
                    applications: 'Hydrogen fuel cell plates, solar glass panels, wind turbine blades, and composite housings.',
                    services: 'High-precision CNC machining and waterjet cutting for clean-energy systems including bipolar plates, flow channels, and encapsulation glass.',
                    icon: (
@@ -337,6 +342,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Electronics & Instrumentation', 
+                   subtitle: 'Fine-tolerance machining',
                    applications: 'Sensor housings, heat sinks, PCB backplates, and enclosures.',
                    services: 'Fine-tolerance CNC machining and waterjet cutting for metals and polymers used in electronic and control systems.',
                    icon: (
@@ -349,6 +355,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Medical & Healthcare', 
+                   subtitle: 'Biocompatible materials',
                    applications: 'Titanium implants, surgical instruments, fluid valves, and diagnostic housings.',
                    services: 'CNC precision machining of biocompatible materials with burr-free finishes suitable for sterile environments.',
                    icon: (
@@ -359,6 +366,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Architecture & Design', 
+                   subtitle: 'Custom architectural projects',
                    applications: 'Architectural facades, decorative panels, inlays, signage, and art installations.',
                    services: 'Waterjet and CNC cutting of metals, stone, and glass for custom architectural and interior design projects.',
                    icon: (
@@ -369,6 +377,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Marine', 
+                   subtitle: 'Engine-room automation',
                    applications: 'Corrosion-resistant housings, flanges, fittings, and sealing panels.',
                    services: 'Waterjet cutting for stainless steel, bronze, and Inconel; CNC machining for marine and offshore assemblies.',
                    icon: (
@@ -379,6 +388,7 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'R&D & Prototype Manufacturing', 
+                   subtitle: 'Rapid prototyping',
                    applications: 'Concept models, experimental parts, jigs, and fixtures for product validation.',
                    services: 'Rapid CNC prototyping and multi-material waterjet cutting with design optimization support.',
                    icon: (
@@ -389,61 +399,71 @@ const CNCPage = () => {
                    )
                  }
                ].map((industry, index) => (
-                 <div 
+                 <motion.div 
                    key={index}
-                   className="industry-accordion-item"
+                   className={`industry-card ${selectedIndustry === industry ? 'selected' : ''}`}
+                   {...fadeInUp}
+                   transition={{ delay: index * 0.05 }}
+                   onClick={() => handleCardClick(industry)}
                  >
-                   <div 
-                     className="industry-header"
-                     onClick={() => toggleIndustry(industry.name)}
-                   >
-                     <div className="industry-title-section">
-                       <div className="industry-icon">{industry.icon}</div>
-                       <span className="industry-name">{industry.name}</span>
-                     </div>
-                     <div className="industry-chevron">
-                       <svg 
-                         width="20" 
-                         height="20" 
-                         viewBox="0 0 24 24" 
-                         fill="none"
-                         className={expandedIndustry === industry.name ? 'rotated' : ''}
-                       >
-                         <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                       </svg>
-                     </div>
+                   <div className="card-arrow">
+                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                       <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                     </svg>
                    </div>
-                   
-                   <AnimatePresence>
-                     {expandedIndustry === industry.name && (
-                       <motion.div
-                         className="industry-content"
-                         initial={{ opacity: 0, height: 0 }}
-                         animate={{ opacity: 1, height: 'auto' }}
-                         exit={{ opacity: 0, height: 0 }}
-                         transition={{ 
-                           duration: 0.3, 
-                           ease: 'easeInOut'
-                         }}
-                         style={{ overflow: 'hidden' }}
-                       >
-                         <div className="industry-content-wrapper">
-                           <div className="industry-section">
-                             <h4 className="industry-subtitle">Applications:</h4>
-                             <p className="industry-text">{industry.applications}</p>
-                           </div>
-                           <div className="industry-section">
-                             <h4 className="industry-subtitle">Services:</h4>
-                             <p className="industry-text">{industry.services}</p>
-                           </div>
-                         </div>
-                       </motion.div>
-                     )}
-                   </AnimatePresence>
-                 </div>
+                   <div className="industry-icon">{industry.icon}</div>
+                   <h3 className="industry-name">{industry.name}</h3>
+                   <p className="industry-subtitle">{industry.subtitle}</p>
+                 </motion.div>
                ))}
              </div>
            </motion.div>
+
+           {/* Industry Information Display */}
+           <AnimatePresence>
+             {selectedIndustry && (
+               <motion.div
+                 className="industry-modal-overlay"
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 exit={{ opacity: 0 }}
+                 transition={{ duration: 0.3 }}
+                 onClick={() => setSelectedIndustry(null)}
+               >
+                 <motion.div
+                   className="industry-modal"
+                   initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                   animate={{ opacity: 1, scale: 1, y: 0 }}
+                   exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                   transition={{ duration: 0.3, ease: "easeOut" }}
+                   onClick={(e) => e.stopPropagation()}
+                 >
+                   <div className="modal-header">
+                     <div className="modal-icon">{selectedIndustry.icon}</div>
+                     <button 
+                       className="modal-close"
+                       onClick={() => setSelectedIndustry(null)}
+                     >
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                       </svg>
+                     </button>
+                   </div>
+                   
+                   <div className="modal-content">
+                     <div className="modal-description">
+                       <h3>Applications</h3>
+                       <p>{selectedIndustry.applications}</p>
+                     </div>
+                     <div className="modal-description">
+                       <h3>Services</h3>
+                       <p>{selectedIndustry.services}</p>
+                     </div>
+                   </div>
+                 </motion.div>
+               </motion.div>
+             )}
+           </AnimatePresence>
 
            {/* CTA Section */}
         </div>
