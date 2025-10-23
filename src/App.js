@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 import './styles/App.css';
 
 // Import pages
@@ -23,11 +24,12 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="App">
-        <Header />
-        <AnimatePresence mode="wait">
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="App">
+          <Header />
+          <AnimatePresence mode="wait">
           <Routes>
             <Route 
               path="/" 
@@ -177,6 +179,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </HelmetProvider>
   );
 }
 

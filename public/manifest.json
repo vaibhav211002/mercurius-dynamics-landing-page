@@ -1,0 +1,16 @@
+{
+  "short_name": "Mercurius Dynamics",
+  "name": "Mercurius Dynamics - Industrial Automation & CNC Precision",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8A2BE2",
+  "background_color": "#ffffff",
+  "description": "Leading provider of CNC machining, industrial automation, valves, and OEM spares. Engineering the future of industrial automation."
+}

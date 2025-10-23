@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -65,6 +66,23 @@ const AboutPage = () => {
 
   return (
     <div className="about-page">
+      <SEOHead
+        title="About Mercurius Dynamics - Industrial Engineering Excellence"
+        description="Learn about Mercurius Dynamics' 20+ years of engineering heritage, delivering CNC precision manufacturing, industrial automation, and digital IT solutions across diverse industries."
+        keywords="about mercurius dynamics, engineering heritage, industrial automation company, CNC manufacturing, automation solutions, engineering excellence, company history, industrial expertise"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Mercurius Dynamics",
+          "description": "Learn about Mercurius Dynamics' engineering heritage and expertise in industrial automation and manufacturing.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Mercurius Dynamics",
+            "foundingDate": "2025",
+            "description": "Next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions."
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">

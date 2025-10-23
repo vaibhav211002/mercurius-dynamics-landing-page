@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 import './ServicesPage.css';
 import { Link } from 'react-router-dom';
 
@@ -132,6 +133,23 @@ const ServicesPage = () => {
 
   return (
     <div className="services-page">
+      <SEOHead
+        title="Industrial Automation Services - Mercurius Dynamics"
+        description="Comprehensive industrial automation services including SCADA systems, PLC programming, panel building, IoT solutions, and predictive analytics. Full-spectrum automation expertise for modern industry."
+        keywords="industrial automation services, SCADA systems, PLC programming, panel building, IoT solutions, predictive analytics, automation engineering, control systems, industrial IoT, automation consulting"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Industrial Automation Services",
+          "description": "Comprehensive industrial automation services including SCADA systems, PLC programming, and IoT solutions.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Mercurius Dynamics"
+          },
+          "serviceType": "Industrial Automation",
+          "areaServed": "India"
+        }}
+      />
       {/* Hero Section */}
       <section className="services-hero">
         <div className="container">

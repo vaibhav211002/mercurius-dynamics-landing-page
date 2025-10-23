@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 
 // Import industry SVG icons from homepage
 import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
@@ -31,6 +32,23 @@ const CNCPage = () => {
 
   return (
     <div className="cnc-page">
+      <SEOHead
+        title="CNC Machining & Waterjet Cutting Services - Mercurius Dynamics"
+        description="Precision CNC machining and waterjet cutting services for aerospace, defence, automotive, and industrial applications. High-quality precision-cut parts with industry-leading turnaround times."
+        keywords="CNC machining, waterjet cutting, precision manufacturing, aerospace machining, defence manufacturing, automotive parts, precision cutting, CNC services, waterjet services, manufacturing solutions"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "CNC Machining & Waterjet Cutting Services",
+          "description": "Precision CNC machining and waterjet cutting services for aerospace, defence, automotive, and industrial applications.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Mercurius Dynamics"
+          },
+          "serviceType": "Manufacturing",
+          "areaServed": "India"
+        }}
+      />
       {/* Hero Section */}
       <section className="cnc-hero">
         <div className="container">
@@ -240,8 +258,6 @@ const CNCPage = () => {
                   <h3 className="material-category">Glass & Ceramics</h3>
                   <ul className="material-list">
                     <li>Glass</li>
-                    <li>Laminated Glass</li>
-                    <li>Porcelain</li>
                     <li>Ceramic Composites</li>
                     <li>Silicon</li>
                   </ul>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 import './ContactPage.css';
 
 const ContactPage = () => {
@@ -193,6 +194,26 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
+      <SEOHead
+        title="Contact Mercurius Dynamics - Industrial Automation Experts"
+        description="Get in touch with Mercurius Dynamics for industrial automation, CNC machining, and engineering solutions. Contact our experts for consultation and project inquiries."
+        keywords="contact mercurius dynamics, industrial automation contact, CNC machining contact, automation consultation, engineering services contact, project inquiry"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Mercurius Dynamics",
+          "description": "Contact page for Mercurius Dynamics industrial automation and engineering services.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Mercurius Dynamics",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "url": "https://mercuriusdynamics.com/contact"
+            }
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">

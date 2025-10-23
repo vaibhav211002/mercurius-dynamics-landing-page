@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import './HomePage.css';
 
 // Import service images
@@ -34,6 +35,23 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
+      <SEOHead
+        title="Mercurius Dynamics - Industrial Automation, CNC Machining & Engineering Solutions"
+        description="Leading provider of CNC machining, industrial automation, valves, and OEM spares. Engineering the future of industrial automation with precision manufacturing and smart infrastructure solutions."
+        keywords="industrial automation, CNC machining, waterjet cutting, automation systems, control panels, PLC programming, SCADA systems, industrial valves, OEM spares, precision manufacturing, engineering solutions, aerospace, defence, oil gas, automotive"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Mercurius Dynamics",
+          "url": "https://mercuriusdynamics.com",
+          "description": "Leading provider of CNC machining, industrial automation, valves, and OEM spares.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://mercuriusdynamics.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
@@ -89,7 +107,7 @@ const HomePage = () => {
         transition={{ delay: 0.2 }}
       >
         <div className="about-image">
-          <img src={image} alt="Facility Image" className="about-img" />
+          <img src={image} alt="Mercurius Dynamics manufacturing facility showcasing industrial automation and CNC machining capabilities" className="about-img" />
         </div>
       </motion.div>
     </div>
@@ -122,7 +140,7 @@ const HomePage = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="service-image">
-                  <img src={service.image} alt={service.title} />
+                  <img src={service.image} alt={`${service.title} services by Mercurius Dynamics - ${service.description}`} />
                 </div>
                 <div className="service-content">
                   <h3>{service.title}</h3>
