@@ -39,7 +39,7 @@
 
 /* Main Content */
 .cnc-content {
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   background-color: white;
   opacity: 1;
   visibility: visible;
@@ -76,7 +76,7 @@
 
 /* Capabilities Section */
 .capabilities-section {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
 }
 
 .capabilities-section h1 {
@@ -429,21 +429,14 @@
 }
 
 .industry-subtitle {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-purple);
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.industry-subtitle::before {
-  content: '';
-  width: 4px;
-  height: 16px;
-  background: var(--primary-purple);
-  margin-right: 0.75rem;
-  border-radius: 2px;
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .industry-text {
@@ -1238,12 +1231,14 @@
 .industry-name {
   font-weight: 700;
   color: var(--text-dark);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 0 0.75rem 0;
   line-height: 1.2;
   transition: all 0.3s ease;
   text-align: center;
   letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .industry-card:hover .industry-name {

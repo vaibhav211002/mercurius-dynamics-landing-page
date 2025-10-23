@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Import industry SVG icons from homepage
+import oilGasIcon from '../assets/images/svgs/Oil & Gas.svg';
+import constructionIcon from '../assets/images/svgs/construction-cone.svg';
+import paperIcon from '../assets/images/svgs/paper.svg';
+import metroIcon from '../assets/images/svgs/metro.svg';
+import metaIcon from '../assets/images/svgs/meta.svg';
+import renewableEnergyIcon from '../assets/images/svgs/renewable-energy.svg';
+import automotiveIcon from '../assets/images/svgs/automotive.svg';
+import fnbIcon from '../assets/images/svgs/fnb.svg';
+import pharmaIcon from '../assets/images/svgs/pharma.svg';
+import defenceIcon from '../assets/images/svgs/defence.svg';
+import aerospaceIcon from '../assets/images/svgs/aerospace.svg';
+import waterTreatmentIcon from '../assets/images/svgs/water treatment.svg';
 import './CNCPage.css';
 
 const CNCPage = () => {
@@ -264,97 +278,55 @@ const CNCPage = () => {
                    name: 'Defence', 
                    applications: 'Armour plates, ballistic panels, Kevlar®/Dyneema® components, tactical housings, and transparent armour systems.',
                    services: 'High-pressure waterjet cutting for armour-grade metals and composites, CNC machining of structural parts, and rapid prototyping for defence assemblies.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M12 2L4 7L12 12L20 7L12 2Z" fill="currentColor"/>
-                       <path d="M4 7V17L12 22L20 17V7L12 12L4 7Z" fill="currentColor" opacity="0.6"/>
-                     </svg>
-                   )
+                   icon: <img src={defenceIcon} alt="Defence" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Automotive & Rail', 
                    applications: 'Brake discs, calipers, chassis and mounting brackets, aluminium prototypes, and automotive glass.',
                    services: 'CNC machining and waterjet profiling for precision mechanical parts, rapid prototyping, and high-accuracy production for EV, metro, and rail systems.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M5 11L6.5 6.5H17.5L19 11M5 11H3V13H5V11M19 11H21V13H19V11M5 11V16H19V11" stroke="currentColor" strokeWidth="2" fill="none"/>
-                       <circle cx="7" cy="16" r="2" fill="currentColor"/>
-                       <circle cx="17" cy="16" r="2" fill="currentColor"/>
-                     </svg>
-                   )
+                   icon: <img src={automotiveIcon} alt="Automotive" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Aerospace & Aeronautics', 
                    applications: 'Titanium housings, propulsion components, carbon/Kevlar® dampers, alloy brackets, and actuation systems.',
                    services: 'Cold-cut waterjet and CNC machining of thin-wall titanium, Inconel, and composites — delivering zero heat-affected zones and aerospace-grade precision.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                     </svg>
-                   )
+                   icon: <img src={aerospaceIcon} alt="Aerospace" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Composites & Advanced Materials', 
                    applications: 'Carbon fiber, Kevlar, Dyneema, FRP/CFRP/GFRP laminates, honeycomb panels, and hybrid composites.',
                    services: 'Precision CNC and waterjet cutting with no delamination or fraying; specialized profiling and tooling for lightweight structural components.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7H21M3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7M8 11H16M8 15H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                     </svg>
-                   )
+                   icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Renewable Energy', 
                    applications: 'Hydrogen fuel cell plates, solar glass panels, wind turbine blades, and composite housings.',
                    services: 'High-precision CNC machining and waterjet cutting for clean-energy systems including bipolar plates, flow channels, and encapsulation glass.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-                     </svg>
-                   )
+                   icon: <img src={renewableEnergyIcon} alt="Renewable Energy" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Electronics & Instrumentation', 
                    applications: 'Sensor housings, heat sinks, PCB backplates, and enclosures.',
                    services: 'Fine-tolerance CNC machining and waterjet cutting for metals and polymers used in electronic and control systems.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                       <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
-                       <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
-                     </svg>
-                   )
+                   icon: <img src={pharmaIcon} alt="Pharmaceutical" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Medical & Healthcare', 
                    applications: 'Titanium implants, surgical instruments, fluid valves, and diagnostic housings.',
                    services: 'CNC precision machining of biocompatible materials with burr-free finishes suitable for sterile environments.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                     </svg>
-                   )
+                   icon: <img src={pharmaIcon} alt="Medical" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'Architecture & Design', 
                    applications: 'Architectural facades, decorative panels, inlays, signage, and art installations.',
                    services: 'Waterjet and CNC cutting of metals, stone, and glass for custom architectural and interior design projects.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <path d="M3 21H21V19H3V21ZM5 17H19V15H5V17ZM7 13H17V11H7V13ZM9 9H15V7H9V9ZM11 5H13V3H11V5Z" fill="currentColor"/>
-                     </svg>
-                   )
+                   icon: <img src={constructionIcon} alt="Construction" style={{width: '24px', height: '24px'}} />
                  },
                  { 
                    name: 'R&D & Prototype Manufacturing', 
                    applications: 'Concept models, experimental parts, jigs, and fixtures for product validation.',
                    services: 'Rapid CNC prototyping and multi-material waterjet cutting with design optimization support.',
-                   icon: (
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                       <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                     </svg>
-                   )
+                   icon: <img src={paperIcon} alt="Paper & Textile" style={{width: '24px', height: '24px'}} />
                  }
                ].map((industry, index) => (
                  <motion.div 
