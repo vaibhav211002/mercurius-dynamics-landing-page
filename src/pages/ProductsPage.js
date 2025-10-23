@@ -444,16 +444,7 @@ const ProductsPage = () => {
                   ]
                 },
                 {
-                  title: "Instrumentation & Accessories",
-                  items: [
-                    "Pressure Gauge Snubber",
-                    "Orifice Plate",
-                    "Ball Valve Seat",
-                    "Nut Bolts & Gaskets"
-                  ]
-                },
-                {
-                  title: "Actuators & Automation",
+                  title: "Actuators",
                   items: [
                     "i-Tork Multi-Turn Actuators",
                     "i-Tork Quarter-Turn Actuators",
@@ -467,18 +458,13 @@ const ProductsPage = () => {
                   ]
                 },
                 {
-                  title: "Custom Solutions",
+                  title: "Instrumentation & Accessories",
                   items: [
-                    "Tailored valve solutions for unique applications",
-                    "Custom valve design and engineering",
-                    "Specialized valve automation systems",
-                    "Bespoke instrumentation and control solutions",
-                    "Custom actuator configurations",
-                    "Specialized valve testing and certification",
-                    "Custom valve maintenance programs",
-                    "Tailored technical support and training"
-                  ],
-                  isCustom: true
+                    "Pressure Gauge Snubber",
+                    "Orifice Plate",
+                    "Ball Valve Seat",
+                    "Nut Bolts & Gaskets"
+                  ]
                 }
               ].map((product, index) => (
                 <motion.div 
