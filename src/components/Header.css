@@ -49,7 +49,7 @@
 
 .logo-separator {
   width: 4px;
-  height: 32px;
+  height: 36px;
   margin-left: 3px;
   background: #7F52FF;
   border-radius: 2px;
@@ -57,11 +57,22 @@
 }
 
 .logo-full-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-line-1,
+.logo-line-2 {
   font-size: 0.9rem;
   font-weight: 700;
   color: #2F3640;
   letter-spacing: 0.5px;
-  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.logo-line-1 {
+  margin-bottom: 1px;
 }
 
 /* Desktop Navigation */

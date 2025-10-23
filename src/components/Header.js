@@ -64,7 +64,10 @@ const Header = () => {
           <Link to="/" className="logo">
             <div className="logo-abbreviation">MD</div>
             <div className="logo-separator"></div>
-            <div className="logo-full-name">Mercurius Dynamics</div>
+            <div className="logo-full-name">
+              <div className="logo-line-1">MERCURIUS</div>
+              <div className="logo-line-2">DYNAMICS</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

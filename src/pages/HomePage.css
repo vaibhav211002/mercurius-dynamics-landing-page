@@ -383,7 +383,6 @@
 }
 
 /* Grid Layout */
-/* Grid Layout */
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 industries (4x4 grid) */
@@ -413,7 +412,7 @@
   cursor: pointer;
   border: 2px solid transparent;
   background-clip: padding-box;
-  min-height: 10px;
+  min-height: 5px;
 }
 
 .industry-card:hover {

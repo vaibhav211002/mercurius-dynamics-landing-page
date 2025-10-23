@@ -53,28 +53,6 @@ const ProductsPage = () => {
   const categories = ['Automation', 'Valves'];
 
   // ✅ Brand Logos per Category
-  const brands = {
-    'Automation': [
-      { name: 'ABB', logo: abblogo },
-      { name: 'Siemens', logo: siemenslogo },
-      { name: 'Rockwell Automation', logo: rockwelllogo },
-      { name: 'Allen-Bradley', logo: allenbradleylogo },
-      { name: 'Schneider', logo: schneider },
-      { name: 'Mitsubishi', logo: mitsubishi },
-    ],
-    'Valves': [
-      { name: 'ABB', logo: abblogo },
-      { name: 'Siemens', logo: siemenslogo },
-      { name: 'Rockwell Automation', logo: rockwelllogo },
-      { name: 'Allen-Bradley', logo: allenbradleylogo },
-      { name: 'Schneider', logo: schneider },
-      { name: 'Mitsubishi', logo: mitsubishi },
-      { name: 'Omron', logo: omron },
-      { name: 'Honeywell', logo: honeywell },
-      { name: 'GE', logo: ge },
-      { name: 'Yaskawa', logo: yaskawa },
-    ]
-  };
 
   // ✅ Product Details
   const productCategories = {
@@ -227,7 +205,6 @@ const ProductsPage = () => {
                   "T-SCADA / Fault Reporting System (FRS)",
                   "Enterprise Asset Management System",
                   "Building Management System (BMS)",
-                  "Energy Management System (EMS)",
                   "EDMS (Electronic Document Management System)",
                   "Network Management System",
                   "Inventory Management System",
@@ -239,10 +216,13 @@ const ProductsPage = () => {
                 title: "Automation Hardware & Control Systems",
                 items: [
                   "PLC Systems",
-                  "DCS Systems (e.g., PAx DCS)",
+                  "DCS Systems",
                   "SCADA / Visualization Solutions",
                   "Foundation Fieldbus Communication",
-                  "Industrial Networking (Ethernet/IP, Modbus TCP/IP, RTU)"
+                  "Industrial Networking (Ethernet/IP, Modbus TCP/IP, RTU)",
+                  "Servo Drives & Motors",
+                  "VFDs & Motion Expansion Modules",
+                  "Stepper Drives & Motion Controllers"
                 ]
               },
               {
@@ -280,22 +260,9 @@ const ProductsPage = () => {
                   "Distribution Transformers",
                   "LT Metering Systems",
                   "Smart Substation Monitoring Systems",
-                  "Vibration Monitoring Systems"
-                ]
-              },
-              {
-                title: "Building & Energy Management Solutions",
-                items: [
-                  "Building Management Systems (BMS)",
-                  "Energy Management Systems (EMS)"
-                ]
-              },
-              {
-                title: "Drives & Motion Products",
-                items: [
-                  "Servo Drives & Motors",
-                  "VFDs & Motion Expansion Modules",
-                  "Stepper Drives & Motion Controllers"
+                  "Vibration Monitoring Systems",
+                  "Surge Protection Devices (SPD)",
+                  "Circuit Breakers (MCB, MCCB)"
                 ]
               },
               {
@@ -307,22 +274,6 @@ const ProductsPage = () => {
                   "Pressure Instruments",
                   "Temperature Instruments",
                   "Energy Meters"
-                ]
-              },
-              {
-                title: "Safety & Protection Equipment",
-                items: [
-                  "Safety Relays, Controllers, Light Curtains",
-                  "Surge Protection Devices (SPD)",
-                  "Circuit Breakers (MCB, MCCB)"
-                ]
-              },
-              {
-                title: "Cables & Connectivity Solutions",
-                items: [
-                  "Industrial Power & Control Cables",
-                  "Communication Cables (Profibus, Ethernet, Fiber Optics)",
-                  "Connectors, Terminal Blocks, Cable Glands"
                 ]
               },
               {
