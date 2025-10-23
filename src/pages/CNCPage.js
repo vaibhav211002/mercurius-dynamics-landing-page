@@ -119,10 +119,6 @@ const CNCPage = () => {
                   description: "Ideal for delicate or complex parts"
                 },
                 {
-                  title: "Exceptional Positional Accuracy",
-                  description: "±0.003\" precision"
-                },
-                {
                   title: "Zero Heat-Affected Zone (HAZ)",
                   description: "No thermal distortion"
                 },
@@ -188,14 +184,10 @@ const CNCPage = () => {
                   <h3 className="material-category">Metals & Alloys</h3>
                   <ul className="material-list">
                     <li>Stainless Steel</li>
-                    <li>Mild Steel</li>
                     <li>AR500 Sheets</li>
                     <li>Titanium</li>
                     <li>Inconel</li>
                     <li>Aluminium Alloys</li>
-                    <li>Brass</li>
-                    <li>Copper</li>
-                    <li>Bronze</li>
                   </ul>
                 </div>
                 <div className="col col-6">
@@ -206,9 +198,7 @@ const CNCPage = () => {
                     <li>Aramid</li>
                     <li>Dyneema</li>
                     <li>Fiberglass</li>
-                    <li>FRP Panels</li>
-                    <li>Hybrid Carbon-Kevlar</li>
-                    <li>High-performance composite laminates</li>
+                    <li>High-performance composites </li>
                   </ul>
                 </div>
                 <div className="col col-6">
@@ -217,15 +207,9 @@ const CNCPage = () => {
                     <li>Acrylic</li>
                     <li>Polycarbonate</li>
                     <li>PTFE (Teflon)</li>
-                    <li>Nylon</li>
                     <li>Delrin (POM)</li>
                     <li>UHMWPE</li>
-                    <li>ABS</li>
                     <li>PVC</li>
-                    <li>Rubber</li>
-                    <li>Foam</li>
-                    <li>Gasket Materials</li>
-                    <li>Insulation</li>
                   </ul>
                 </div>
                 <div className="col col-6">
@@ -252,13 +236,7 @@ const CNCPage = () => {
                   <h3 className="material-category">Others (Custom & Specialty Materials)</h3>
                   <ul className="material-list">
                     <li>Wood</li>
-                    <li>MDF</li>
-                    <li>Leather</li>
-                    <li>Laminates</li>
-                    <li>ACP (Aluminium Composite Panels)</li>
-                    <li>Phenolic Boards</li>
                     <li>Bakelite</li>
-                    <li>Technical Fabrics</li>
                     <li>Specialty Materials</li>
                   </ul>
                 </div>
@@ -284,7 +262,6 @@ const CNCPage = () => {
                {[
                  { 
                    name: 'Defence', 
-                   subtitle: 'Mission-critical control',
                    applications: 'Armour plates, ballistic panels, Kevlar®/Dyneema® components, tactical housings, and transparent armour systems.',
                    services: 'High-pressure waterjet cutting for armour-grade metals and composites, CNC machining of structural parts, and rapid prototyping for defence assemblies.',
                    icon: (
@@ -296,7 +273,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Automotive & Rail', 
-                   subtitle: 'Motion and test systems',
                    applications: 'Brake discs, calipers, chassis and mounting brackets, aluminium prototypes, and automotive glass.',
                    services: 'CNC machining and waterjet profiling for precision mechanical parts, rapid prototyping, and high-accuracy production for EV, metro, and rail systems.',
                    icon: (
@@ -309,7 +285,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Aerospace & Aeronautics', 
-                   subtitle: 'High-precision manufacturing',
                    applications: 'Titanium housings, propulsion components, carbon/Kevlar® dampers, alloy brackets, and actuation systems.',
                    services: 'Cold-cut waterjet and CNC machining of thin-wall titanium, Inconel, and composites — delivering zero heat-affected zones and aerospace-grade precision.',
                    icon: (
@@ -320,7 +295,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Composites & Advanced Materials', 
-                   subtitle: 'Specialized profiling and tooling',
                    applications: 'Carbon fiber, Kevlar, Dyneema, FRP/CFRP/GFRP laminates, honeycomb panels, and hybrid composites.',
                    services: 'Precision CNC and waterjet cutting with no delamination or fraying; specialized profiling and tooling for lightweight structural components.',
                    icon: (
@@ -331,7 +305,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Renewable Energy', 
-                   subtitle: 'Coordinated controls',
                    applications: 'Hydrogen fuel cell plates, solar glass panels, wind turbine blades, and composite housings.',
                    services: 'High-precision CNC machining and waterjet cutting for clean-energy systems including bipolar plates, flow channels, and encapsulation glass.',
                    icon: (
@@ -342,7 +315,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Electronics & Instrumentation', 
-                   subtitle: 'Fine-tolerance machining',
                    applications: 'Sensor housings, heat sinks, PCB backplates, and enclosures.',
                    services: 'Fine-tolerance CNC machining and waterjet cutting for metals and polymers used in electronic and control systems.',
                    icon: (
@@ -355,7 +327,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Medical & Healthcare', 
-                   subtitle: 'Biocompatible materials',
                    applications: 'Titanium implants, surgical instruments, fluid valves, and diagnostic housings.',
                    services: 'CNC precision machining of biocompatible materials with burr-free finishes suitable for sterile environments.',
                    icon: (
@@ -366,7 +337,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'Architecture & Design', 
-                   subtitle: 'Custom architectural projects',
                    applications: 'Architectural facades, decorative panels, inlays, signage, and art installations.',
                    services: 'Waterjet and CNC cutting of metals, stone, and glass for custom architectural and interior design projects.',
                    icon: (
@@ -377,7 +347,6 @@ const CNCPage = () => {
                  },
                  { 
                    name: 'R&D & Prototype Manufacturing', 
-                   subtitle: 'Rapid prototyping',
                    applications: 'Concept models, experimental parts, jigs, and fixtures for product validation.',
                    services: 'Rapid CNC prototyping and multi-material waterjet cutting with design optimization support.',
                    icon: (
