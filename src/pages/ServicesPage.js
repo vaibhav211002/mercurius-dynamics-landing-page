@@ -38,16 +38,18 @@ const ServicesPage = () => {
 
   const services = [
     {
-      title: "Proprietary Solutions & Asset Intelligence",
+      title: "Proprietary Solutions ",
       items: [
         "T-SCADA / Fault Reporting System Development & Integration",
         "Asset Management Software Deployment",
         "EDMS (Electronic Document Management System)",
         "Building Management System (BMS)",
+        "Energy Management System (EMS)",
         "Network Management System (NMS)",
         "Inventory Management System",
         "Custom IoT Solutions & Remote Monitoring",
-        "Real-time Data Acquisition & Analytics"
+        "Real-time Data Acquisition & Analytics",
+        "Consulting Services",
       ]
     },
     {
@@ -90,6 +92,7 @@ const ServicesPage = () => {
         "Installation & Site Supervision",
         "Commissioning & Site Acceptance Testing",
         "Retrofitting & Migration of Legacy Systems",
+        "Legacy Valve Modernization",
         "AMC (Annual Maintenance Contract)",
         "Troubleshooting & Remote Support"
       ]
@@ -117,14 +120,6 @@ const ServicesPage = () => {
       ]
     },
     {
-      title: "Building & Energy Management",
-      items: [
-        "Building Management Systems (BMS)",
-        "Energy Management Systems (EMS)",
-        "Smart Substation Integration"
-      ]
-    },
-    {
       title: "Field Services",
       items: [
         "Electrical & Instrumentation (E&I) Field Services",
@@ -137,23 +132,6 @@ const ServicesPage = () => {
         "Condition-Based Monitoring",
         "Predictive Analytics using Machine Learning",
         "Data-Driven Asset Optimization"
-      ]
-    },
-    {
-      title: "Consulting Services",
-      items: [
-        "Digital Transformation Consulting",
-        "Energy Optimization Studies",
-        "Safety & Reliability Consulting"
-      ]
-    },
-    {
-      title: "Valve Services",
-      items: [
-        "Automation & Actuation: Pneumatic / Electric Actuator Integration, Linear Power Cylinders, Positioners",
-        "Testing & Calibration: Pressure & Leakage Testing (ANSI / DIN / BS Standards), Stroke Testing, Safety Valve Certification",
-        "Retrofitting & Upgradation: Manual-to-Automated Conversions, Legacy Valve Modernization",
-        "Maintenance & Support: On-site Valve Inspection, Condition Monitoring, Seal / Trim Replacement, Emergency Repair"
       ]
     }
   ];

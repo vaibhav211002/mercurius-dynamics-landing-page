@@ -429,6 +429,10 @@ const CNCPage = () => {
                  >
                    <div className="modal-header">
                      <div className="modal-icon">{selectedIndustry.icon}</div>
+                     <div className="modal-title-section">
+                       <h2>{selectedIndustry.name}</h2>
+                       <p className="modal-subtitle">{selectedIndustry.subtitle}</p>
+                     </div>
                      <button 
                        className="modal-close"
                        onClick={() => setSelectedIndustry(null)}
