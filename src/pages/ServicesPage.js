@@ -52,7 +52,7 @@ const ServicesPage = () => {
       ]
     },
     {
-      title: "Automation & Robotics Services",
+      title: "Automation & Robotics Engineering",
       items: [
         "Process Automation (Batch, Continuous & Discrete)",
         "Machine Control Systems",
