@@ -378,14 +378,6 @@ const ProductsPage = () => {
                   ]
                 },
                 {
-                  title: "Special Application Valves",
-                  items: [
-                    "Diaphragm Control Valve",
-                    "TC End Diaphragm Valve",
-                    "Hydraulic Control Valve"
-                  ]
-                },
-                {
                   title: "Needle & Manifold Valves",
                   items: [
                     "Needle Valve",
@@ -393,14 +385,12 @@ const ProductsPage = () => {
                   ]
                 },
                 {
-                  title: "Tank Bottom Valves",
+                  title: "Special Application Valves",
                   items: [
-                    "Flush Bottom Tank Valve"
-                  ]
-                },
-                {
-                  title: "Plug Valves",
-                  items: [
+                    "Diaphragm Control Valve",
+                    "TC End Diaphragm Valve",
+                    "Hydraulic Control Valve",
+                    "Flush Bottom Tank Valve",
                     "Plug Valve"
                   ]
                 },
