@@ -47,8 +47,7 @@ const ServicesPage = () => {
         "Energy Management System (EMS)",
         "Network Management System (NMS)",
         "Inventory Management System",
-        "Custom IoT Solutions & Remote Monitoring",
-        "Real-time Data Acquisition & Analytics",
+        "Custom IoT Solutions",
         "Consulting Services",
       ]
     },
@@ -129,7 +128,7 @@ const ServicesPage = () => {
     {
       title: "Predictive Analytics & AI / ML",
       items: [
-        "Condition-Based Monitoring",
+        "Real-time Data Acquisition & Analytics",
         "Predictive Analytics using Machine Learning",
         "Data-Driven Asset Optimization"
       ]

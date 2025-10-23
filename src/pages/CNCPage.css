@@ -1300,6 +1300,8 @@
   justify-content: space-between;
   padding: 1.5rem;
   border-bottom: 1px solid rgba(139, 69, 255, 0.1);
+  gap: 1rem;
+  min-height: 80px;
 }
 
 .modal-icon {
@@ -1322,14 +1324,19 @@
 
 .modal-title-section {
   flex: 1;
+  margin: 0 1rem;
+  min-width: 0;
 }
 
 .modal-title-section h2 {
   color: var(--text-dark);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .modal-subtitle {
