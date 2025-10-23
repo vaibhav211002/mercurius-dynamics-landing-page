@@ -281,12 +281,7 @@ const ProductsPage = () => {
                 items: [
                   "Tailored automation systems for unique requirements",
                   "Custom software development and integration",
-                  "Specialized control panel design and manufacturing",
-                  "Bespoke industrial networking solutions",
-                  "Custom instrumentation and measurement systems",
-                  "Specialized safety and protection solutions",
-                  "Custom cable assemblies and connectivity solutions",
-                  "Tailored maintenance and support services"
+                  "Specialized control panel design and manufacturing"
                 ],
                 isCustom: true
               }
