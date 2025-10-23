@@ -52,7 +52,7 @@ const ServicesPage = () => {
       ]
     },
     {
-      title: "Automation Engineering Services",
+      title: "Automation & Robotics Services",
       items: [
         "Process Automation (Batch, Continuous & Discrete)",
         "Machine Control Systems",
@@ -60,7 +60,10 @@ const ServicesPage = () => {
         "SCADA, PLC & DCS Programming",
         "HMI / Operator Interface Design",
         "Foundation Fieldbus & Protocol Integration",
-        "Industrial Network Design & Commissioning"
+        "Industrial Network Design & Commissioning",
+        "Robotics & Pick-and-Place Automation",
+        "Vision-Based Robotic Systems",
+        "Motion Planning & Optimization"
       ]
     },
     {
@@ -101,21 +104,13 @@ const ServicesPage = () => {
       items: [
         "Safety Interlock Systems",
         "Servo Drive Configuration",
+        "Servo Drive & Motion Control Solutions",
         "Load Sharing Systems",
         "DG Synchronization & AMF Logic",
         "APFC Control Logic Setup",
         "Soft Starter Implementation",
         "Busduct / Rising Main Systems Setup",
         "SIS / ESD Integration & Safety Instrumented Systems"
-      ]
-    },
-    {
-      title: "Robotics & Automation",
-      items: [
-        "Robotics & Pick-and-Place Automation",
-        "Servo Drive & Motion Control Solutions",
-        "Vision-Based Robotic Systems",
-        "Motion Planning & Optimization"
       ]
     },
     {
