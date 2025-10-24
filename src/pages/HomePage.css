@@ -404,7 +404,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.1rem;
-  padding: 0.2rem;
+  padding: 0.1rem;
   background: white;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -413,6 +413,7 @@
   border: 2px solid transparent;
   background-clip: padding-box;
   min-height: 5px;
+  /* height: 5px; */
 }
 
 .industry-card:hover {
