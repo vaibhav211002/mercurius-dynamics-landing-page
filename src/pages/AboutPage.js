@@ -24,43 +24,36 @@ const AboutPage = () => {
       year: '1999',
       title: 'Nocle Systems and Controls (formerly Elcon Systems)',
       description: 'Established as an authorized distributor for Rockwell Automation, marking the beginning of our journey in the industrial automation sector.',
-      icon: '🏭'
     },
     {
       year: '2006',
       title: 'Wissen Automation India',
       description: 'Founded to deliver advanced automation and control solutions, expanding engineering capabilities across diverse industries.',
-      icon: '⚙️'
     },
     {
       year: '2007–2017',
       title: 'Siemens Partnership',
       description: 'Wissen Automation served as an official distributor for Siemens, strengthening global partnerships and driving innovation in automation and process control.',
-      icon: '🤝'
     },
     {
       year: '2012',
       title: 'Wissen Automation International Expansion',
       description: 'Expanded operations to Uganda and the African region, offering automation, panel manufacturing, and engineering solutions on an international scale.',
-      icon: '🌍'
     },
     {
       year: '2015',
       title: 'Tricolor Automation',
       description: 'Launched to specialize in custom control systems, process automation, PLC programming, and industrial integration providing end-to-end automation expertise.',
-      icon: '🎨'
     },
     {
       year: '2016',
       title: 'Bellisimo Solutions',
       description: 'Founded to focus on CNC machining and waterjet cutting for Aerospace and Defence applications, supporting high-precision R&D and production engineering.',
-      icon: '✈️'
     },
     {
       year: '2025',
       title: 'Mercurius Dynamics',
       description: 'Established to unite all wings under one global brand, expanding internationally and driving the next era of industrial innovation and excellence.',
-      icon: '🚀'
     }
   ];
 
@@ -107,10 +100,10 @@ const AboutPage = () => {
             {...fadeInUp}
           >
             <div className="content-section">
-              <h2>
+              <h1>
                 <span className="heading-normal">Company </span>
                 <span className="heading-normal">Overview</span>
-              </h2>
+              </h1>
               <p>
                 Leveraging decades of engineering heritage and guided by the same leadership that has successfully built and managed industrial ventures for over 20 years, Mercurius Dynamics stands as a next-generation enterprise uniting CNC precision manufacturing, industrial automation, and digital IT solutions under one umbrella  built upon a legacy of reliability, and innovation.
 We are part of a diversified industrial group that includes Wissen Automation India, Tricolor Automation, and Bellisimo Solutions, together forming a robust ecosystem of engineering, automation, manufacturing, and software expertise.
@@ -179,10 +172,11 @@ Rooted in the same leadership values that have driven our group's success for de
             {...fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <h1>
-              <span className="heading-normal">Our Core </span>
-              <span className="heading-normal">Values</span>
-            </h1>
+            <h2 className='heading-normal'>
+              {/* <span className="heading-normal">Our Core </span>
+              <span className="heading-normal">Values</span> */}
+              Our Core Values
+            </h2>
             <div className="core-values-grid">
               <div className="core-value-card">
                 <div className="core-value-icon">
@@ -283,7 +277,7 @@ Rooted in the same leadership values that have driven our group's success for de
             transition={{ delay: 0.4 }}
           >
             <div className="section-header">
-              <h2>Our Journey</h2>
+              <h1>Our Journey</h1>
             </div>
             
             <div className="horizontal-timeline">

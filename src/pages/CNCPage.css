@@ -215,7 +215,7 @@
 .benefit-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -271,12 +271,14 @@
   background: rgba(139, 69, 255, 0.02);
   border-radius: 12px;
   border-left: 4px solid var(--primary-purple);
+  color: black;
+
 }
 
 .material-category h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--primary-purple);
+  color: black;
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -381,7 +383,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
@@ -454,7 +456,7 @@
 }
 
 .cta-card {
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   color: white;
   padding: 3rem;
   border-radius: 20px;
@@ -1114,6 +1116,7 @@
   .material-category,
   .cta-card {
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 }
 
@@ -1184,12 +1187,14 @@
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(139, 69, 255, 0.15);
   border-color: rgba(139, 69, 255, 0.2);
+  color: black;
 }
 
 .industry-card.selected {
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(139, 69, 255, 0.2);
   border-color: rgba(139, 69, 255, 0.3);
+  color: black;
 }
 
 .card-arrow {
@@ -1215,13 +1220,13 @@
 }
 
 .industry-icon {
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  background: white;
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
@@ -1259,6 +1264,11 @@
 
 .industry-card:hover .industry-subtitle {
   opacity: 1;
+}
+
+.industry-card:hover .industry-icon {
+  background: white;
+  color: black;
 }
 
 /* Industry Detail Modal */
@@ -1302,7 +1312,7 @@
 .modal-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1372,7 +1382,7 @@
 }
 
 .modal-description h3 {
-  color: var(--primary-purple);
+  color: black;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;

@@ -65,9 +65,40 @@ const SparesPage = () => {
     setShowSuggestions(value.length >= 2);
   };
 
+  const scrollToBrand = (brandName) => {
+    // Find the brand in the brands object
+    for (const [letter, brandList] of Object.entries(brands)) {
+      if (brandList.includes(brandName)) {
+        // Set the selected letter to show the correct section
+        setSelectedLetter(letter);
+        setSearchTerm('');
+        setShowSuggestions(false);
+        
+        // Scroll to the brand section after a short delay to allow state update
+        setTimeout(() => {
+          const brandElement = document.querySelector(`[data-brand="${brandName}"]`);
+          if (brandElement) {
+            brandElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Highlight the brand temporarily
+            brandElement.style.backgroundColor = '#f3f4f6';
+            setTimeout(() => {
+              brandElement.style.backgroundColor = '';
+            }, 2000);
+          }
+        }, 100);
+        break;
+      }
+    }
+  };
+
   const handleSuggestionClick = (suggestion) => {
-    setSearchTerm(suggestion);
-    setShowSuggestions(false);
+    scrollToBrand(suggestion);
+  };
+
+  const handleSearchSubmit = (e) => {
+    if (e.key === 'Enter' && searchTerm.trim()) {
+      scrollToBrand(searchTerm.trim());
+    }
   };
 
   const handleClearSearch = () => {
@@ -132,7 +163,7 @@ const SparesPage = () => {
             {...fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <h3>Why Choose Us?</h3>
+            <h2>Why Choose Us?</h2>
             <div className="features-grid">
               <div className="feature-card">
                 <div className="feature-icon">
@@ -181,7 +212,7 @@ const SparesPage = () => {
                     <path d="M18 12H22" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </div>
-                <h4>Support & Discontinued Parts</h4>
+                <h4>Support for Current & Discontinued Models</h4>
               </div>
             </div>
           </motion.div>
@@ -212,6 +243,7 @@ const SparesPage = () => {
                   placeholder="Search brands... (e.g., Siemens, ABB, Schneider)"
                   value={searchTerm}
                   onChange={handleSearchChange}
+                  onKeyPress={handleSearchSubmit}
                   onFocus={() => setShowSuggestions(searchTerm.length >= 2)}
                   onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                 />
@@ -248,6 +280,12 @@ const SparesPage = () => {
             <div className="alphabet-filter">
               <div className="filter-label">Filter by Letter:</div>
               <div className="alphabet-buttons">
+                <button
+                  className={`alphabet-btn clear-filter ${!selectedLetter ? 'active' : ''}`}
+                  onClick={() => handleLetterFilter('')}
+                >
+                  All
+                </button>
                 {Object.keys(brands).map(letter => (
                   <button
                     key={letter}
@@ -257,12 +295,6 @@ const SparesPage = () => {
                     {letter}
                   </button>
                 ))}
-                <button
-                  className={`alphabet-btn clear-filter ${!selectedLetter ? 'active' : ''}`}
-                  onClick={() => handleLetterFilter('')}
-                >
-                  All
-                </button>
               </div>
             </div>
             
@@ -303,6 +335,7 @@ const SparesPage = () => {
                       <div
                         key={brand}
                         className="brand-card"
+                        data-brand={brand}
                       >
                         <span className="brand-name">{brand}</span>
                         <Link to="/request-quote" className="brand-contact-btn">

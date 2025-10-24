@@ -313,7 +313,7 @@
 .service-learn-more .btn {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--primary-purple) 0%, #7F52FF 100%);
+  background: var(--gradient-primary);
   border: none;
   color: white;
   font-weight: 500;
@@ -339,7 +339,7 @@
 .service-card:hover .service-learn-more .btn {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
-  background: linear-gradient(135deg, #7F52FF 0%, var(--primary-purple) 100%);
+  background: var(--gradient-primary-hover);
 }
 
 .service-card:hover .service-learn-more .btn::before {
@@ -427,6 +427,7 @@
 
 .industry-card:hover .industry-icon {
   background: var(--gradient-primary) !important;
+  background: white;
   color: white;
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(139, 69, 255, 0.3);
@@ -498,7 +499,7 @@
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, var(--primary-purple-dark) 0%, var(--primary-purple-light) 100%);
+  background: var(--gradient-primary);
   color: white;
 }
 
