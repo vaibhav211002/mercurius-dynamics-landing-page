@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ProductsPage.css';
+import industrialFacilityImage from '../assets/images/industrial-facility.jpg';
 import abblogo from '../assets/images/companyLogo/abb.png'
 import siemenslogo from '../assets/images/companyLogo/siemens.png'
 import rockwelllogo from '../assets/images/companyLogo/rockwellautomation.png'
@@ -82,7 +83,7 @@ const ProductsPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h1>Industrial Products</h1>
-            <p>Explore our comprehensive portfolio of industrial grade products - combining precision, performance, and reliability to meet the evolving demands of various sectors.</p>
+            <p>Explore our comprehensive portfolio of industrial grade products - combining precision, performance, and reliability to meet the evolving demands.</p>
             {/* <Link to="/contact" className="btn btn-secondary hero-cta">
               Contact Us
             </Link> */}

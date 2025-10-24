@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './SparesPage.css';
+// import {images} from '../assets/images/delivery-service.jpg'
 
 const SparesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -137,6 +138,9 @@ const SparesPage = () => {
     <div className="spares-page">
       {/* Hero Section */}
       <section className="spares-hero">
+         {/* <div className="hero-background-image">
+                  <img src={images} alt="Industrial Facility" />
+          </div> */}
         <div className="container">
           <motion.div 
             className="hero-content"
@@ -147,7 +151,7 @@ const SparesPage = () => {
               <span className="title-accent"> Spares & Components</span>
             </h1>
             <p className="hero-description">
-                  Genuine OEM-certified parts from the world’s leading manufacturers, covering both current and discontinued models for every industry.
+                  Genuine OEM-certified parts from the world's leading manufacturers, covering both current and discontinued models for every industry.
             </p>
           </motion.div>
         </div>

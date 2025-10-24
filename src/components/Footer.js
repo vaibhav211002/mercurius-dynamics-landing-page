@@ -12,14 +12,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              <div className="logo-icon">
-                <div className="md-logo">
-                  <span className="md-text">MD</span>
-                  <div className="md-bar"></div>
-                </div>
-              </div>
+              <div className="md-text">MD</div>
+              <div className="md-bar"></div>
               <div className="logo-text-container">
-                <span className="logo-text">Mercurius Dynamics</span>
+                <div className="logo-lines-1">MERCURIUS</div>
+                <div className="logo-lines-2">DYNAMICS</div>
               </div>
             </div>
             <p className="footer-description">

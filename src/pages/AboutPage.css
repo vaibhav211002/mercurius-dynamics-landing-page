@@ -20,6 +20,8 @@
 .about-hero p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Main Content */

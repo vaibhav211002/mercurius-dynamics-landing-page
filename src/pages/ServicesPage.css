@@ -17,10 +17,14 @@
   margin-bottom: 1rem;
 }
 
+.services-hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .services-hero p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.25rem;
-  max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
 }

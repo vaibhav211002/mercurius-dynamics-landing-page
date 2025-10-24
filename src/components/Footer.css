@@ -23,47 +23,42 @@
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
-}
-
-.footer-logo .logo-icon {
-  margin-right: 1rem;
-  color: var(--primary-purple);
-  flex-shrink: 0;
-}
-
-.md-logo {
-  display: flex;
-  align-items: center;
-  height: 40px;
+  gap: 0;
 }
 
 .md-text {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: white;
-  letter-spacing: -0.5px;
-  line-height: 1;
+  letter-spacing: 0.5px;
 }
 
 .md-bar {
   width: 4px;
-  height: 32px;
+  height: 38px;
   background-color: var(--primary-purple);
-  margin-left: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
   border-radius: 2px;
 }
 
 .logo-text-container {
   display: flex;
   flex-direction: column;
+  line-height: 1.1;
 }
 
-.footer-logo .logo-text {
-  font-size: 1.5rem;
+.logo-lines-1,
+.logo-lines-2 {
+  font-size: 0.9rem;
   font-weight: 700;
   color: white;
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.logo-line-1 {
+  margin-bottom: 1px;
 }
 
 .logo-tagline {
@@ -74,10 +69,10 @@
 }
 
 .footer-description {
-  color: #CCCCCC;
+  color: white;
   font-size: 0.9rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
 }
 
 /* Footer Titles */
@@ -100,7 +95,7 @@
 }
 
 .footer-links a {
-  color: #CCCCCC;
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
@@ -112,15 +107,16 @@
 
 /* Footer Links Grid */
 .footer-links-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 1rem;
-  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 150px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .footer-links-grid a {
-  color: #CCCCCC;
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
@@ -131,11 +127,6 @@
   color: var(--primary-purple);
 }
 
-/* Center the 5th link (Contact) */
-.footer-links-grid a:nth-child(5) {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
 
 /* Centered Footer Sections */
 .footer-section-centered {
@@ -152,7 +143,7 @@
 
 /* Contact Info */
 .contact-info {
-  color: #CCCCCC;
+  color: white;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -175,7 +166,7 @@
   height: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: #CCCCCC;
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -201,7 +192,7 @@
 }
 
 .copyright {
-  color: #CCCCCC;
+  color: white;
   font-size: 0.85rem;
   margin: 0;
 }
@@ -212,7 +203,7 @@
 }
 
 .footer-bottom-links a {
-  color: #CCCCCC;
+  color: white;
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.3s ease;
@@ -268,8 +259,9 @@
   }
   
   .footer-links-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     max-width: 150px;
+    gap: 0.5rem;
   }
 }
 

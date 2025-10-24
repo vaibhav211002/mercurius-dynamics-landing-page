@@ -43,13 +43,13 @@
 .logo-abbreviation {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2F3640;
+  color: black !important;
   letter-spacing: 0.5px;
 }
 
 .logo-separator {
   width: 4px;
-  height: 36px;
+  height: 38px;
   margin-left: 3px;
   background: #7F52FF;
   border-radius: 2px;
@@ -66,7 +66,7 @@
 .logo-line-2 {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #2F3640;
+  color: black !important;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -205,7 +205,7 @@
 .mobile-nav-logo .logo-abbreviation {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #2F3640;
+  color: black !important;
   letter-spacing: 0.5px;
 }
 
@@ -227,7 +227,7 @@
 .mobile-nav-logo .logo-line-2 {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #2F3640;
+  color: black !important;
   letter-spacing: 0.5px;
 }
 

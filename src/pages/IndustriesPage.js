@@ -50,7 +50,6 @@ const IndustriesPage = () => {
     {
       name: 'Oil & Gas',
       icon: <img src={oilGasIcon} alt="Oil & Gas" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Automation and electrical systems',
       description: 'Automation and electrical systems in the oil & gas sector require high reliability, safety integrity, and resilience in harsh conditions. Solutions span upstream, midstream, and downstream facilities, enabling safe, efficient, and compliant operations.',
       keyOfferings: [
         'PLC control systems (SIL-3 / TMR / Quad-redundant) for process and safety control',
@@ -69,7 +68,6 @@ const IndustriesPage = () => {
     {
       name: 'Cement & Construction',
       icon: <img src={constructionIcon} alt="Cement & Construction" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Continuous, dust-tolerant control',
       description: 'Continuous, dust-tolerant control from raw mill to packing with energy optimization and reliable drives.',
       keyOfferings: [
         'PLC/SCADA for raw mill, kiln, pre-heater, crusher, VRM, conveyors, packers',
@@ -85,7 +83,6 @@ const IndustriesPage = () => {
     {
       name: 'Paper & Textile',
       icon: <img src={paperIcon} alt="Paper & Textile" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Stable tension/speed control',
       description: 'Stable tension/speed, recipe control, and utility automation to improve quality and reduce rework.',
       keyOfferings: [
         'PLC/SCADA for dyeing, drying, sizing, calendaring, coating, finishing lines',
@@ -100,7 +97,6 @@ const IndustriesPage = () => {
     {
       name: 'Metro & Railways',
       icon: <img src={metroIcon} alt="Metro & Railways" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Centralized supervision',
       description: 'Centralized supervision for stations, depots, and OCCs with fast fault isolation and utility control.',
       keyOfferings: [
         'SCADA, T-SCADA, and Fault Reporting System (FRS) for network-wide supervision & alarms',
@@ -115,7 +111,6 @@ const IndustriesPage = () => {
     {
       name: 'Metal & Steel',
       icon: <img src={metaIcon} alt="Metal & Steel" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Rugged control systems',
       description: 'Rugged control for furnaces, rolling, casting, and heavy material handling with synchronized drives.',
       keyOfferings: [
         'PLC/DCS for reheating/annealing furnaces, roughing/finishing mills, CCM/Slab/bloom casters',
@@ -131,7 +126,6 @@ const IndustriesPage = () => {
     {
       name: 'Power & Renewable Energy',
       icon: <img src={renewableEnergyIcon} alt="Power & Renewable Energy" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Coordinated controls',
       description: 'Coordinated controls, protection, and energy visibility for conventional plants and renewables.',
       keyOfferings: [
         'PLC/DCS for turbine, boiler, BOP, ash/coal handling, CW/ACW systems',
@@ -146,7 +140,6 @@ const IndustriesPage = () => {
     {
       name: 'Automotive & Heavy Machinery',
       icon: <img src={automotiveIcon} alt="Automotive & Heavy Machinery" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Motion and test systems',
       description: 'Motion, test, and plant visibility for discrete manufacturing, with integrated quality and traceability.',
       keyOfferings: [
         'PLC/SCADA for assembly cells, transfer lines, conveyors, EoL testing',
@@ -160,7 +153,6 @@ const IndustriesPage = () => {
     {
       name: 'Food & Beverage',
       icon: <img src={fnbIcon} alt="Food & Beverage" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Hygienic, traceable control',
       description: 'Hygienic, traceable control for batch/continuous processing with utilities optimization.',
       keyOfferings: [
         'PLC/SCADA for mixing, cooking, pasteurization, sterilization, CIP/SIP & packaging',
@@ -175,7 +167,6 @@ const IndustriesPage = () => {
     {
       name: 'Pharmaceutical',
       icon: <img src={pharmaIcon} alt="Pharmaceutical" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'GxP-compliant automation',
       description: 'GxP-compliant automation with environmental control, batch integrity, and data traceability.',
       keyOfferings: [
         'PLC/SCADA for filling, sterilization, lyophilization, packaging, utilities',
@@ -190,7 +181,6 @@ const IndustriesPage = () => {
     {
       name: 'Defence',
       icon: <img src={defenceIcon} alt="Defence" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Mission-critical control',
       description: 'Mission-critical control, ruggedized hardware, and traceable manufacturing for labs, ranges, and production.',
       keyOfferings: [
         'PLC/SCADA for test benches, simulators, climatic/vibration chambers',
@@ -204,7 +194,6 @@ const IndustriesPage = () => {
     {
       name: 'Aerospace',
       icon: <img src={aerospaceIcon} alt="Aerospace" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'High-precision manufacturing',
       description: 'High-precision manufacturing and qualification systems with full traceability.',
       keyOfferings: [
         'PLC/SCADA for engine/actuator test stands, endurance & vibration rigs',
@@ -218,7 +207,6 @@ const IndustriesPage = () => {
     {
       name: 'Water & Wastewater Treatment',
       icon: <img src={waterTreatmentIcon} alt="Water & Wastewater Treatment" style={{width: '28px', height: '28px'}} />,
-      subtitle: 'Fail-safe control',
       description: 'Fail-safe control for treatment, pumping, and distribution with remote visibility.',
       keyOfferings: [
         'PLC/SCADA for clarifiers, filters, aeration, chlorination, sludge handling',

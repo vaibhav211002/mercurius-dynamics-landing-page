@@ -312,8 +312,8 @@
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .modal-offerings h3::before {
