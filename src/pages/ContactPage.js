@@ -182,7 +182,7 @@ const ContactPage = () => {
         </svg>
       ),
       title: 'Address',
-      values: ['Mercurius Dynamics', 'Industrial Park, Building A', 'Tech City, State 12345', 'United States']
+      values: ['Mercurius Dynamics', 'A-67 Ground Floor, Sector 67,', 'Noida , Uttar Pradesh 201309', 'India']
     }
   ];
 
