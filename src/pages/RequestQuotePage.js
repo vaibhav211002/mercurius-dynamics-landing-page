@@ -246,27 +246,26 @@ const RequestQuotePage = () => {
   ];
 
   return (
-    <div>
-      
+     <div className="request-quote-page">
+       {/* Hero Section */}
+       <section className="rfq-hero">
+         <div className="hero-background">
+           <div className="hero-overlay"></div>
+         </div>
+         <div className="container">
+           <motion.div 
+            className="hero-content"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1>COMING SOON !!</h1>
+            {/* <p>Fill out the form below to get a customized quote for your needs.</p> */}
+          </motion.div>
+        </div>
+      </section>
+    {/* //   new div is here */}
     </div>
-    // <div className="request-quote-page">
-    //   {/* Hero Section */}
-    //   <section className="rfq-hero">
-    //     <div className="hero-background">
-    //       <div className="hero-overlay"></div>
-    //     </div>
-    //     <div className="container">
-    //       <motion.div 
-    //         className="hero-content"
-    //         initial={{ opacity: 0, y: 30 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ duration: 0.8 }}
-    //       >
-    //         <h1>Request for Quote (RFQ)</h1>
-    //         <p>Fill out the form below to get a customized quote for your needs.</p>
-    //       </motion.div>
-    //     </div>
-    //   </section>
 
     //   {/* RFQ Form */}
     //   <section className="rfq-form-section">
