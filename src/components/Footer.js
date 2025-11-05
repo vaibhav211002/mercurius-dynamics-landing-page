@@ -42,8 +42,24 @@ const Footer = () => {
             <div className="contact-info">
               <p>A-67 Ground Floor, Sector 67, Noida </p>
               <p>Uttar Pradesh 201309, India</p>
-              <p>Email: info@mercuriusdynamics.com</p>
-              <p>Phone: +91 7838167696</p>
+              <p>
+                    Email:{" "}
+                    <a
+                      href="mailto:info@mercuriusdynamics.com"
+                      className="text-indigo-400 hover:underline"
+                    >
+                      info@mercuriusdynamics.com
+                    </a>
+              </p>              
+              <p>
+              Phone:{" "}
+              <a
+                href="tel:+917838167696"
+                className="text-indigo-400 hover:underline"
+              >
+                +91 7838167696
+              </a>
+            </p>
             </div>
           </div>
         </div>
